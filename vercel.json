@@ -3,6 +3,21 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/materials/grade-pre2/2025-1/workbook-support.pdf",
+      "destination": "/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Student_Support_Workbook.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/materials/grade-pre2/2025-1/workbook-standard.pdf",
+      "destination": "/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Student_Standard_Workbook.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/materials/grade-pre2/2025-1/teaching-guide.pdf",
+      "destination": "/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Instructor_Teaching_Guide.pdf",
+      "permanent": true
+    },
+    {
       "source": "/materials/grade3/2025-1/workbook.pdf",
       "destination": "/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Student_Support_Workbook.pdf",
       "permanent": true
