@@ -5,6 +5,7 @@
     {
       "slug": "grade3",
       "label": "3級",
+      "fileCode": "Grade3",
       "order": 30,
       "sessions": [
         {
@@ -21,8 +22,8 @@
               "label": "サポート版",
               "description": "見本・書き出し・確認訳を先に示し、迷わず筆写を始められる版です。",
               "pages": 15,
-              "path": "/materials/grade3/2025-3/workbook-support.pdf",
-              "downloadName": "ReadPass_3級_2025-3_サポート版.pdf"
+              "path": "/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Student_Support_Workbook.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade3_2025-3_Student_Support_Workbook.pdf"
             },
             {
               "type": "workbook",
@@ -31,8 +32,8 @@
               "label": "標準版",
               "description": "自分で本文を探して書いたあと、確認訳と照合する版です。",
               "pages": 15,
-              "path": "/materials/grade3/2025-3/workbook-standard.pdf",
-              "downloadName": "ReadPass_3級_2025-3_標準版.pdf"
+              "path": "/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Student_Standard_Workbook.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade3_2025-3_Student_Standard_Workbook.pdf"
             },
             {
               "type": "teaching-guide",
@@ -41,8 +42,8 @@
               "label": "指導教案",
               "description": "解答・記入例・根拠英文・指導上の確認点をまとめた共通教案です。",
               "pages": 9,
-              "path": "/materials/grade3/2025-3/teaching-guide.pdf",
-              "downloadName": "ReadPass_3級_2025-3_指導教案.pdf"
+              "path": "/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Instructor_Teaching_Guide.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade3_2025-3_Instructor_Teaching_Guide.pdf"
             }
           ]
         },
@@ -60,8 +61,8 @@
               "label": "サポート版",
               "description": "見本・書き出し・確認訳を先に示し、迷わず筆写を始められる版です。",
               "pages": 16,
-              "path": "/materials/grade3/2025-2/workbook-support.pdf",
-              "downloadName": "ReadPass_3級_2025-2_サポート版.pdf"
+              "path": "/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Student_Support_Workbook.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade3_2025-2_Student_Support_Workbook.pdf"
             },
             {
               "type": "workbook",
@@ -70,8 +71,8 @@
               "label": "標準版",
               "description": "自分で本文を探して書いたあと、確認訳と照合する版です。",
               "pages": 16,
-              "path": "/materials/grade3/2025-2/workbook-standard.pdf",
-              "downloadName": "ReadPass_3級_2025-2_標準版.pdf"
+              "path": "/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Student_Standard_Workbook.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade3_2025-2_Student_Standard_Workbook.pdf"
             },
             {
               "type": "teaching-guide",
@@ -80,8 +81,8 @@
               "label": "指導教案",
               "description": "解答・記入例・根拠英文・指導上の確認点をまとめた共通教案です。",
               "pages": 9,
-              "path": "/materials/grade3/2025-2/teaching-guide.pdf",
-              "downloadName": "ReadPass_3級_2025-2_指導教案.pdf"
+              "path": "/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Instructor_Teaching_Guide.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade3_2025-2_Instructor_Teaching_Guide.pdf"
             }
           ]
         },
@@ -99,8 +100,8 @@
               "label": "サポート版",
               "description": "見本と具体的な手順を示し、迷わず筆写を始められる生徒用ワークです。",
               "pages": 15,
-              "path": "/materials/grade3/2025-1/workbook.pdf",
-              "downloadName": "ReadPass_3級_2025-1_サポート版.pdf"
+              "path": "/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Student_Support_Workbook.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade3_2025-1_Student_Support_Workbook.pdf"
             },
             {
               "type": "teaching-guide",
@@ -109,8 +110,8 @@
               "label": "指導教案",
               "description": "解答・記入例と指導上の確認点をまとめた講師用資料です。",
               "pages": 9,
-              "path": "/materials/grade3/2025-1/teaching-guide.pdf",
-              "downloadName": "ReadPass_3級_2025-1_指導教案.pdf"
+              "path": "/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Instructor_Teaching_Guide.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade3_2025-1_Instructor_Teaching_Guide.pdf"
             }
           ]
         }

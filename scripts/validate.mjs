@@ -37,7 +37,7 @@ const downloadNames = [];
 let documentCount = 0;
 
 for (const grade of data.grades) {
-  if (!grade.slug || !grade.label || !Array.isArray(grade.sessions) || !grade.sessions.length) {
+  if (!grade.slug || !grade.label || !grade.fileCode || !Array.isArray(grade.sessions) || !grade.sessions.length) {
     throw new Error(`Invalid grade entry: ${grade.slug || "unknown"}`);
   }
   for (const session of grade.sessions) {
@@ -68,6 +68,22 @@ for (const grade of data.grades) {
       }
       if (!document.downloadName?.endsWith(".pdf")) {
         throw new Error(`Invalid download name for ${document.path}`);
+      }
+      const pathFileName = decodeURIComponent(document.path.split("/").at(-1));
+      if (pathFileName !== document.downloadName) {
+        throw new Error(
+          `PDF path filename and download name must match: ${document.path} / ${document.downloadName}`,
+        );
+      }
+      const requiredNameParts = ["ReadPass", "EIKEN", grade.fileCode, session.key];
+      if (!requiredNameParts.every((part) => document.downloadName.includes(part))) {
+        throw new Error(`Download name does not identify the material: ${document.downloadName}`);
+      }
+      if (document.type === "workbook" && !document.downloadName.includes("Student")) {
+        throw new Error(`Workbook download name must identify the student audience: ${document.downloadName}`);
+      }
+      if (document.type === "teaching-guide" && !document.downloadName.includes("Instructor_Teaching_Guide")) {
+        throw new Error(`Teaching guide download name is incomplete: ${document.downloadName}`);
       }
 
       paths.push(document.path);
@@ -142,6 +158,30 @@ if (!js.includes("sampleContent") || !js.includes("updateCatalog")) {
   throw new Error("Required page interactions are missing");
 }
 if (!robots.includes("Disallow: /")) throw new Error("robots.txt must discourage indexing");
+
+const vercel = JSON.parse(readFileSync("vercel.json", "utf8"));
+const redirects = vercel.redirects ?? [];
+const requiredLegacySources = [
+  "/materials/grade3/2025-1/workbook.pdf",
+  "/materials/grade3/2025-1/teaching-guide.pdf",
+  "/materials/grade3/2025-2/workbook-support.pdf",
+  "/materials/grade3/2025-2/workbook-standard.pdf",
+  "/materials/grade3/2025-2/teaching-guide.pdf",
+  "/materials/grade3/2025-3/workbook-support.pdf",
+  "/materials/grade3/2025-3/workbook-standard.pdf",
+  "/materials/grade3/2025-3/teaching-guide.pdf",
+];
+unique(redirects.map((redirect) => redirect.source), "redirect source");
+for (const source of requiredLegacySources) {
+  if (!redirects.some((redirect) => redirect.source === source)) {
+    throw new Error(`Missing legacy PDF redirect: ${source}`);
+  }
+}
+for (const redirect of redirects) {
+  if (!redirect.permanent || !paths.includes(redirect.destination)) {
+    throw new Error(`Invalid legacy PDF redirect: ${redirect.source}`);
+  }
+}
 
 for (const match of html.matchAll(/href="([^"]+)"/g)) {
   const href = match[1];
