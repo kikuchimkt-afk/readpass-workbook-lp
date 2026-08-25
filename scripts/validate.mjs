@@ -180,6 +180,10 @@ const requiredLegacySources = [
   "/materials/grade3/2025-3/workbook-support.pdf",
   "/materials/grade3/2025-3/workbook-standard.pdf",
   "/materials/grade3/2025-3/teaching-guide.pdf",
+  "/materials/grade4/2025-3/workbook.pdf",
+  "/materials/grade4/2025-3/teaching-guide.pdf",
+  "/materials/grade4/2025-2/workbook.pdf",
+  "/materials/grade4/2025-2/teaching-guide.pdf",
   "/materials/grade4/2025-1/workbook.pdf",
   "/materials/grade4/2025-1/teaching-guide.pdf",
 ];
