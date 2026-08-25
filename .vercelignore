@@ -1,0 +1,6 @@
+.git/
+.qa/
+.vercel/
+node_modules/
+docs/
+README.md

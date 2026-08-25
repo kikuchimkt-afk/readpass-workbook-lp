@@ -1,6 +1,6 @@
 import { readFileSync, existsSync } from "node:fs";
 
-const requiredFiles = ["index.html", "styles.css", "script.js", "public/favicon.svg", "vercel.json"];
+const requiredFiles = ["index.html", "styles.css", "script.js", "assets/favicon.svg", "vercel.json"];
 const missingFiles = requiredFiles.filter((file) => !existsSync(file));
 if (missingFiles.length) throw new Error(`Missing files: ${missingFiles.join(", ")}`);
 
