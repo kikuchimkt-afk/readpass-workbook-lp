@@ -163,6 +163,7 @@ const vercel = JSON.parse(readFileSync("vercel.json", "utf8"));
 const redirects = vercel.redirects ?? [];
 const requiredLegacySources = [
   "/materials/grade3/2025-1/workbook.pdf",
+  "/materials/grade3/2025-1/workbook-standard.pdf",
   "/materials/grade3/2025-1/teaching-guide.pdf",
   "/materials/grade3/2025-2/workbook-support.pdf",
   "/materials/grade3/2025-2/workbook-standard.pdf",
