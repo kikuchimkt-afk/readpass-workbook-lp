@@ -129,6 +129,8 @@ const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]);
 unique(ids, "HTML ID");
 
 const requiredCopy = [
+  "PenPass",
+  "ReadPass連動 かきこみワーク",
   "社内利用専用",
   "外部への共有・再配布は行わないでください",
   "noindex, nofollow, noarchive",

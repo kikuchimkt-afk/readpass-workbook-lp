@@ -28,5 +28,5 @@ createServer((request, response) => {
   response.writeHead(200, { "Content-Type": mime[extname(file)] || "application/octet-stream" });
   createReadStream(file).pipe(response);
 }).listen(port, "127.0.0.1", () => {
-  console.log(`ReadPass workbook LP: http://127.0.0.1:${port}`);
+  console.log(`PenPass LP: http://127.0.0.1:${port}`);
 });

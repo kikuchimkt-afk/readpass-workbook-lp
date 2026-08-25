@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ReadPassかきこみワーク">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="PenPass">
   <rect width="64" height="64" rx="14" fill="#0b3b32"/>
   <path d="M18 15h19c6 0 11 5 11 11v23H27c-5 0-9-4-9-9V15Z" fill="#f4f0e5"/>
   <path d="M27 24h13M27 31h13M27 38h9" stroke="#0b3b32" stroke-width="3" stroke-linecap="round"/>
