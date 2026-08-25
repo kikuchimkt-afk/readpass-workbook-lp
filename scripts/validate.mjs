@@ -186,6 +186,12 @@ const requiredLegacySources = [
   "/materials/grade4/2025-2/teaching-guide.pdf",
   "/materials/grade4/2025-1/workbook.pdf",
   "/materials/grade4/2025-1/teaching-guide.pdf",
+  "/materials/grade5/2025-3/workbook.pdf",
+  "/materials/grade5/2025-3/teaching-guide.pdf",
+  "/materials/grade5/2025-2/workbook.pdf",
+  "/materials/grade5/2025-2/teaching-guide.pdf",
+  "/materials/grade5/2025-1/workbook.pdf",
+  "/materials/grade5/2025-1/teaching-guide.pdf",
 ];
 unique(redirects.map((redirect) => redirect.source), "redirect source");
 for (const source of requiredLegacySources) {

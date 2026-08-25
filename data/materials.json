@@ -346,6 +346,101 @@
           ]
         }
       ]
+    },
+    {
+      "slug": "grade5",
+      "label": "5級",
+      "fileCode": "Grade5",
+      "order": 50,
+      "sessions": [
+        {
+          "key": "2025-3",
+          "year": 2025,
+          "session": 3,
+          "label": "2025年度 第3回",
+          "updatedAt": "2026-08-25",
+          "documents": [
+            {
+              "type": "workbook",
+              "profile": "common",
+              "audience": "生徒配付用",
+              "label": "共通版",
+              "description": "小学校高学年から取り組めるよう、見る場所・書く内容・回数を1動作ずつ示した筆写中心のワークです。",
+              "pages": 13,
+              "path": "/materials/grade5/2025-3/ReadPass_EIKEN_Grade5_2025-3_Student_Workbook.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade5_2025-3_Student_Workbook.pdf"
+            },
+            {
+              "type": "teaching-guide",
+              "profile": "teacher",
+              "audience": "講師用",
+              "label": "指導教案",
+              "description": "全25問の正答・完成英文・不正解語の意味・会話の練習文・語順・低学年への声かけをまとめた教案です。",
+              "pages": 5,
+              "path": "/materials/grade5/2025-3/ReadPass_EIKEN_Grade5_2025-3_Instructor_Teaching_Guide.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade5_2025-3_Instructor_Teaching_Guide.pdf"
+            }
+          ]
+        },
+        {
+          "key": "2025-2",
+          "year": 2025,
+          "session": 2,
+          "label": "2025年度 第2回",
+          "updatedAt": "2026-08-25",
+          "documents": [
+            {
+              "type": "workbook",
+              "profile": "common",
+              "audience": "生徒配付用",
+              "label": "共通版",
+              "description": "小学校高学年から取り組めるよう、見る場所・書く内容・回数を1動作ずつ示した筆写中心のワークです。",
+              "pages": 13,
+              "path": "/materials/grade5/2025-2/ReadPass_EIKEN_Grade5_2025-2_Student_Workbook.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade5_2025-2_Student_Workbook.pdf"
+            },
+            {
+              "type": "teaching-guide",
+              "profile": "teacher",
+              "audience": "講師用",
+              "label": "指導教案",
+              "description": "全25問の正答・完成英文・不正解語の意味・会話の練習文・語順・低学年への声かけをまとめた教案です。",
+              "pages": 5,
+              "path": "/materials/grade5/2025-2/ReadPass_EIKEN_Grade5_2025-2_Instructor_Teaching_Guide.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade5_2025-2_Instructor_Teaching_Guide.pdf"
+            }
+          ]
+        },
+        {
+          "key": "2025-1",
+          "year": 2025,
+          "session": 1,
+          "label": "2025年度 第1回",
+          "updatedAt": "2026-08-25",
+          "documents": [
+            {
+              "type": "workbook",
+              "profile": "common",
+              "audience": "生徒配付用",
+              "label": "共通版",
+              "description": "小学校高学年から取り組めるよう、見る場所・書く内容・回数を1動作ずつ示した筆写中心のワークです。",
+              "pages": 13,
+              "path": "/materials/grade5/2025-1/ReadPass_EIKEN_Grade5_2025-1_Student_Workbook.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade5_2025-1_Student_Workbook.pdf"
+            },
+            {
+              "type": "teaching-guide",
+              "profile": "teacher",
+              "audience": "講師用",
+              "label": "指導教案",
+              "description": "全25問の正答・完成英文・不正解語の意味・会話の練習文・語順・低学年への声かけをまとめた教案です。",
+              "pages": 5,
+              "path": "/materials/grade5/2025-1/ReadPass_EIKEN_Grade5_2025-1_Instructor_Teaching_Guide.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade5_2025-1_Instructor_Teaching_Guide.pdf"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

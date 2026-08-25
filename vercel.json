@@ -121,6 +121,36 @@
       "source": "/materials/grade4/2025-1/teaching-guide.pdf",
       "destination": "/materials/grade4/2025-1/ReadPass_EIKEN_Grade4_2025-1_Instructor_Teaching_Guide.pdf",
       "permanent": true
+    },
+    {
+      "source": "/materials/grade5/2025-3/workbook.pdf",
+      "destination": "/materials/grade5/2025-3/ReadPass_EIKEN_Grade5_2025-3_Student_Workbook.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/materials/grade5/2025-3/teaching-guide.pdf",
+      "destination": "/materials/grade5/2025-3/ReadPass_EIKEN_Grade5_2025-3_Instructor_Teaching_Guide.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/materials/grade5/2025-2/workbook.pdf",
+      "destination": "/materials/grade5/2025-2/ReadPass_EIKEN_Grade5_2025-2_Student_Workbook.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/materials/grade5/2025-2/teaching-guide.pdf",
+      "destination": "/materials/grade5/2025-2/ReadPass_EIKEN_Grade5_2025-2_Instructor_Teaching_Guide.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/materials/grade5/2025-1/workbook.pdf",
+      "destination": "/materials/grade5/2025-1/ReadPass_EIKEN_Grade5_2025-1_Student_Workbook.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/materials/grade5/2025-1/teaching-guide.pdf",
+      "destination": "/materials/grade5/2025-1/ReadPass_EIKEN_Grade5_2025-1_Instructor_Teaching_Guide.pdf",
+      "permanent": true
     }
   ],
   "headers": [
