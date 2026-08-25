@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="ReadPass連動かきこみワークのワークブック本体と指導教案を閲覧・ダウンロードできる社内教材ポータルです。"
+      content="ReadPass連動かきこみワークを、級・年度・回から選んで閲覧・ダウンロードできる社内教材ライブラリです。"
     />
     <meta name="theme-color" content="#0b3b32" />
     <meta name="robots" content="noindex, nofollow, noarchive" />
@@ -14,10 +14,11 @@
     <meta property="og:title" content="ReadPass連動 かきこみワーク｜社内教材ポータル" />
     <meta
       property="og:description"
-      content="解いて終わりにしない。正しい英文を、手で残す。"
+      content="級・年度・回から、生徒用ワークブックと講師用指導教案を選べる社内教材ライブラリ。"
     />
     <title>ReadPass連動 かきこみワーク｜社内教材ポータル</title>
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <script>document.documentElement.classList.add("js");</script>
     <link rel="stylesheet" href="/styles.css" />
     <script src="/script.js" defer></script>
   </head>
@@ -38,69 +39,43 @@
           <span></span><span></span>
         </button>
         <nav id="global-nav" class="global-nav" aria-label="メインメニュー">
-          <a href="#materials">教材PDF</a>
+          <a href="#materials">教材ライブラリ</a>
+          <a href="#profiles">版の選び方</a>
           <a href="#philosophy">作成理念</a>
-          <a href="#design">教材設計</a>
-          <a href="#sample">紙面体験</a>
+          <a href="#sample">紙面見本</a>
         </nav>
-        <a class="header-cta" href="#materials">教材PDFを開く</a>
+        <a class="header-cta" href="#materials">教材を選ぶ</a>
       </div>
     </header>
 
     <main id="main">
-      <section id="top" class="hero">
-        <div class="hero-grid container">
+      <section id="top" class="hero portal-hero">
+        <div class="portal-hero-grid container">
           <div class="hero-copy reveal">
             <p class="hero-badge">ECCベストワン北島中央校｜社内教材ポータル</p>
-            <p class="hero-kicker">READ · WRITE · SPEAK</p>
-            <h1><span>解いて終わりにしない。</span><em>正しい英文を、<br />手で残す。</em></h1>
+            <p class="hero-kicker">READPASS MATERIAL LIBRARY</p>
+            <h1><span>必要な回を、すぐ開く。</span><em>授業で使う教材を、<br />ひとつの場所に。</em></h1>
             <p class="hero-lead">
-              ReadPassで答えと解説を確認したあと、紙に英文を写し、意味と訳を書き、声に出す。
-              画面での理解を、次の一問につながる学習へ整えるワークです。
+              級・年度・回を選び、生徒用ワークブックと講師用の指導教案を閲覧・ダウンロードできます。
+              生徒の取り組み方に合わせて、サポート版と標準版を使い分けてください。
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#materials">教材PDFを開く</a>
-              <a
-                class="button button-ghost"
-                href="#sample"
-              >紙面の流れを確認する</a>
+              <a class="button button-primary" href="#materials">教材ライブラリを開く</a>
+              <a class="button button-ghost" href="#profiles">版の選び方を見る</a>
             </div>
             <p class="hero-note">社内利用専用です。教材単体での販売・外部への共有は行っていません。</p>
           </div>
-
-          <div class="hero-visual reveal" aria-label="ワークブックの記入イメージ">
-            <div class="visual-orbit visual-orbit-one" aria-hidden="true"></div>
-            <div class="visual-orbit visual-orbit-two" aria-hidden="true"></div>
-            <article class="paper-card paper-card-back" aria-hidden="true">
-              <span>READPASS</span>
-              <strong>WRITE 01</strong>
-            </article>
-            <article class="paper-card paper-card-front">
-              <div class="paper-head">
-                <span>Q 01</span>
-                <span>SHORT SENTENCE</span>
-              </div>
-              <h2>正しい英文を<br />1回、ていねいに写す。</h2>
-              <div class="paper-step">
-                <b>1</b><span>ReadPassで解く</span><i class="paper-check" aria-hidden="true"></i>
-              </div>
-              <div class="paper-step">
-                <b>2</b><span>英文を見ながら写す</span>
-              </div>
-              <div class="writing-lines" aria-hidden="true"><i></i><i></i><i></i></div>
-              <div class="paper-step compact">
-                <b>3</b><span>意味を書く</span>
-              </div>
-              <div class="meaning-row" aria-hidden="true"><i></i><i></i><i></i></div>
-              <div class="paper-foot"><span>指で追って読む</span><strong>□</strong></div>
-            </article>
-            <span class="hero-seal" aria-hidden="true">WRITE<br />BY HAND</span>
-          </div>
-        </div>
-        <div class="hero-stats" aria-label="教材の概要">
-          <div><strong>30</strong><span>QUESTIONS<br />全30問に対応</span></div>
-          <div><strong>15</strong><span>PAGES<br />ワークブック本体</span></div>
-          <div><strong>4</strong><span>ACTIONS<br />解く・写す・意味・読む</span></div>
+          <aside class="portal-summary reveal" aria-labelledby="portal-summary-title">
+            <p class="portal-summary-label">LIBRARY GUIDE</p>
+            <h2 id="portal-summary-title">教材の探し方</h2>
+            <dl>
+              <div><dt>1</dt><dd>級を選ぶ</dd></div>
+              <div><dt>2</dt><dd>年度・回を選ぶ</dd></div>
+              <div><dt>生徒用</dt><dd>サポート版／標準版</dd></div>
+              <div><dt>講師用</dt><dd>試験回ごとの指導教案</dd></div>
+            </dl>
+            <p>追加した級・試験回も、同じ教材一覧から選べます。</p>
+          </aside>
         </div>
       </section>
 
@@ -109,77 +84,228 @@
           <div class="materials-heading">
             <div>
               <p class="eyebrow">INTERNAL MATERIALS</p>
-              <h2>教材PDF</h2>
+              <h2>教材ライブラリ</h2>
             </div>
             <p>
-              生徒に配付する「ワークブック本体」と、授業で使用する「指導教案」を分けています。
-              閲覧はブラウザで開き、印刷・保存が必要な場合はダウンロードしてください。
+              「級 → 年度・回 → 教材」の順に選びます。生徒配付用と講師用を明確に分け、
+              どのPDFを開くか迷いにくい構成にしています。
             </p>
           </div>
-
-          <div class="material-grid">
-            <article class="material-card">
-              <div class="material-card-head">
-                <span class="material-number">01</span>
-                <p>STUDENT</p>
-              </div>
-              <div class="material-card-body">
-                <p class="material-label">生徒配付用</p>
-                <h3>ワークブック本体</h3>
-                <p>ReadPassで解いたあとに、筆写・意味確認・和訳・音読へ進むための書き込み教材です。</p>
-                <dl class="material-meta">
-                  <div><dt>対象</dt><dd>3級・2025年度 第1回</dd></div>
-                  <div><dt>仕様</dt><dd>A4縦・15ページ</dd></div>
-                  <div><dt>用途</dt><dd>生徒への配付・印刷</dd></div>
-                </dl>
-              </div>
-              <div class="material-actions">
-                <a
-                  class="button material-view"
-                  href="/materials/grade3/2025-1/workbook.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >PDFを閲覧 <span aria-hidden="true">↗</span></a>
-                <a
-                  class="button material-download"
-                  href="/materials/grade3/2025-1/workbook.pdf"
-                  download="ReadPass_3級_2025-1_ワークブック本体.pdf"
-                >PDFをダウンロード <span aria-hidden="true">↓</span></a>
-              </div>
-            </article>
-
-            <article class="material-card material-card-guide">
-              <div class="material-card-head">
-                <span class="material-number">02</span>
-                <p>INSTRUCTOR</p>
-              </div>
-              <div class="material-card-body">
-                <p class="material-label">講師用</p>
-                <h3>指導教案</h3>
-                <p>解答・記入例と指導上の確認点をまとめた、授業準備と採点・声かけのための講師用資料です。</p>
-                <dl class="material-meta">
-                  <div><dt>対象</dt><dd>3級・2025年度 第1回</dd></div>
-                  <div><dt>仕様</dt><dd>A4縦・9ページ</dd></div>
-                  <div><dt>用途</dt><dd>授業準備・指導時の参照</dd></div>
-                </dl>
-              </div>
-              <div class="material-actions">
-                <a
-                  class="button material-view"
-                  href="/materials/grade3/2025-1/teaching-guide.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >PDFを閲覧 <span aria-hidden="true">↗</span></a>
-                <a
-                  class="button material-download"
-                  href="/materials/grade3/2025-1/teaching-guide.pdf"
-                  download="ReadPass_3級_2025-1_指導教案.pdf"
-                >PDFをダウンロード <span aria-hidden="true">↓</span></a>
-              </div>
-            </article>
+          <!-- MATERIAL_CATALOG_START -->
+          <div class="grade-jump" aria-label="級から教材を探す">
+            <span>収録級</span>
+            <a href="#grade3-2025-3">3級</a>
           </div>
 
+          <form class="catalog-controls" data-catalog-controls aria-label="教材の絞り込み">
+            <label>
+              <span>級</span>
+              <select name="grade" data-grade-filter>
+                <option value="all">すべての級</option>
+                <option value="grade3">3級</option>
+              </select>
+            </label>
+            <label>
+              <span>年度</span>
+              <select name="year" data-year-filter>
+                <option value="all">すべての年度</option>
+                <option value="2025">2025年度</option>
+              </select>
+            </label>
+            <button type="button" data-filter-reset>絞り込みを解除</button>
+          </form>
+
+          <div class="catalog-summary">
+            <p data-result-count aria-live="polite">3回分・PDF 8点を掲載</p>
+            <p>新しい試験回から順に表示しています。</p>
+          </div>
+
+          <div class="session-grid" data-session-grid>
+          <article class="session-card" id="grade3-2025-3" data-catalog-card data-grade="grade3" data-year="2025">
+            <header class="session-card-head">
+              <div>
+                <p class="session-grade">3級</p>
+                <h3>2025年度 第3回</h3>
+              </div>
+              <div class="session-status"><span>公開中</span><small>生徒用2版＋指導教案</small></div>
+            </header>
+            <div class="document-list">
+              <article class="document-row">
+                <div class="document-icon" aria-hidden="true">W</div>
+                <div class="document-copy">
+                  <div class="document-title-line">
+                    <p class="document-audience">生徒配付用</p>
+                    <span>15ページ</span>
+                  </div>
+                  <h4>サポート版</h4>
+                  <p>見本・書き出し・確認訳を先に示し、迷わず筆写を始められる版です。</p>
+                </div>
+                <div class="document-actions" aria-label="3級 2025年度 第3回 サポート版の操作">
+                  <a class="document-button document-view" href="/materials/grade3/2025-3/workbook-support.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第3回 サポート版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                  <a class="document-button document-download" href="/materials/grade3/2025-3/workbook-support.pdf" download="ReadPass_3級_2025-3_サポート版.pdf" aria-label="3級 2025年度 第3回 サポート版のPDFをダウンロード">ダウンロード</a>
+                </div>
+              </article>
+              <article class="document-row">
+                <div class="document-icon" aria-hidden="true">W</div>
+                <div class="document-copy">
+                  <div class="document-title-line">
+                    <p class="document-audience">生徒配付用</p>
+                    <span>15ページ</span>
+                  </div>
+                  <h4>標準版</h4>
+                  <p>自分で本文を探して書いたあと、確認訳と照合する版です。</p>
+                </div>
+                <div class="document-actions" aria-label="3級 2025年度 第3回 標準版の操作">
+                  <a class="document-button document-view" href="/materials/grade3/2025-3/workbook-standard.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第3回 標準版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                  <a class="document-button document-download" href="/materials/grade3/2025-3/workbook-standard.pdf" download="ReadPass_3級_2025-3_標準版.pdf" aria-label="3級 2025年度 第3回 標準版のPDFをダウンロード">ダウンロード</a>
+                </div>
+              </article>
+              <article class="document-row document-row-guide">
+                <div class="document-icon" aria-hidden="true">T</div>
+                <div class="document-copy">
+                  <div class="document-title-line">
+                    <p class="document-audience">講師用</p>
+                    <span>9ページ</span>
+                  </div>
+                  <h4>指導教案</h4>
+                  <p>解答・記入例・根拠英文・指導上の確認点をまとめた共通教案です。</p>
+                </div>
+                <div class="document-actions" aria-label="3級 2025年度 第3回 指導教案の操作">
+                  <a class="document-button document-view" href="/materials/grade3/2025-3/teaching-guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第3回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                  <a class="document-button document-download" href="/materials/grade3/2025-3/teaching-guide.pdf" download="ReadPass_3級_2025-3_指導教案.pdf" aria-label="3級 2025年度 第3回 指導教案のPDFをダウンロード">ダウンロード</a>
+                </div>
+              </article>
+            </div>
+          </article>
+          <article class="session-card" id="grade3-2025-2" data-catalog-card data-grade="grade3" data-year="2025">
+            <header class="session-card-head">
+              <div>
+                <p class="session-grade">3級</p>
+                <h3>2025年度 第2回</h3>
+              </div>
+              <div class="session-status"><span>公開中</span><small>生徒用2版＋指導教案</small></div>
+            </header>
+            <div class="document-list">
+              <article class="document-row">
+                <div class="document-icon" aria-hidden="true">W</div>
+                <div class="document-copy">
+                  <div class="document-title-line">
+                    <p class="document-audience">生徒配付用</p>
+                    <span>16ページ</span>
+                  </div>
+                  <h4>サポート版</h4>
+                  <p>見本・書き出し・確認訳を先に示し、迷わず筆写を始められる版です。</p>
+                </div>
+                <div class="document-actions" aria-label="3級 2025年度 第2回 サポート版の操作">
+                  <a class="document-button document-view" href="/materials/grade3/2025-2/workbook-support.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第2回 サポート版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                  <a class="document-button document-download" href="/materials/grade3/2025-2/workbook-support.pdf" download="ReadPass_3級_2025-2_サポート版.pdf" aria-label="3級 2025年度 第2回 サポート版のPDFをダウンロード">ダウンロード</a>
+                </div>
+              </article>
+              <article class="document-row">
+                <div class="document-icon" aria-hidden="true">W</div>
+                <div class="document-copy">
+                  <div class="document-title-line">
+                    <p class="document-audience">生徒配付用</p>
+                    <span>16ページ</span>
+                  </div>
+                  <h4>標準版</h4>
+                  <p>自分で本文を探して書いたあと、確認訳と照合する版です。</p>
+                </div>
+                <div class="document-actions" aria-label="3級 2025年度 第2回 標準版の操作">
+                  <a class="document-button document-view" href="/materials/grade3/2025-2/workbook-standard.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第2回 標準版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                  <a class="document-button document-download" href="/materials/grade3/2025-2/workbook-standard.pdf" download="ReadPass_3級_2025-2_標準版.pdf" aria-label="3級 2025年度 第2回 標準版のPDFをダウンロード">ダウンロード</a>
+                </div>
+              </article>
+              <article class="document-row document-row-guide">
+                <div class="document-icon" aria-hidden="true">T</div>
+                <div class="document-copy">
+                  <div class="document-title-line">
+                    <p class="document-audience">講師用</p>
+                    <span>9ページ</span>
+                  </div>
+                  <h4>指導教案</h4>
+                  <p>解答・記入例・根拠英文・指導上の確認点をまとめた共通教案です。</p>
+                </div>
+                <div class="document-actions" aria-label="3級 2025年度 第2回 指導教案の操作">
+                  <a class="document-button document-view" href="/materials/grade3/2025-2/teaching-guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第2回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                  <a class="document-button document-download" href="/materials/grade3/2025-2/teaching-guide.pdf" download="ReadPass_3級_2025-2_指導教案.pdf" aria-label="3級 2025年度 第2回 指導教案のPDFをダウンロード">ダウンロード</a>
+                </div>
+              </article>
+            </div>
+          </article>
+          <article class="session-card" id="grade3-2025-1" data-catalog-card data-grade="grade3" data-year="2025">
+            <header class="session-card-head">
+              <div>
+                <p class="session-grade">3級</p>
+                <h3>2025年度 第1回</h3>
+              </div>
+              <div class="session-status"><span>公開中</span><small>生徒用1版＋指導教案</small></div>
+            </header>
+            <div class="document-list">
+              <article class="document-row">
+                <div class="document-icon" aria-hidden="true">W</div>
+                <div class="document-copy">
+                  <div class="document-title-line">
+                    <p class="document-audience">生徒配付用</p>
+                    <span>15ページ</span>
+                  </div>
+                  <h4>サポート版</h4>
+                  <p>見本と具体的な手順を示し、迷わず筆写を始められる生徒用ワークです。</p>
+                </div>
+                <div class="document-actions" aria-label="3級 2025年度 第1回 サポート版の操作">
+                  <a class="document-button document-view" href="/materials/grade3/2025-1/workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第1回 サポート版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                  <a class="document-button document-download" href="/materials/grade3/2025-1/workbook.pdf" download="ReadPass_3級_2025-1_サポート版.pdf" aria-label="3級 2025年度 第1回 サポート版のPDFをダウンロード">ダウンロード</a>
+                </div>
+              </article>
+              <article class="document-row document-row-guide">
+                <div class="document-icon" aria-hidden="true">T</div>
+                <div class="document-copy">
+                  <div class="document-title-line">
+                    <p class="document-audience">講師用</p>
+                    <span>9ページ</span>
+                  </div>
+                  <h4>指導教案</h4>
+                  <p>解答・記入例と指導上の確認点をまとめた講師用資料です。</p>
+                </div>
+                <div class="document-actions" aria-label="3級 2025年度 第1回 指導教案の操作">
+                  <a class="document-button document-view" href="/materials/grade3/2025-1/teaching-guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第1回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                  <a class="document-button document-download" href="/materials/grade3/2025-1/teaching-guide.pdf" download="ReadPass_3級_2025-1_指導教案.pdf" aria-label="3級 2025年度 第1回 指導教案のPDFをダウンロード">ダウンロード</a>
+                </div>
+              </article>
+            </div>
+          </article>
+          </div>
+          <p class="catalog-empty" data-catalog-empty hidden>該当する教材はまだ登録されていません。</p>
+          <!-- MATERIAL_CATALOG_END -->
           <p class="internal-note"><strong>社内利用について</strong> 教室内での指導・印刷に使用し、外部への共有・再配布は行わないでください。</p>
+
+          <section id="profiles" class="profile-guide" aria-labelledby="profiles-title">
+            <div class="profile-guide-head">
+              <p class="eyebrow">HOW TO CHOOSE</p>
+              <h2 id="profiles-title">生徒に合わせた版の選び方</h2>
+              <p>どちらの版も扱う問題と学習目標は同じです。自力で作業を始められる量に合わせて選びます。</p>
+            </div>
+            <div class="profile-grid">
+              <article>
+                <span>STUDENT · SUPPORT</span>
+                <h3>サポート版</h3>
+                <p>「どこを見て、何を書くか」が分かりにくい生徒向け。見本や書き出しを確認してから手を動かします。</p>
+                <strong>迷って止まりやすい生徒／初回の導入に</strong>
+              </article>
+              <article>
+                <span>STUDENT · STANDARD</span>
+                <h3>標準版</h3>
+                <p>本文から根拠を探し、自分で書いてから確認したい生徒向け。探す作業を先に置いています。</p>
+                <strong>自力で本文をたどれる生徒／定着確認に</strong>
+              </article>
+              <article class="profile-guide-teacher">
+                <span>INSTRUCTOR</span>
+                <h3>指導教案</h3>
+                <p>サポート版・標準版で共通して使います。解答、記入例、根拠英文、声かけの要点を確認できます。</p>
+                <strong>授業準備・巡回・記入確認に</strong>
+              </article>
+            </div>
+          </section>
         </div>
       </section>
 
@@ -239,7 +365,7 @@
               <div class="type-index">B</div>
               <p class="type-label">DIALOGUE</p>
               <h3>会話文</h3>
-              <p>空所直前の相手の文と正しい返事をA・Bで写し、一人で2役を読みます。</p>
+              <p>空所の直前にある1文と正しい返事をA・Bで写し、一人で2役を読みます。</p>
               <ul><li>会話を2文筆写</li><li>A・Bを分けて確認</li><li>一人で2役音読</li></ul>
             </article>
             <article class="type-card reveal">
@@ -280,28 +406,6 @@
         </div>
       </section>
 
-      <section id="roadmap" class="section roadmap-section">
-        <div class="container">
-          <div class="section-number reveal"><span>04</span><small>PROTOTYPE</small></div>
-          <div class="roadmap-grid">
-            <div class="roadmap-copy reveal">
-              <p class="eyebrow">START SMALL, IMPROVE CAREFULLY</p>
-              <h2>まず1回分で、<br />作成方針を確かめる。</h2>
-              <p>
-                まずは、3級相当・2025年度第1回に対応する教室内プロトタイプを初版として用意しました。
-                生徒が迷わず始められるか、書く量が適切か、授業で確認しやすいかを見ながら整えます。
-              </p>
-              <p>基本方針が固まった段階で、ほかの試験回・級へ順次広げる予定です。</p>
-            </div>
-            <div class="roadmap-list reveal">
-              <div class="roadmap-item active"><span>NOW</span><strong>3級相当・2025年度 第1回</strong><small>ワークブック本体15ページ／指導教案9ページ</small></div>
-              <div class="roadmap-item"><span>NEXT</span><strong>同じ級のほかの試験回</strong><small>授業での検証後に追加</small></div>
-              <div class="roadmap-item"><span>FUTURE</span><strong>ほかの級へ展開</strong><small>難度に合わせて筆写量を調整</small></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="trial" class="trial-section">
         <div class="trial-inner container reveal">
           <p class="eyebrow">LESSON FLOW</p>
@@ -309,7 +413,7 @@
           <p>
             授業では、先にReadPassで問題を解き、答えと解説を確認します。その後、生徒用ワークブックで筆写・意味確認・和訳・音読へ進みます。
           </p>
-          <a class="button button-yellow" href="#materials">教材PDFへ戻る <span aria-hidden="true">↑</span></a>
+          <a class="button button-yellow" href="#materials">教材ライブラリへ戻る <span aria-hidden="true">↑</span></a>
           <small>※本ページと掲載教材は社内利用専用です。</small>
         </div>
       </section>

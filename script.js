@@ -26,6 +26,83 @@ window.addEventListener(
   { passive: true },
 );
 
+const gradeFilter = document.querySelector("[data-grade-filter]");
+const yearFilter = document.querySelector("[data-year-filter]");
+const filterReset = document.querySelector("[data-filter-reset]");
+const catalogCards = [...document.querySelectorAll("[data-catalog-card]")];
+const resultCount = document.querySelector("[data-result-count]");
+const catalogEmpty = document.querySelector("[data-catalog-empty]");
+
+const optionExists = (select, value) =>
+  [...(select?.options ?? [])].some((option) => option.value === value);
+
+const updateCatalog = ({ updateUrl = false, clearHash = false } = {}) => {
+  if (!gradeFilter || !yearFilter) return;
+  const grade = optionExists(gradeFilter, gradeFilter.value) ? gradeFilter.value : "all";
+  const year = optionExists(yearFilter, yearFilter.value) ? yearFilter.value : "all";
+  let visibleSessions = 0;
+  let visibleDocuments = 0;
+
+  catalogCards.forEach((card) => {
+    const matchesGrade = grade === "all" || card.dataset.grade === grade;
+    const matchesYear = year === "all" || card.dataset.year === year;
+    const visible = matchesGrade && matchesYear;
+    card.hidden = !visible;
+    if (visible) {
+      visibleSessions += 1;
+      visibleDocuments += card.querySelectorAll(".document-row").length;
+    }
+  });
+
+  if (resultCount) {
+    resultCount.textContent = `${visibleSessions}回分・PDF ${visibleDocuments}点を表示中`;
+  }
+  if (catalogEmpty) catalogEmpty.hidden = visibleSessions !== 0;
+
+  if (updateUrl) {
+    const url = new URL(window.location.href);
+    grade === "all" ? url.searchParams.delete("grade") : url.searchParams.set("grade", grade);
+    year === "all" ? url.searchParams.delete("year") : url.searchParams.set("year", year);
+    if (clearHash) url.hash = "";
+    history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+  }
+};
+
+const syncCatalogFromLocation = () => {
+  if (!gradeFilter || !yearFilter) return;
+  const url = new URL(window.location.href);
+  const hashId = decodeURIComponent(url.hash.slice(1));
+  const hashTarget = hashId ? document.getElementById(hashId) : null;
+
+  let grade = optionExists(gradeFilter, url.searchParams.get("grade"))
+    ? url.searchParams.get("grade")
+    : "all";
+  let year = optionExists(yearFilter, url.searchParams.get("year"))
+    ? url.searchParams.get("year")
+    : "all";
+
+  if (hashTarget?.matches("[data-catalog-card]")) {
+    grade = hashTarget.dataset.grade;
+    year = hashTarget.dataset.year;
+  }
+
+  gradeFilter.value = grade;
+  yearFilter.value = year;
+  updateCatalog();
+};
+
+gradeFilter?.addEventListener("change", () => updateCatalog({ updateUrl: true, clearHash: true }));
+yearFilter?.addEventListener("change", () => updateCatalog({ updateUrl: true, clearHash: true }));
+filterReset?.addEventListener("click", () => {
+  gradeFilter.value = "all";
+  yearFilter.value = "all";
+  updateCatalog({ updateUrl: true, clearHash: true });
+  gradeFilter.focus();
+});
+window.addEventListener("popstate", syncCatalogFromLocation);
+window.addEventListener("hashchange", syncCatalogFromLocation);
+syncCatalogFromLocation();
+
 const sampleContent = {
   short: {
     number: "Q 01",
@@ -73,7 +150,7 @@ const updateSample = (key) => {
   samplePanel.querySelector(".sample-done span").textContent = content.done;
 
   sampleTabs.forEach((tab) => tab.setAttribute("aria-selected", String(tab.dataset.sample === key)));
-  samplePanel.animate(
+  samplePanel.animate?.(
     [
       { opacity: 0.55, transform: "translateY(5px)" },
       { opacity: 1, transform: "translateY(0)" },
