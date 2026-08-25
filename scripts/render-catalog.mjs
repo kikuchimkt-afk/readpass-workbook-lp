@@ -12,90 +12,87 @@ const escapeHtml = (value) =>
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
 
-const allSessions = data.grades
+const grades = [...data.grades].sort((a, b) => a.order - b.order);
+const allSessions = grades
   .flatMap((grade) => grade.sessions.map((session) => ({ ...session, grade })))
   .sort((a, b) => b.year - a.year || b.session - a.session || a.grade.order - b.grade.order);
 const years = [...new Set(allSessions.map((session) => session.year))].sort((a, b) => b - a);
+const documentTotal = allSessions.reduce((count, session) => count + session.documents.length, 0);
 
-const gradeOptions = data.grades
-  .sort((a, b) => a.order - b.order)
-  .map((grade) => `<option value="${escapeHtml(grade.slug)}">${escapeHtml(grade.label)}</option>`)
-  .join("");
 const yearOptions = years.map((year) => `<option value="${year}">${year}年度</option>`).join("");
-const latestSessionKey = (grade) =>
-  [...grade.sessions].sort((a, b) => b.year - a.year || b.session - a.session)[0].key;
 
 const renderDocument = (document, session, grade) => {
   const isGuide = document.type === "teaching-guide";
-  const icon = isGuide ? "T" : "W";
-  const kind = isGuide ? "講師用" : "生徒用";
   const ariaBase = `${grade.label} ${session.label} ${document.label}`;
   return `
-              <article class="document-row${isGuide ? " document-row-guide" : ""}">
-                <div class="document-icon" aria-hidden="true">${icon}</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">${escapeHtml(document.audience)}</p>
-                    <span>${escapeHtml(document.pages)}ページ</span>
+                <article class="library-document${isGuide ? " library-document-guide" : ""}">
+                  <span class="library-document-icon" aria-hidden="true">${isGuide ? "教" : "生"}</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>${escapeHtml(document.audience)}</span>
+                      <span>${escapeHtml(document.pages)}ページ</span>
+                    </div>
+                    <h4>${escapeHtml(document.label)}</h4>
+                    <p>${escapeHtml(document.description)}</p>
                   </div>
-                  <h4>${escapeHtml(document.label)}</h4>
-                  <p>${escapeHtml(document.description)}</p>
-                </div>
-                <div class="document-actions" aria-label="${escapeHtml(ariaBase)}の操作">
-                  <a class="document-button document-view" href="${escapeHtml(document.path)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(ariaBase)}のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="${escapeHtml(document.path)}" download="${escapeHtml(document.downloadName)}" aria-label="${escapeHtml(ariaBase)}のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>`;
+                  <div class="library-document-actions" aria-label="${escapeHtml(ariaBase)}の操作">
+                    <a class="library-action library-action-view" href="${escapeHtml(document.path)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(ariaBase)}のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="${escapeHtml(document.path)}" download="${escapeHtml(document.downloadName)}" aria-label="${escapeHtml(ariaBase)}のPDFをダウンロード">ダウンロード</a>
+                  </div>
+                </article>`;
 };
 
 const renderSession = (session) => {
   const { grade } = session;
   const workbookCount = session.documents.filter((document) => document.type === "workbook").length;
-  const available = workbookCount === 1 ? "生徒用1版＋指導教案" : `生徒用${workbookCount}版＋指導教案`;
+  const available = workbookCount === 1 ? "生徒用＋指導教案" : `生徒用${workbookCount}版＋指導教案`;
+  const searchText = [
+    grade.label,
+    session.label,
+    ...session.documents.flatMap((document) => [document.label, document.audience]),
+  ].join(" ");
   return `
-          <article class="session-card" id="${escapeHtml(grade.slug)}-${escapeHtml(session.key)}" data-catalog-card data-grade="${escapeHtml(grade.slug)}" data-year="${session.year}">
-            <header class="session-card-head">
-              <div>
-                <p class="session-grade">${escapeHtml(grade.label)}</p>
-                <h3>${escapeHtml(session.label)}</h3>
+            <details class="session-row" id="${escapeHtml(grade.slug)}-${escapeHtml(session.key)}" data-catalog-card data-grade="${escapeHtml(grade.slug)}" data-year="${session.year}" data-search="${escapeHtml(searchText)}">
+              <summary>
+                <span class="session-primary"><span class="grade-pill">${escapeHtml(grade.label)}</span><strong>${escapeHtml(session.label)}</strong></span>
+                <span class="session-contents">${escapeHtml(available)}</span>
+                <span class="session-pdf-count">PDF ${session.documents.length}点</span>
+                <span class="session-chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="library-document-list">${session.documents.map((document) => renderDocument(document, session, grade)).join("")}
               </div>
-              <div class="session-status"><span>公開中</span><small>${escapeHtml(available)}</small></div>
-            </header>
-            <div class="document-list">${session.documents.map((document) => renderDocument(document, session, grade)).join("")}
-            </div>
-          </article>`;
+            </details>`;
 };
 
 const catalog = `
-          <div class="grade-jump" aria-label="級から教材を探す">
-            <span>収録級</span>
-            ${data.grades.map((grade) => `<a href="#${escapeHtml(grade.slug)}-${escapeHtml(latestSessionKey(grade))}">${escapeHtml(grade.label)}</a>`).join("\n            ")}
-          </div>
-
-          <form class="catalog-controls" data-catalog-controls aria-label="教材の絞り込み">
-            <label>
-              <span>級</span>
-              <select name="grade" data-grade-filter>
-                <option value="all">すべての級</option>
-                ${gradeOptions}
-              </select>
+          <div class="library-toolbar" data-catalog-controls>
+            <div class="grade-filter-block">
+              <span class="control-label">級から選ぶ</span>
+              <div class="grade-filters" aria-label="級で絞り込む">
+                <button type="button" class="is-active" data-grade-filter="all" aria-pressed="true">すべて</button>
+                ${grades.map((grade) => `<button type="button" data-grade-filter="${escapeHtml(grade.slug)}" aria-pressed="false">${escapeHtml(grade.label)}</button>`).join("")}
+              </div>
+            </div>
+            <label class="catalog-search">
+              <span class="control-label">教材を検索</span>
+              <span class="search-field"><span aria-hidden="true">⌕</span><input type="search" data-query-filter placeholder="例：3級 第2回" autocomplete="off" /></span>
             </label>
-            <label>
-              <span>年度</span>
+            <label class="catalog-year">
+              <span class="control-label">年度</span>
               <select name="year" data-year-filter>
-                <option value="all">すべての年度</option>
+                <option value="all">すべて</option>
                 ${yearOptions}
               </select>
             </label>
-            <button type="button" data-filter-reset>絞り込みを解除</button>
-          </form>
-
-          <div class="catalog-summary">
-            <p data-result-count aria-live="polite">${allSessions.length}回分・PDF ${allSessions.reduce((count, session) => count + session.documents.length, 0)}点を掲載</p>
-            <p>新しい試験回から順に表示しています。</p>
+            <button class="catalog-reset" type="button" data-filter-reset>条件をクリア</button>
           </div>
 
-          <div class="session-grid" data-session-grid>${allSessions.map(renderSession).join("")}
+          <div class="catalog-summary">
+            <p data-result-count aria-live="polite">${allSessions.length}回分・PDF ${documentTotal}点を表示中</p>
+            <p>行を選ぶと、教材PDFが開きます。</p>
+          </div>
+
+          <div class="session-list" data-session-grid>${allSessions.map(renderSession).join("")}
           </div>
           <p class="catalog-empty" data-catalog-empty hidden>該当する教材はまだ登録されていません。</p>`;
 

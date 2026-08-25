@@ -22,82 +22,108 @@ navigation?.querySelectorAll("a").forEach((link) => link.addEventListener("click
 
 window.addEventListener(
   "scroll",
-  () => header?.classList.toggle("is-scrolled", window.scrollY > 20),
+  () => header?.classList.toggle("is-scrolled", window.scrollY > 16),
   { passive: true },
 );
 
-const gradeFilter = document.querySelector("[data-grade-filter]");
+const gradeFilters = [...document.querySelectorAll("[data-grade-filter]")];
 const yearFilter = document.querySelector("[data-year-filter]");
+const queryFilter = document.querySelector("[data-query-filter]");
 const filterReset = document.querySelector("[data-filter-reset]");
 const catalogCards = [...document.querySelectorAll("[data-catalog-card]")];
 const resultCount = document.querySelector("[data-result-count]");
 const catalogEmpty = document.querySelector("[data-catalog-empty]");
+let activeGrade = "all";
 
+const availableGrades = new Set(gradeFilters.map((button) => button.dataset.gradeFilter));
 const optionExists = (select, value) =>
   [...(select?.options ?? [])].some((option) => option.value === value);
+const normalizeSearch = (value) => String(value ?? "").toLocaleLowerCase("ja").trim();
+const matchesSearch = (searchText, query) => {
+  const haystack = normalizeSearch(searchText);
+  return normalizeSearch(query)
+    .split(/\s+/)
+    .filter(Boolean)
+    .every((term) => haystack.includes(term));
+};
+
+const updateGradeButtons = () => {
+  gradeFilters.forEach((button) => {
+    const selected = button.dataset.gradeFilter === activeGrade;
+    button.classList.toggle("is-active", selected);
+    button.setAttribute("aria-pressed", String(selected));
+  });
+};
 
 const updateCatalog = ({ updateUrl = false, clearHash = false } = {}) => {
-  if (!gradeFilter || !yearFilter) return;
-  const grade = optionExists(gradeFilter, gradeFilter.value) ? gradeFilter.value : "all";
+  if (!yearFilter || !queryFilter) return;
   const year = optionExists(yearFilter, yearFilter.value) ? yearFilter.value : "all";
+  const query = normalizeSearch(queryFilter.value);
   let visibleSessions = 0;
   let visibleDocuments = 0;
 
   catalogCards.forEach((card) => {
-    const matchesGrade = grade === "all" || card.dataset.grade === grade;
+    const matchesGrade = activeGrade === "all" || card.dataset.grade === activeGrade;
     const matchesYear = year === "all" || card.dataset.year === year;
-    const visible = matchesGrade && matchesYear;
+    const matchesQuery = !query || matchesSearch(card.dataset.search, query);
+    const visible = matchesGrade && matchesYear && matchesQuery;
     card.hidden = !visible;
+    if (!visible) card.open = false;
     if (visible) {
       visibleSessions += 1;
-      visibleDocuments += card.querySelectorAll(".document-row").length;
+      visibleDocuments += card.querySelectorAll(".library-document").length;
     }
   });
 
-  if (resultCount) {
-    resultCount.textContent = `${visibleSessions}回分・PDF ${visibleDocuments}点を表示中`;
-  }
+  updateGradeButtons();
+  if (resultCount) resultCount.textContent = `${visibleSessions}回分・PDF ${visibleDocuments}点を表示中`;
   if (catalogEmpty) catalogEmpty.hidden = visibleSessions !== 0;
 
   if (updateUrl) {
     const url = new URL(window.location.href);
-    grade === "all" ? url.searchParams.delete("grade") : url.searchParams.set("grade", grade);
+    activeGrade === "all" ? url.searchParams.delete("grade") : url.searchParams.set("grade", activeGrade);
     year === "all" ? url.searchParams.delete("year") : url.searchParams.set("year", year);
+    query ? url.searchParams.set("q", queryFilter.value.trim()) : url.searchParams.delete("q");
     if (clearHash) url.hash = "";
     history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
   }
 };
 
 const syncCatalogFromLocation = () => {
-  if (!gradeFilter || !yearFilter) return;
+  if (!yearFilter || !queryFilter) return;
   const url = new URL(window.location.href);
   const hashId = decodeURIComponent(url.hash.slice(1));
   const hashTarget = hashId ? document.getElementById(hashId) : null;
-
-  let grade = optionExists(gradeFilter, url.searchParams.get("grade"))
-    ? url.searchParams.get("grade")
-    : "all";
-  let year = optionExists(yearFilter, url.searchParams.get("year"))
+  const requestedGrade = url.searchParams.get("grade");
+  activeGrade = availableGrades.has(requestedGrade) ? requestedGrade : "all";
+  yearFilter.value = optionExists(yearFilter, url.searchParams.get("year"))
     ? url.searchParams.get("year")
     : "all";
+  queryFilter.value = url.searchParams.get("q") ?? "";
 
   if (hashTarget?.matches("[data-catalog-card]")) {
-    grade = hashTarget.dataset.grade;
-    year = hashTarget.dataset.year;
+    activeGrade = hashTarget.dataset.grade;
+    yearFilter.value = hashTarget.dataset.year;
+    queryFilter.value = "";
+    hashTarget.open = true;
   }
-
-  gradeFilter.value = grade;
-  yearFilter.value = year;
   updateCatalog();
 };
 
-gradeFilter?.addEventListener("change", () => updateCatalog({ updateUrl: true, clearHash: true }));
+gradeFilters.forEach((button) => {
+  button.addEventListener("click", () => {
+    activeGrade = button.dataset.gradeFilter;
+    updateCatalog({ updateUrl: true, clearHash: true });
+  });
+});
 yearFilter?.addEventListener("change", () => updateCatalog({ updateUrl: true, clearHash: true }));
+queryFilter?.addEventListener("input", () => updateCatalog({ updateUrl: true, clearHash: true }));
 filterReset?.addEventListener("click", () => {
-  gradeFilter.value = "all";
+  activeGrade = "all";
   yearFilter.value = "all";
+  queryFilter.value = "";
   updateCatalog({ updateUrl: true, clearHash: true });
-  gradeFilter.focus();
+  gradeFilters[0]?.focus();
 });
 window.addEventListener("popstate", syncCatalogFromLocation);
 window.addEventListener("hashchange", syncCatalogFromLocation);
@@ -162,7 +188,7 @@ const updateSample = (key) => {
 sampleTabs.forEach((tab, index) => {
   tab.addEventListener("click", () => updateSample(tab.dataset.sample));
   tab.addEventListener("keydown", (event) => {
-    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+    if (!["ArrowLeft", "ArrowRight"].includes(event.key)) return;
     event.preventDefault();
     const direction = event.key === "ArrowRight" ? 1 : -1;
     const nextIndex = (index + direction + sampleTabs.length) % sampleTabs.length;

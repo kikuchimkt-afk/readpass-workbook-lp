@@ -7,7 +7,7 @@
       name="description"
       content="PenPassは、ReadPass連動 かきこみワークを級・年度・回から選んで閲覧・ダウンロードできる社内教材ライブラリです。"
     />
-    <meta name="theme-color" content="#0b3b32" />
+    <meta name="theme-color" content="#36afe7" />
     <meta name="robots" content="noindex, nofollow, noarchive" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ja_JP" />
@@ -18,6 +18,9 @@
     />
     <title>PenPass｜ReadPass連動 かきこみワーク</title>
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet" />
     <script>document.documentElement.classList.add("js");</script>
     <link rel="stylesheet" href="/styles.css" />
     <script src="/script.js" defer></script>
@@ -28,7 +31,7 @@
     <header class="site-header" data-header>
       <div class="header-inner">
         <a class="brand" href="#top" aria-label="ページの先頭へ">
-          <span class="brand-mark" aria-hidden="true">P<span>P</span></span>
+          <img class="brand-mark" src="/assets/favicon.svg" alt="" width="46" height="46" />
           <span class="brand-copy">
             <strong>PenPass</strong>
             <small>ReadPass連動 かきこみワーク</small>
@@ -49,18 +52,16 @@
     </header>
 
     <main id="main">
-      <section id="top" class="hero portal-hero">
-        <div class="portal-hero-grid container">
+      <section id="top" class="hero">
+        <div class="hero-grid container">
           <div class="hero-copy reveal">
             <p class="hero-badge">ECCベストワン北島中央校｜社内教材ポータル</p>
-            <div class="hero-product-lockup" aria-label="PenPass、ReadPass連動 かきこみワーク">
-              <p class="hero-kicker">PENPASS</p>
-              <p class="hero-product-subtitle">ReadPass連動 かきこみワーク</p>
-            </div>
-            <h1><span>必要な回を、すぐ開く。</span><em>授業で使う教材を、<br />ひとつの場所に。</em></h1>
+            <h1 class="hero-wordmark" lang="en">PenPass</h1>
+            <p class="hero-product-subtitle">ReadPass連動 かきこみワーク</p>
+            <p class="hero-concept">アプリで解く。紙に書く。授業で確かめる。</p>
             <p class="hero-lead">
-              級・年度・回を選び、生徒用ワークブックと講師用の指導教案を閲覧・ダウンロードできます。
-              受験層に合わせた共通版、またはサポート版・標準版から選べます。
+              ReadPassで得た「わかった」を、筆写・意味確認・和訳・音読へつなぐ授業用ワークです。
+              生徒用ワークブックと講師用の指導教案を、級・年度・回からすぐに選べます。
             </p>
             <div class="hero-actions">
               <a class="button button-primary" href="#materials">教材ライブラリを開く</a>
@@ -68,17 +69,10 @@
             </div>
             <p class="hero-note">社内利用専用です。教材単体での販売・外部への共有は行っていません。</p>
           </div>
-          <aside class="portal-summary reveal" aria-labelledby="portal-summary-title">
-            <p class="portal-summary-label">LIBRARY GUIDE</p>
-            <h2 id="portal-summary-title">教材の探し方</h2>
-            <dl>
-              <div><dt>1</dt><dd>級を選ぶ</dd></div>
-              <div><dt>2</dt><dd>年度・回を選ぶ</dd></div>
-              <div><dt>生徒用</dt><dd>共通版／サポート版／標準版</dd></div>
-              <div><dt>講師用</dt><dd>試験回ごとの指導教案</dd></div>
-            </dl>
-            <p>追加した級・試験回も、同じ教材一覧から選べます。</p>
-          </aside>
+          <figure class="hero-photo reveal">
+            <img src="/assets/images/penpass-hero-learning.webp" alt="英語ワークに鉛筆で書き込む生徒" width="1600" height="900" fetchpriority="high" />
+            <figcaption><span>READ · WRITE · REMEMBER</span><strong>手を動かした分だけ、学びを残す。</strong></figcaption>
+          </figure>
         </div>
       </section>
 
@@ -95,620 +89,604 @@
             </p>
           </div>
           <!-- MATERIAL_CATALOG_START -->
-          <div class="grade-jump" aria-label="級から教材を探す">
-            <span>収録級</span>
-            <a href="#grade-pre2-2025-3">準2級</a>
-            <a href="#grade3-2025-3">3級</a>
-            <a href="#grade4-2025-3">4級</a>
-            <a href="#grade5-2025-3">5級</a>
-          </div>
-
-          <form class="catalog-controls" data-catalog-controls aria-label="教材の絞り込み">
-            <label>
-              <span>級</span>
-              <select name="grade" data-grade-filter>
-                <option value="all">すべての級</option>
-                <option value="grade-pre2">準2級</option><option value="grade3">3級</option><option value="grade4">4級</option><option value="grade5">5級</option>
-              </select>
+          <div class="library-toolbar" data-catalog-controls>
+            <div class="grade-filter-block">
+              <span class="control-label">級から選ぶ</span>
+              <div class="grade-filters" aria-label="級で絞り込む">
+                <button type="button" class="is-active" data-grade-filter="all" aria-pressed="true">すべて</button>
+                <button type="button" data-grade-filter="grade-pre2" aria-pressed="false">準2級</button><button type="button" data-grade-filter="grade3" aria-pressed="false">3級</button><button type="button" data-grade-filter="grade4" aria-pressed="false">4級</button><button type="button" data-grade-filter="grade5" aria-pressed="false">5級</button>
+              </div>
+            </div>
+            <label class="catalog-search">
+              <span class="control-label">教材を検索</span>
+              <span class="search-field"><span aria-hidden="true">⌕</span><input type="search" data-query-filter placeholder="例：3級 第2回" autocomplete="off" /></span>
             </label>
-            <label>
-              <span>年度</span>
+            <label class="catalog-year">
+              <span class="control-label">年度</span>
               <select name="year" data-year-filter>
-                <option value="all">すべての年度</option>
+                <option value="all">すべて</option>
                 <option value="2025">2025年度</option>
               </select>
             </label>
-            <button type="button" data-filter-reset>絞り込みを解除</button>
-          </form>
-
-          <div class="catalog-summary">
-            <p data-result-count aria-live="polite">12回分・PDF 30点を掲載</p>
-            <p>新しい試験回から順に表示しています。</p>
+            <button class="catalog-reset" type="button" data-filter-reset>条件をクリア</button>
           </div>
 
-          <div class="session-grid" data-session-grid>
-          <article class="session-card" id="grade-pre2-2025-3" data-catalog-card data-grade="grade-pre2" data-year="2025">
-            <header class="session-card-head">
-              <div>
-                <p class="session-grade">準2級</p>
-                <h3>2025年度 第3回</h3>
+          <div class="catalog-summary">
+            <p data-result-count aria-live="polite">12回分・PDF 30点を表示中</p>
+            <p>行を選ぶと、教材PDFが開きます。</p>
+          </div>
+
+          <div class="session-list" data-session-grid>
+            <details class="session-row" id="grade-pre2-2025-3" data-catalog-card data-grade="grade-pre2" data-year="2025" data-search="準2級 2025年度 第3回 サポート版 生徒配付用 標準版 生徒配付用 指導教案 講師用">
+              <summary>
+                <span class="session-primary"><span class="grade-pill">準2級</span><strong>2025年度 第3回</strong></span>
+                <span class="session-contents">生徒用2版＋指導教案</span>
+                <span class="session-pdf-count">PDF 3点</span>
+                <span class="session-chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="library-document-list">
+                <article class="library-document">
+                  <span class="library-document-icon" aria-hidden="true">生</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>生徒配付用</span>
+                      <span>15ページ</span>
+                    </div>
+                    <h4>サポート版</h4>
+                    <p>完成見本・意味の区切り・主語／動詞の手掛かりを先に示す版です。</p>
+                  </div>
+                  <div class="library-document-actions" aria-label="準2級 2025年度 第3回 サポート版の操作">
+                    <a class="library-action library-action-view" href="/materials/grade-pre2/2025-3/ReadPass_EIKEN_GradePre2_2025-3_Student_Support_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="準2級 2025年度 第3回 サポート版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade-pre2/2025-3/ReadPass_EIKEN_GradePre2_2025-3_Student_Support_Workbook.pdf" download="ReadPass_EIKEN_GradePre2_2025-3_Student_Support_Workbook.pdf" aria-label="準2級 2025年度 第3回 サポート版のPDFをダウンロード">ダウンロード</a>
+                  </div>
+                </article>
+                <article class="library-document">
+                  <span class="library-document-icon" aria-hidden="true">生</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>生徒配付用</span>
+                      <span>15ページ</span>
+                    </div>
+                    <h4>標準版</h4>
+                    <p>自分で根拠を探して書いたあと、正しい英文と2つの訳で照合する版です。</p>
+                  </div>
+                  <div class="library-document-actions" aria-label="準2級 2025年度 第3回 標準版の操作">
+                    <a class="library-action library-action-view" href="/materials/grade-pre2/2025-3/ReadPass_EIKEN_GradePre2_2025-3_Student_Standard_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="準2級 2025年度 第3回 標準版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade-pre2/2025-3/ReadPass_EIKEN_GradePre2_2025-3_Student_Standard_Workbook.pdf" download="ReadPass_EIKEN_GradePre2_2025-3_Student_Standard_Workbook.pdf" aria-label="準2級 2025年度 第3回 標準版のPDFをダウンロード">ダウンロード</a>
+                  </div>
+                </article>
+                <article class="library-document library-document-guide">
+                  <span class="library-document-icon" aria-hidden="true">教</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>講師用</span>
+                      <span>8ページ</span>
+                    </div>
+                    <h4>指導教案</h4>
+                    <p>全29問の解答・完成英文・根拠英文・2つの訳・指導上の確認点をまとめた共通教案です。</p>
+                  </div>
+                  <div class="library-document-actions" aria-label="準2級 2025年度 第3回 指導教案の操作">
+                    <a class="library-action library-action-view" href="/materials/grade-pre2/2025-3/ReadPass_EIKEN_GradePre2_2025-3_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="準2級 2025年度 第3回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade-pre2/2025-3/ReadPass_EIKEN_GradePre2_2025-3_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_GradePre2_2025-3_Instructor_Teaching_Guide.pdf" aria-label="準2級 2025年度 第3回 指導教案のPDFをダウンロード">ダウンロード</a>
+                  </div>
+                </article>
               </div>
-              <div class="session-status"><span>公開中</span><small>生徒用2版＋指導教案</small></div>
-            </header>
-            <div class="document-list">
-              <article class="document-row">
-                <div class="document-icon" aria-hidden="true">W</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">生徒配付用</p>
-                    <span>15ページ</span>
+            </details>
+            <details class="session-row" id="grade3-2025-3" data-catalog-card data-grade="grade3" data-year="2025" data-search="3級 2025年度 第3回 サポート版 生徒配付用 標準版 生徒配付用 指導教案 講師用">
+              <summary>
+                <span class="session-primary"><span class="grade-pill">3級</span><strong>2025年度 第3回</strong></span>
+                <span class="session-contents">生徒用2版＋指導教案</span>
+                <span class="session-pdf-count">PDF 3点</span>
+                <span class="session-chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="library-document-list">
+                <article class="library-document">
+                  <span class="library-document-icon" aria-hidden="true">生</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>生徒配付用</span>
+                      <span>15ページ</span>
+                    </div>
+                    <h4>サポート版</h4>
+                    <p>見本・書き出し・確認訳を先に示し、迷わず筆写を始められる版です。</p>
                   </div>
-                  <h4>サポート版</h4>
-                  <p>完成見本・意味の区切り・主語／動詞の手掛かりを先に示す版です。</p>
-                </div>
-                <div class="document-actions" aria-label="準2級 2025年度 第3回 サポート版の操作">
-                  <a class="document-button document-view" href="/materials/grade-pre2/2025-3/ReadPass_EIKEN_GradePre2_2025-3_Student_Support_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="準2級 2025年度 第3回 サポート版のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade-pre2/2025-3/ReadPass_EIKEN_GradePre2_2025-3_Student_Support_Workbook.pdf" download="ReadPass_EIKEN_GradePre2_2025-3_Student_Support_Workbook.pdf" aria-label="準2級 2025年度 第3回 サポート版のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-              <article class="document-row">
-                <div class="document-icon" aria-hidden="true">W</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">生徒配付用</p>
-                    <span>15ページ</span>
+                  <div class="library-document-actions" aria-label="3級 2025年度 第3回 サポート版の操作">
+                    <a class="library-action library-action-view" href="/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Student_Support_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第3回 サポート版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Student_Support_Workbook.pdf" download="ReadPass_EIKEN_Grade3_2025-3_Student_Support_Workbook.pdf" aria-label="3級 2025年度 第3回 サポート版のPDFをダウンロード">ダウンロード</a>
                   </div>
-                  <h4>標準版</h4>
-                  <p>自分で根拠を探して書いたあと、正しい英文と2つの訳で照合する版です。</p>
-                </div>
-                <div class="document-actions" aria-label="準2級 2025年度 第3回 標準版の操作">
-                  <a class="document-button document-view" href="/materials/grade-pre2/2025-3/ReadPass_EIKEN_GradePre2_2025-3_Student_Standard_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="準2級 2025年度 第3回 標準版のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade-pre2/2025-3/ReadPass_EIKEN_GradePre2_2025-3_Student_Standard_Workbook.pdf" download="ReadPass_EIKEN_GradePre2_2025-3_Student_Standard_Workbook.pdf" aria-label="準2級 2025年度 第3回 標準版のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-              <article class="document-row document-row-guide">
-                <div class="document-icon" aria-hidden="true">T</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">講師用</p>
-                    <span>8ページ</span>
+                </article>
+                <article class="library-document">
+                  <span class="library-document-icon" aria-hidden="true">生</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>生徒配付用</span>
+                      <span>15ページ</span>
+                    </div>
+                    <h4>標準版</h4>
+                    <p>自分で本文を探して書いたあと、確認訳と照合する版です。</p>
                   </div>
-                  <h4>指導教案</h4>
-                  <p>全29問の解答・完成英文・根拠英文・2つの訳・指導上の確認点をまとめた共通教案です。</p>
-                </div>
-                <div class="document-actions" aria-label="準2級 2025年度 第3回 指導教案の操作">
-                  <a class="document-button document-view" href="/materials/grade-pre2/2025-3/ReadPass_EIKEN_GradePre2_2025-3_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="準2級 2025年度 第3回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade-pre2/2025-3/ReadPass_EIKEN_GradePre2_2025-3_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_GradePre2_2025-3_Instructor_Teaching_Guide.pdf" aria-label="準2級 2025年度 第3回 指導教案のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-            </div>
-          </article>
-          <article class="session-card" id="grade3-2025-3" data-catalog-card data-grade="grade3" data-year="2025">
-            <header class="session-card-head">
-              <div>
-                <p class="session-grade">3級</p>
-                <h3>2025年度 第3回</h3>
+                  <div class="library-document-actions" aria-label="3級 2025年度 第3回 標準版の操作">
+                    <a class="library-action library-action-view" href="/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Student_Standard_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第3回 標準版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Student_Standard_Workbook.pdf" download="ReadPass_EIKEN_Grade3_2025-3_Student_Standard_Workbook.pdf" aria-label="3級 2025年度 第3回 標準版のPDFをダウンロード">ダウンロード</a>
+                  </div>
+                </article>
+                <article class="library-document library-document-guide">
+                  <span class="library-document-icon" aria-hidden="true">教</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>講師用</span>
+                      <span>9ページ</span>
+                    </div>
+                    <h4>指導教案</h4>
+                    <p>解答・記入例・根拠英文・指導上の確認点をまとめた共通教案です。</p>
+                  </div>
+                  <div class="library-document-actions" aria-label="3級 2025年度 第3回 指導教案の操作">
+                    <a class="library-action library-action-view" href="/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第3回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_Grade3_2025-3_Instructor_Teaching_Guide.pdf" aria-label="3級 2025年度 第3回 指導教案のPDFをダウンロード">ダウンロード</a>
+                  </div>
+                </article>
               </div>
-              <div class="session-status"><span>公開中</span><small>生徒用2版＋指導教案</small></div>
-            </header>
-            <div class="document-list">
-              <article class="document-row">
-                <div class="document-icon" aria-hidden="true">W</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">生徒配付用</p>
-                    <span>15ページ</span>
+            </details>
+            <details class="session-row" id="grade4-2025-3" data-catalog-card data-grade="grade4" data-year="2025" data-search="4級 2025年度 第3回 共通版 生徒配付用 指導教案 講師用">
+              <summary>
+                <span class="session-primary"><span class="grade-pill">4級</span><strong>2025年度 第3回</strong></span>
+                <span class="session-contents">生徒用＋指導教案</span>
+                <span class="session-pdf-count">PDF 2点</span>
+                <span class="session-chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="library-document-list">
+                <article class="library-document">
+                  <span class="library-document-icon" aria-hidden="true">生</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>生徒配付用</span>
+                      <span>24ページ</span>
+                    </div>
+                    <h4>共通版</h4>
+                    <p>小学校高学年から取り組めるよう、見る場所・書く内容・回数を1動作ずつ示した筆写中心のワークです。</p>
                   </div>
-                  <h4>サポート版</h4>
-                  <p>見本・書き出し・確認訳を先に示し、迷わず筆写を始められる版です。</p>
-                </div>
-                <div class="document-actions" aria-label="3級 2025年度 第3回 サポート版の操作">
-                  <a class="document-button document-view" href="/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Student_Support_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第3回 サポート版のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Student_Support_Workbook.pdf" download="ReadPass_EIKEN_Grade3_2025-3_Student_Support_Workbook.pdf" aria-label="3級 2025年度 第3回 サポート版のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-              <article class="document-row">
-                <div class="document-icon" aria-hidden="true">W</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">生徒配付用</p>
-                    <span>15ページ</span>
+                  <div class="library-document-actions" aria-label="4級 2025年度 第3回 共通版の操作">
+                    <a class="library-action library-action-view" href="/materials/grade4/2025-3/ReadPass_EIKEN_Grade4_2025-3_Student_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="4級 2025年度 第3回 共通版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade4/2025-3/ReadPass_EIKEN_Grade4_2025-3_Student_Workbook.pdf" download="ReadPass_EIKEN_Grade4_2025-3_Student_Workbook.pdf" aria-label="4級 2025年度 第3回 共通版のPDFをダウンロード">ダウンロード</a>
                   </div>
-                  <h4>標準版</h4>
-                  <p>自分で本文を探して書いたあと、確認訳と照合する版です。</p>
-                </div>
-                <div class="document-actions" aria-label="3級 2025年度 第3回 標準版の操作">
-                  <a class="document-button document-view" href="/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Student_Standard_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第3回 標準版のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Student_Standard_Workbook.pdf" download="ReadPass_EIKEN_Grade3_2025-3_Student_Standard_Workbook.pdf" aria-label="3級 2025年度 第3回 標準版のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-              <article class="document-row document-row-guide">
-                <div class="document-icon" aria-hidden="true">T</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">講師用</p>
-                    <span>9ページ</span>
+                </article>
+                <article class="library-document library-document-guide">
+                  <span class="library-document-icon" aria-hidden="true">教</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>講師用</span>
+                      <span>8ページ</span>
+                    </div>
+                    <h4>指導教案</h4>
+                    <p>全35問の正答・完成英文・不正解語の意味・根拠英文・2つの訳・低学年への声かけをまとめた教案です。</p>
                   </div>
-                  <h4>指導教案</h4>
-                  <p>解答・記入例・根拠英文・指導上の確認点をまとめた共通教案です。</p>
-                </div>
-                <div class="document-actions" aria-label="3級 2025年度 第3回 指導教案の操作">
-                  <a class="document-button document-view" href="/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第3回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_Grade3_2025-3_Instructor_Teaching_Guide.pdf" aria-label="3級 2025年度 第3回 指導教案のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-            </div>
-          </article>
-          <article class="session-card" id="grade4-2025-3" data-catalog-card data-grade="grade4" data-year="2025">
-            <header class="session-card-head">
-              <div>
-                <p class="session-grade">4級</p>
-                <h3>2025年度 第3回</h3>
+                  <div class="library-document-actions" aria-label="4級 2025年度 第3回 指導教案の操作">
+                    <a class="library-action library-action-view" href="/materials/grade4/2025-3/ReadPass_EIKEN_Grade4_2025-3_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="4級 2025年度 第3回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade4/2025-3/ReadPass_EIKEN_Grade4_2025-3_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_Grade4_2025-3_Instructor_Teaching_Guide.pdf" aria-label="4級 2025年度 第3回 指導教案のPDFをダウンロード">ダウンロード</a>
+                  </div>
+                </article>
               </div>
-              <div class="session-status"><span>公開中</span><small>生徒用1版＋指導教案</small></div>
-            </header>
-            <div class="document-list">
-              <article class="document-row">
-                <div class="document-icon" aria-hidden="true">W</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">生徒配付用</p>
-                    <span>24ページ</span>
+            </details>
+            <details class="session-row" id="grade5-2025-3" data-catalog-card data-grade="grade5" data-year="2025" data-search="5級 2025年度 第3回 共通版 生徒配付用 指導教案 講師用">
+              <summary>
+                <span class="session-primary"><span class="grade-pill">5級</span><strong>2025年度 第3回</strong></span>
+                <span class="session-contents">生徒用＋指導教案</span>
+                <span class="session-pdf-count">PDF 2点</span>
+                <span class="session-chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="library-document-list">
+                <article class="library-document">
+                  <span class="library-document-icon" aria-hidden="true">生</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>生徒配付用</span>
+                      <span>13ページ</span>
+                    </div>
+                    <h4>共通版</h4>
+                    <p>小学校高学年から取り組めるよう、見る場所・書く内容・回数を1動作ずつ示した筆写中心のワークです。</p>
                   </div>
-                  <h4>共通版</h4>
-                  <p>小学校高学年から取り組めるよう、見る場所・書く内容・回数を1動作ずつ示した筆写中心のワークです。</p>
-                </div>
-                <div class="document-actions" aria-label="4級 2025年度 第3回 共通版の操作">
-                  <a class="document-button document-view" href="/materials/grade4/2025-3/ReadPass_EIKEN_Grade4_2025-3_Student_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="4級 2025年度 第3回 共通版のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade4/2025-3/ReadPass_EIKEN_Grade4_2025-3_Student_Workbook.pdf" download="ReadPass_EIKEN_Grade4_2025-3_Student_Workbook.pdf" aria-label="4級 2025年度 第3回 共通版のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-              <article class="document-row document-row-guide">
-                <div class="document-icon" aria-hidden="true">T</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">講師用</p>
-                    <span>8ページ</span>
+                  <div class="library-document-actions" aria-label="5級 2025年度 第3回 共通版の操作">
+                    <a class="library-action library-action-view" href="/materials/grade5/2025-3/ReadPass_EIKEN_Grade5_2025-3_Student_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="5級 2025年度 第3回 共通版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade5/2025-3/ReadPass_EIKEN_Grade5_2025-3_Student_Workbook.pdf" download="ReadPass_EIKEN_Grade5_2025-3_Student_Workbook.pdf" aria-label="5級 2025年度 第3回 共通版のPDFをダウンロード">ダウンロード</a>
                   </div>
-                  <h4>指導教案</h4>
-                  <p>全35問の正答・完成英文・不正解語の意味・根拠英文・2つの訳・低学年への声かけをまとめた教案です。</p>
-                </div>
-                <div class="document-actions" aria-label="4級 2025年度 第3回 指導教案の操作">
-                  <a class="document-button document-view" href="/materials/grade4/2025-3/ReadPass_EIKEN_Grade4_2025-3_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="4級 2025年度 第3回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade4/2025-3/ReadPass_EIKEN_Grade4_2025-3_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_Grade4_2025-3_Instructor_Teaching_Guide.pdf" aria-label="4級 2025年度 第3回 指導教案のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-            </div>
-          </article>
-          <article class="session-card" id="grade5-2025-3" data-catalog-card data-grade="grade5" data-year="2025">
-            <header class="session-card-head">
-              <div>
-                <p class="session-grade">5級</p>
-                <h3>2025年度 第3回</h3>
+                </article>
+                <article class="library-document library-document-guide">
+                  <span class="library-document-icon" aria-hidden="true">教</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>講師用</span>
+                      <span>5ページ</span>
+                    </div>
+                    <h4>指導教案</h4>
+                    <p>全25問の正答・完成英文・不正解語の意味・会話の練習文・語順・低学年への声かけをまとめた教案です。</p>
+                  </div>
+                  <div class="library-document-actions" aria-label="5級 2025年度 第3回 指導教案の操作">
+                    <a class="library-action library-action-view" href="/materials/grade5/2025-3/ReadPass_EIKEN_Grade5_2025-3_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="5級 2025年度 第3回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade5/2025-3/ReadPass_EIKEN_Grade5_2025-3_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_Grade5_2025-3_Instructor_Teaching_Guide.pdf" aria-label="5級 2025年度 第3回 指導教案のPDFをダウンロード">ダウンロード</a>
+                  </div>
+                </article>
               </div>
-              <div class="session-status"><span>公開中</span><small>生徒用1版＋指導教案</small></div>
-            </header>
-            <div class="document-list">
-              <article class="document-row">
-                <div class="document-icon" aria-hidden="true">W</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">生徒配付用</p>
-                    <span>13ページ</span>
+            </details>
+            <details class="session-row" id="grade-pre2-2025-2" data-catalog-card data-grade="grade-pre2" data-year="2025" data-search="準2級 2025年度 第2回 サポート版 生徒配付用 標準版 生徒配付用 指導教案 講師用">
+              <summary>
+                <span class="session-primary"><span class="grade-pill">準2級</span><strong>2025年度 第2回</strong></span>
+                <span class="session-contents">生徒用2版＋指導教案</span>
+                <span class="session-pdf-count">PDF 3点</span>
+                <span class="session-chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="library-document-list">
+                <article class="library-document">
+                  <span class="library-document-icon" aria-hidden="true">生</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>生徒配付用</span>
+                      <span>15ページ</span>
+                    </div>
+                    <h4>サポート版</h4>
+                    <p>完成見本・意味の区切り・主語／動詞の手掛かりを先に示す版です。</p>
                   </div>
-                  <h4>共通版</h4>
-                  <p>小学校高学年から取り組めるよう、見る場所・書く内容・回数を1動作ずつ示した筆写中心のワークです。</p>
-                </div>
-                <div class="document-actions" aria-label="5級 2025年度 第3回 共通版の操作">
-                  <a class="document-button document-view" href="/materials/grade5/2025-3/ReadPass_EIKEN_Grade5_2025-3_Student_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="5級 2025年度 第3回 共通版のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade5/2025-3/ReadPass_EIKEN_Grade5_2025-3_Student_Workbook.pdf" download="ReadPass_EIKEN_Grade5_2025-3_Student_Workbook.pdf" aria-label="5級 2025年度 第3回 共通版のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-              <article class="document-row document-row-guide">
-                <div class="document-icon" aria-hidden="true">T</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">講師用</p>
-                    <span>5ページ</span>
+                  <div class="library-document-actions" aria-label="準2級 2025年度 第2回 サポート版の操作">
+                    <a class="library-action library-action-view" href="/materials/grade-pre2/2025-2/ReadPass_EIKEN_GradePre2_2025-2_Student_Support_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="準2級 2025年度 第2回 サポート版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade-pre2/2025-2/ReadPass_EIKEN_GradePre2_2025-2_Student_Support_Workbook.pdf" download="ReadPass_EIKEN_GradePre2_2025-2_Student_Support_Workbook.pdf" aria-label="準2級 2025年度 第2回 サポート版のPDFをダウンロード">ダウンロード</a>
                   </div>
-                  <h4>指導教案</h4>
-                  <p>全25問の正答・完成英文・不正解語の意味・会話の練習文・語順・低学年への声かけをまとめた教案です。</p>
-                </div>
-                <div class="document-actions" aria-label="5級 2025年度 第3回 指導教案の操作">
-                  <a class="document-button document-view" href="/materials/grade5/2025-3/ReadPass_EIKEN_Grade5_2025-3_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="5級 2025年度 第3回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade5/2025-3/ReadPass_EIKEN_Grade5_2025-3_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_Grade5_2025-3_Instructor_Teaching_Guide.pdf" aria-label="5級 2025年度 第3回 指導教案のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-            </div>
-          </article>
-          <article class="session-card" id="grade-pre2-2025-2" data-catalog-card data-grade="grade-pre2" data-year="2025">
-            <header class="session-card-head">
-              <div>
-                <p class="session-grade">準2級</p>
-                <h3>2025年度 第2回</h3>
+                </article>
+                <article class="library-document">
+                  <span class="library-document-icon" aria-hidden="true">生</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>生徒配付用</span>
+                      <span>15ページ</span>
+                    </div>
+                    <h4>標準版</h4>
+                    <p>自分で根拠を探して書いたあと、正しい英文と2つの訳で照合する版です。</p>
+                  </div>
+                  <div class="library-document-actions" aria-label="準2級 2025年度 第2回 標準版の操作">
+                    <a class="library-action library-action-view" href="/materials/grade-pre2/2025-2/ReadPass_EIKEN_GradePre2_2025-2_Student_Standard_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="準2級 2025年度 第2回 標準版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade-pre2/2025-2/ReadPass_EIKEN_GradePre2_2025-2_Student_Standard_Workbook.pdf" download="ReadPass_EIKEN_GradePre2_2025-2_Student_Standard_Workbook.pdf" aria-label="準2級 2025年度 第2回 標準版のPDFをダウンロード">ダウンロード</a>
+                  </div>
+                </article>
+                <article class="library-document library-document-guide">
+                  <span class="library-document-icon" aria-hidden="true">教</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>講師用</span>
+                      <span>8ページ</span>
+                    </div>
+                    <h4>指導教案</h4>
+                    <p>全29問の解答・完成英文・根拠英文・2つの訳・指導上の確認点をまとめた共通教案です。</p>
+                  </div>
+                  <div class="library-document-actions" aria-label="準2級 2025年度 第2回 指導教案の操作">
+                    <a class="library-action library-action-view" href="/materials/grade-pre2/2025-2/ReadPass_EIKEN_GradePre2_2025-2_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="準2級 2025年度 第2回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade-pre2/2025-2/ReadPass_EIKEN_GradePre2_2025-2_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_GradePre2_2025-2_Instructor_Teaching_Guide.pdf" aria-label="準2級 2025年度 第2回 指導教案のPDFをダウンロード">ダウンロード</a>
+                  </div>
+                </article>
               </div>
-              <div class="session-status"><span>公開中</span><small>生徒用2版＋指導教案</small></div>
-            </header>
-            <div class="document-list">
-              <article class="document-row">
-                <div class="document-icon" aria-hidden="true">W</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">生徒配付用</p>
-                    <span>15ページ</span>
+            </details>
+            <details class="session-row" id="grade3-2025-2" data-catalog-card data-grade="grade3" data-year="2025" data-search="3級 2025年度 第2回 サポート版 生徒配付用 標準版 生徒配付用 指導教案 講師用">
+              <summary>
+                <span class="session-primary"><span class="grade-pill">3級</span><strong>2025年度 第2回</strong></span>
+                <span class="session-contents">生徒用2版＋指導教案</span>
+                <span class="session-pdf-count">PDF 3点</span>
+                <span class="session-chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="library-document-list">
+                <article class="library-document">
+                  <span class="library-document-icon" aria-hidden="true">生</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>生徒配付用</span>
+                      <span>16ページ</span>
+                    </div>
+                    <h4>サポート版</h4>
+                    <p>見本・書き出し・確認訳を先に示し、迷わず筆写を始められる版です。</p>
                   </div>
-                  <h4>サポート版</h4>
-                  <p>完成見本・意味の区切り・主語／動詞の手掛かりを先に示す版です。</p>
-                </div>
-                <div class="document-actions" aria-label="準2級 2025年度 第2回 サポート版の操作">
-                  <a class="document-button document-view" href="/materials/grade-pre2/2025-2/ReadPass_EIKEN_GradePre2_2025-2_Student_Support_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="準2級 2025年度 第2回 サポート版のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade-pre2/2025-2/ReadPass_EIKEN_GradePre2_2025-2_Student_Support_Workbook.pdf" download="ReadPass_EIKEN_GradePre2_2025-2_Student_Support_Workbook.pdf" aria-label="準2級 2025年度 第2回 サポート版のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-              <article class="document-row">
-                <div class="document-icon" aria-hidden="true">W</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">生徒配付用</p>
-                    <span>15ページ</span>
+                  <div class="library-document-actions" aria-label="3級 2025年度 第2回 サポート版の操作">
+                    <a class="library-action library-action-view" href="/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Student_Support_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第2回 サポート版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Student_Support_Workbook.pdf" download="ReadPass_EIKEN_Grade3_2025-2_Student_Support_Workbook.pdf" aria-label="3級 2025年度 第2回 サポート版のPDFをダウンロード">ダウンロード</a>
                   </div>
-                  <h4>標準版</h4>
-                  <p>自分で根拠を探して書いたあと、正しい英文と2つの訳で照合する版です。</p>
-                </div>
-                <div class="document-actions" aria-label="準2級 2025年度 第2回 標準版の操作">
-                  <a class="document-button document-view" href="/materials/grade-pre2/2025-2/ReadPass_EIKEN_GradePre2_2025-2_Student_Standard_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="準2級 2025年度 第2回 標準版のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade-pre2/2025-2/ReadPass_EIKEN_GradePre2_2025-2_Student_Standard_Workbook.pdf" download="ReadPass_EIKEN_GradePre2_2025-2_Student_Standard_Workbook.pdf" aria-label="準2級 2025年度 第2回 標準版のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-              <article class="document-row document-row-guide">
-                <div class="document-icon" aria-hidden="true">T</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">講師用</p>
-                    <span>8ページ</span>
+                </article>
+                <article class="library-document">
+                  <span class="library-document-icon" aria-hidden="true">生</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>生徒配付用</span>
+                      <span>16ページ</span>
+                    </div>
+                    <h4>標準版</h4>
+                    <p>自分で本文を探して書いたあと、確認訳と照合する版です。</p>
                   </div>
-                  <h4>指導教案</h4>
-                  <p>全29問の解答・完成英文・根拠英文・2つの訳・指導上の確認点をまとめた共通教案です。</p>
-                </div>
-                <div class="document-actions" aria-label="準2級 2025年度 第2回 指導教案の操作">
-                  <a class="document-button document-view" href="/materials/grade-pre2/2025-2/ReadPass_EIKEN_GradePre2_2025-2_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="準2級 2025年度 第2回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade-pre2/2025-2/ReadPass_EIKEN_GradePre2_2025-2_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_GradePre2_2025-2_Instructor_Teaching_Guide.pdf" aria-label="準2級 2025年度 第2回 指導教案のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-            </div>
-          </article>
-          <article class="session-card" id="grade3-2025-2" data-catalog-card data-grade="grade3" data-year="2025">
-            <header class="session-card-head">
-              <div>
-                <p class="session-grade">3級</p>
-                <h3>2025年度 第2回</h3>
+                  <div class="library-document-actions" aria-label="3級 2025年度 第2回 標準版の操作">
+                    <a class="library-action library-action-view" href="/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Student_Standard_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第2回 標準版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Student_Standard_Workbook.pdf" download="ReadPass_EIKEN_Grade3_2025-2_Student_Standard_Workbook.pdf" aria-label="3級 2025年度 第2回 標準版のPDFをダウンロード">ダウンロード</a>
+                  </div>
+                </article>
+                <article class="library-document library-document-guide">
+                  <span class="library-document-icon" aria-hidden="true">教</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>講師用</span>
+                      <span>9ページ</span>
+                    </div>
+                    <h4>指導教案</h4>
+                    <p>解答・記入例・根拠英文・指導上の確認点をまとめた共通教案です。</p>
+                  </div>
+                  <div class="library-document-actions" aria-label="3級 2025年度 第2回 指導教案の操作">
+                    <a class="library-action library-action-view" href="/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第2回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_Grade3_2025-2_Instructor_Teaching_Guide.pdf" aria-label="3級 2025年度 第2回 指導教案のPDFをダウンロード">ダウンロード</a>
+                  </div>
+                </article>
               </div>
-              <div class="session-status"><span>公開中</span><small>生徒用2版＋指導教案</small></div>
-            </header>
-            <div class="document-list">
-              <article class="document-row">
-                <div class="document-icon" aria-hidden="true">W</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">生徒配付用</p>
-                    <span>16ページ</span>
+            </details>
+            <details class="session-row" id="grade4-2025-2" data-catalog-card data-grade="grade4" data-year="2025" data-search="4級 2025年度 第2回 共通版 生徒配付用 指導教案 講師用">
+              <summary>
+                <span class="session-primary"><span class="grade-pill">4級</span><strong>2025年度 第2回</strong></span>
+                <span class="session-contents">生徒用＋指導教案</span>
+                <span class="session-pdf-count">PDF 2点</span>
+                <span class="session-chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="library-document-list">
+                <article class="library-document">
+                  <span class="library-document-icon" aria-hidden="true">生</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>生徒配付用</span>
+                      <span>24ページ</span>
+                    </div>
+                    <h4>共通版</h4>
+                    <p>小学校高学年から取り組めるよう、見る場所・書く内容・回数を1動作ずつ示した筆写中心のワークです。</p>
                   </div>
-                  <h4>サポート版</h4>
-                  <p>見本・書き出し・確認訳を先に示し、迷わず筆写を始められる版です。</p>
-                </div>
-                <div class="document-actions" aria-label="3級 2025年度 第2回 サポート版の操作">
-                  <a class="document-button document-view" href="/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Student_Support_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第2回 サポート版のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Student_Support_Workbook.pdf" download="ReadPass_EIKEN_Grade3_2025-2_Student_Support_Workbook.pdf" aria-label="3級 2025年度 第2回 サポート版のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-              <article class="document-row">
-                <div class="document-icon" aria-hidden="true">W</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">生徒配付用</p>
-                    <span>16ページ</span>
+                  <div class="library-document-actions" aria-label="4級 2025年度 第2回 共通版の操作">
+                    <a class="library-action library-action-view" href="/materials/grade4/2025-2/ReadPass_EIKEN_Grade4_2025-2_Student_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="4級 2025年度 第2回 共通版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade4/2025-2/ReadPass_EIKEN_Grade4_2025-2_Student_Workbook.pdf" download="ReadPass_EIKEN_Grade4_2025-2_Student_Workbook.pdf" aria-label="4級 2025年度 第2回 共通版のPDFをダウンロード">ダウンロード</a>
                   </div>
-                  <h4>標準版</h4>
-                  <p>自分で本文を探して書いたあと、確認訳と照合する版です。</p>
-                </div>
-                <div class="document-actions" aria-label="3級 2025年度 第2回 標準版の操作">
-                  <a class="document-button document-view" href="/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Student_Standard_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第2回 標準版のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Student_Standard_Workbook.pdf" download="ReadPass_EIKEN_Grade3_2025-2_Student_Standard_Workbook.pdf" aria-label="3級 2025年度 第2回 標準版のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-              <article class="document-row document-row-guide">
-                <div class="document-icon" aria-hidden="true">T</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">講師用</p>
-                    <span>9ページ</span>
+                </article>
+                <article class="library-document library-document-guide">
+                  <span class="library-document-icon" aria-hidden="true">教</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>講師用</span>
+                      <span>8ページ</span>
+                    </div>
+                    <h4>指導教案</h4>
+                    <p>全35問の正答・完成英文・不正解語の意味・根拠英文・2つの訳・低学年への声かけをまとめた教案です。</p>
                   </div>
-                  <h4>指導教案</h4>
-                  <p>解答・記入例・根拠英文・指導上の確認点をまとめた共通教案です。</p>
-                </div>
-                <div class="document-actions" aria-label="3級 2025年度 第2回 指導教案の操作">
-                  <a class="document-button document-view" href="/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第2回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_Grade3_2025-2_Instructor_Teaching_Guide.pdf" aria-label="3級 2025年度 第2回 指導教案のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-            </div>
-          </article>
-          <article class="session-card" id="grade4-2025-2" data-catalog-card data-grade="grade4" data-year="2025">
-            <header class="session-card-head">
-              <div>
-                <p class="session-grade">4級</p>
-                <h3>2025年度 第2回</h3>
+                  <div class="library-document-actions" aria-label="4級 2025年度 第2回 指導教案の操作">
+                    <a class="library-action library-action-view" href="/materials/grade4/2025-2/ReadPass_EIKEN_Grade4_2025-2_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="4級 2025年度 第2回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade4/2025-2/ReadPass_EIKEN_Grade4_2025-2_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_Grade4_2025-2_Instructor_Teaching_Guide.pdf" aria-label="4級 2025年度 第2回 指導教案のPDFをダウンロード">ダウンロード</a>
+                  </div>
+                </article>
               </div>
-              <div class="session-status"><span>公開中</span><small>生徒用1版＋指導教案</small></div>
-            </header>
-            <div class="document-list">
-              <article class="document-row">
-                <div class="document-icon" aria-hidden="true">W</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">生徒配付用</p>
-                    <span>24ページ</span>
+            </details>
+            <details class="session-row" id="grade5-2025-2" data-catalog-card data-grade="grade5" data-year="2025" data-search="5級 2025年度 第2回 共通版 生徒配付用 指導教案 講師用">
+              <summary>
+                <span class="session-primary"><span class="grade-pill">5級</span><strong>2025年度 第2回</strong></span>
+                <span class="session-contents">生徒用＋指導教案</span>
+                <span class="session-pdf-count">PDF 2点</span>
+                <span class="session-chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="library-document-list">
+                <article class="library-document">
+                  <span class="library-document-icon" aria-hidden="true">生</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>生徒配付用</span>
+                      <span>13ページ</span>
+                    </div>
+                    <h4>共通版</h4>
+                    <p>小学校高学年から取り組めるよう、見る場所・書く内容・回数を1動作ずつ示した筆写中心のワークです。</p>
                   </div>
-                  <h4>共通版</h4>
-                  <p>小学校高学年から取り組めるよう、見る場所・書く内容・回数を1動作ずつ示した筆写中心のワークです。</p>
-                </div>
-                <div class="document-actions" aria-label="4級 2025年度 第2回 共通版の操作">
-                  <a class="document-button document-view" href="/materials/grade4/2025-2/ReadPass_EIKEN_Grade4_2025-2_Student_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="4級 2025年度 第2回 共通版のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade4/2025-2/ReadPass_EIKEN_Grade4_2025-2_Student_Workbook.pdf" download="ReadPass_EIKEN_Grade4_2025-2_Student_Workbook.pdf" aria-label="4級 2025年度 第2回 共通版のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-              <article class="document-row document-row-guide">
-                <div class="document-icon" aria-hidden="true">T</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">講師用</p>
-                    <span>8ページ</span>
+                  <div class="library-document-actions" aria-label="5級 2025年度 第2回 共通版の操作">
+                    <a class="library-action library-action-view" href="/materials/grade5/2025-2/ReadPass_EIKEN_Grade5_2025-2_Student_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="5級 2025年度 第2回 共通版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade5/2025-2/ReadPass_EIKEN_Grade5_2025-2_Student_Workbook.pdf" download="ReadPass_EIKEN_Grade5_2025-2_Student_Workbook.pdf" aria-label="5級 2025年度 第2回 共通版のPDFをダウンロード">ダウンロード</a>
                   </div>
-                  <h4>指導教案</h4>
-                  <p>全35問の正答・完成英文・不正解語の意味・根拠英文・2つの訳・低学年への声かけをまとめた教案です。</p>
-                </div>
-                <div class="document-actions" aria-label="4級 2025年度 第2回 指導教案の操作">
-                  <a class="document-button document-view" href="/materials/grade4/2025-2/ReadPass_EIKEN_Grade4_2025-2_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="4級 2025年度 第2回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade4/2025-2/ReadPass_EIKEN_Grade4_2025-2_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_Grade4_2025-2_Instructor_Teaching_Guide.pdf" aria-label="4級 2025年度 第2回 指導教案のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-            </div>
-          </article>
-          <article class="session-card" id="grade5-2025-2" data-catalog-card data-grade="grade5" data-year="2025">
-            <header class="session-card-head">
-              <div>
-                <p class="session-grade">5級</p>
-                <h3>2025年度 第2回</h3>
+                </article>
+                <article class="library-document library-document-guide">
+                  <span class="library-document-icon" aria-hidden="true">教</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>講師用</span>
+                      <span>5ページ</span>
+                    </div>
+                    <h4>指導教案</h4>
+                    <p>全25問の正答・完成英文・不正解語の意味・会話の練習文・語順・低学年への声かけをまとめた教案です。</p>
+                  </div>
+                  <div class="library-document-actions" aria-label="5級 2025年度 第2回 指導教案の操作">
+                    <a class="library-action library-action-view" href="/materials/grade5/2025-2/ReadPass_EIKEN_Grade5_2025-2_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="5級 2025年度 第2回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade5/2025-2/ReadPass_EIKEN_Grade5_2025-2_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_Grade5_2025-2_Instructor_Teaching_Guide.pdf" aria-label="5級 2025年度 第2回 指導教案のPDFをダウンロード">ダウンロード</a>
+                  </div>
+                </article>
               </div>
-              <div class="session-status"><span>公開中</span><small>生徒用1版＋指導教案</small></div>
-            </header>
-            <div class="document-list">
-              <article class="document-row">
-                <div class="document-icon" aria-hidden="true">W</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">生徒配付用</p>
-                    <span>13ページ</span>
+            </details>
+            <details class="session-row" id="grade-pre2-2025-1" data-catalog-card data-grade="grade-pre2" data-year="2025" data-search="準2級 2025年度 第1回 サポート版 生徒配付用 標準版 生徒配付用 指導教案 講師用">
+              <summary>
+                <span class="session-primary"><span class="grade-pill">準2級</span><strong>2025年度 第1回</strong></span>
+                <span class="session-contents">生徒用2版＋指導教案</span>
+                <span class="session-pdf-count">PDF 3点</span>
+                <span class="session-chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="library-document-list">
+                <article class="library-document">
+                  <span class="library-document-icon" aria-hidden="true">生</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>生徒配付用</span>
+                      <span>15ページ</span>
+                    </div>
+                    <h4>サポート版</h4>
+                    <p>完成見本・意味の区切り・主語／動詞の手掛かりを先に示す版です。</p>
                   </div>
-                  <h4>共通版</h4>
-                  <p>小学校高学年から取り組めるよう、見る場所・書く内容・回数を1動作ずつ示した筆写中心のワークです。</p>
-                </div>
-                <div class="document-actions" aria-label="5級 2025年度 第2回 共通版の操作">
-                  <a class="document-button document-view" href="/materials/grade5/2025-2/ReadPass_EIKEN_Grade5_2025-2_Student_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="5級 2025年度 第2回 共通版のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade5/2025-2/ReadPass_EIKEN_Grade5_2025-2_Student_Workbook.pdf" download="ReadPass_EIKEN_Grade5_2025-2_Student_Workbook.pdf" aria-label="5級 2025年度 第2回 共通版のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-              <article class="document-row document-row-guide">
-                <div class="document-icon" aria-hidden="true">T</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">講師用</p>
-                    <span>5ページ</span>
+                  <div class="library-document-actions" aria-label="準2級 2025年度 第1回 サポート版の操作">
+                    <a class="library-action library-action-view" href="/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Student_Support_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="準2級 2025年度 第1回 サポート版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Student_Support_Workbook.pdf" download="ReadPass_EIKEN_GradePre2_2025-1_Student_Support_Workbook.pdf" aria-label="準2級 2025年度 第1回 サポート版のPDFをダウンロード">ダウンロード</a>
                   </div>
-                  <h4>指導教案</h4>
-                  <p>全25問の正答・完成英文・不正解語の意味・会話の練習文・語順・低学年への声かけをまとめた教案です。</p>
-                </div>
-                <div class="document-actions" aria-label="5級 2025年度 第2回 指導教案の操作">
-                  <a class="document-button document-view" href="/materials/grade5/2025-2/ReadPass_EIKEN_Grade5_2025-2_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="5級 2025年度 第2回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade5/2025-2/ReadPass_EIKEN_Grade5_2025-2_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_Grade5_2025-2_Instructor_Teaching_Guide.pdf" aria-label="5級 2025年度 第2回 指導教案のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-            </div>
-          </article>
-          <article class="session-card" id="grade-pre2-2025-1" data-catalog-card data-grade="grade-pre2" data-year="2025">
-            <header class="session-card-head">
-              <div>
-                <p class="session-grade">準2級</p>
-                <h3>2025年度 第1回</h3>
+                </article>
+                <article class="library-document">
+                  <span class="library-document-icon" aria-hidden="true">生</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>生徒配付用</span>
+                      <span>15ページ</span>
+                    </div>
+                    <h4>標準版</h4>
+                    <p>自分で根拠を探して書いたあと、正しい英文と2つの訳で照合する版です。</p>
+                  </div>
+                  <div class="library-document-actions" aria-label="準2級 2025年度 第1回 標準版の操作">
+                    <a class="library-action library-action-view" href="/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Student_Standard_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="準2級 2025年度 第1回 標準版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Student_Standard_Workbook.pdf" download="ReadPass_EIKEN_GradePre2_2025-1_Student_Standard_Workbook.pdf" aria-label="準2級 2025年度 第1回 標準版のPDFをダウンロード">ダウンロード</a>
+                  </div>
+                </article>
+                <article class="library-document library-document-guide">
+                  <span class="library-document-icon" aria-hidden="true">教</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>講師用</span>
+                      <span>8ページ</span>
+                    </div>
+                    <h4>指導教案</h4>
+                    <p>全29問の解答・完成英文・根拠英文・2つの訳・指導上の確認点をまとめた共通教案です。</p>
+                  </div>
+                  <div class="library-document-actions" aria-label="準2級 2025年度 第1回 指導教案の操作">
+                    <a class="library-action library-action-view" href="/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="準2級 2025年度 第1回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_GradePre2_2025-1_Instructor_Teaching_Guide.pdf" aria-label="準2級 2025年度 第1回 指導教案のPDFをダウンロード">ダウンロード</a>
+                  </div>
+                </article>
               </div>
-              <div class="session-status"><span>公開中</span><small>生徒用2版＋指導教案</small></div>
-            </header>
-            <div class="document-list">
-              <article class="document-row">
-                <div class="document-icon" aria-hidden="true">W</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">生徒配付用</p>
-                    <span>15ページ</span>
+            </details>
+            <details class="session-row" id="grade3-2025-1" data-catalog-card data-grade="grade3" data-year="2025" data-search="3級 2025年度 第1回 サポート版 生徒配付用 標準版 生徒配付用 指導教案 講師用">
+              <summary>
+                <span class="session-primary"><span class="grade-pill">3級</span><strong>2025年度 第1回</strong></span>
+                <span class="session-contents">生徒用2版＋指導教案</span>
+                <span class="session-pdf-count">PDF 3点</span>
+                <span class="session-chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="library-document-list">
+                <article class="library-document">
+                  <span class="library-document-icon" aria-hidden="true">生</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>生徒配付用</span>
+                      <span>15ページ</span>
+                    </div>
+                    <h4>サポート版</h4>
+                    <p>見本と具体的な手順を示し、迷わず筆写を始められる生徒用ワークです。</p>
                   </div>
-                  <h4>サポート版</h4>
-                  <p>完成見本・意味の区切り・主語／動詞の手掛かりを先に示す版です。</p>
-                </div>
-                <div class="document-actions" aria-label="準2級 2025年度 第1回 サポート版の操作">
-                  <a class="document-button document-view" href="/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Student_Support_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="準2級 2025年度 第1回 サポート版のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Student_Support_Workbook.pdf" download="ReadPass_EIKEN_GradePre2_2025-1_Student_Support_Workbook.pdf" aria-label="準2級 2025年度 第1回 サポート版のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-              <article class="document-row">
-                <div class="document-icon" aria-hidden="true">W</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">生徒配付用</p>
-                    <span>15ページ</span>
+                  <div class="library-document-actions" aria-label="3級 2025年度 第1回 サポート版の操作">
+                    <a class="library-action library-action-view" href="/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Student_Support_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第1回 サポート版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Student_Support_Workbook.pdf" download="ReadPass_EIKEN_Grade3_2025-1_Student_Support_Workbook.pdf" aria-label="3級 2025年度 第1回 サポート版のPDFをダウンロード">ダウンロード</a>
                   </div>
-                  <h4>標準版</h4>
-                  <p>自分で根拠を探して書いたあと、正しい英文と2つの訳で照合する版です。</p>
-                </div>
-                <div class="document-actions" aria-label="準2級 2025年度 第1回 標準版の操作">
-                  <a class="document-button document-view" href="/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Student_Standard_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="準2級 2025年度 第1回 標準版のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Student_Standard_Workbook.pdf" download="ReadPass_EIKEN_GradePre2_2025-1_Student_Standard_Workbook.pdf" aria-label="準2級 2025年度 第1回 標準版のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-              <article class="document-row document-row-guide">
-                <div class="document-icon" aria-hidden="true">T</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">講師用</p>
-                    <span>8ページ</span>
+                </article>
+                <article class="library-document">
+                  <span class="library-document-icon" aria-hidden="true">生</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>生徒配付用</span>
+                      <span>15ページ</span>
+                    </div>
+                    <h4>標準版</h4>
+                    <p>自分で本文を探して書いたあと、確認訳と照合する版です。</p>
                   </div>
-                  <h4>指導教案</h4>
-                  <p>全29問の解答・完成英文・根拠英文・2つの訳・指導上の確認点をまとめた共通教案です。</p>
-                </div>
-                <div class="document-actions" aria-label="準2級 2025年度 第1回 指導教案の操作">
-                  <a class="document-button document-view" href="/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="準2級 2025年度 第1回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_GradePre2_2025-1_Instructor_Teaching_Guide.pdf" aria-label="準2級 2025年度 第1回 指導教案のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-            </div>
-          </article>
-          <article class="session-card" id="grade3-2025-1" data-catalog-card data-grade="grade3" data-year="2025">
-            <header class="session-card-head">
-              <div>
-                <p class="session-grade">3級</p>
-                <h3>2025年度 第1回</h3>
+                  <div class="library-document-actions" aria-label="3級 2025年度 第1回 標準版の操作">
+                    <a class="library-action library-action-view" href="/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Student_Standard_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第1回 標準版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Student_Standard_Workbook.pdf" download="ReadPass_EIKEN_Grade3_2025-1_Student_Standard_Workbook.pdf" aria-label="3級 2025年度 第1回 標準版のPDFをダウンロード">ダウンロード</a>
+                  </div>
+                </article>
+                <article class="library-document library-document-guide">
+                  <span class="library-document-icon" aria-hidden="true">教</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>講師用</span>
+                      <span>9ページ</span>
+                    </div>
+                    <h4>指導教案</h4>
+                    <p>解答・記入例と指導上の確認点をまとめた講師用資料です。</p>
+                  </div>
+                  <div class="library-document-actions" aria-label="3級 2025年度 第1回 指導教案の操作">
+                    <a class="library-action library-action-view" href="/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第1回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_Grade3_2025-1_Instructor_Teaching_Guide.pdf" aria-label="3級 2025年度 第1回 指導教案のPDFをダウンロード">ダウンロード</a>
+                  </div>
+                </article>
               </div>
-              <div class="session-status"><span>公開中</span><small>生徒用2版＋指導教案</small></div>
-            </header>
-            <div class="document-list">
-              <article class="document-row">
-                <div class="document-icon" aria-hidden="true">W</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">生徒配付用</p>
-                    <span>15ページ</span>
+            </details>
+            <details class="session-row" id="grade4-2025-1" data-catalog-card data-grade="grade4" data-year="2025" data-search="4級 2025年度 第1回 共通版 生徒配付用 指導教案 講師用">
+              <summary>
+                <span class="session-primary"><span class="grade-pill">4級</span><strong>2025年度 第1回</strong></span>
+                <span class="session-contents">生徒用＋指導教案</span>
+                <span class="session-pdf-count">PDF 2点</span>
+                <span class="session-chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="library-document-list">
+                <article class="library-document">
+                  <span class="library-document-icon" aria-hidden="true">生</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>生徒配付用</span>
+                      <span>24ページ</span>
+                    </div>
+                    <h4>共通版</h4>
+                    <p>小学校高学年から取り組めるよう、見る場所・書く内容・回数を1動作ずつ示した筆写中心のワークです。</p>
                   </div>
-                  <h4>サポート版</h4>
-                  <p>見本と具体的な手順を示し、迷わず筆写を始められる生徒用ワークです。</p>
-                </div>
-                <div class="document-actions" aria-label="3級 2025年度 第1回 サポート版の操作">
-                  <a class="document-button document-view" href="/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Student_Support_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第1回 サポート版のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Student_Support_Workbook.pdf" download="ReadPass_EIKEN_Grade3_2025-1_Student_Support_Workbook.pdf" aria-label="3級 2025年度 第1回 サポート版のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-              <article class="document-row">
-                <div class="document-icon" aria-hidden="true">W</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">生徒配付用</p>
-                    <span>15ページ</span>
+                  <div class="library-document-actions" aria-label="4級 2025年度 第1回 共通版の操作">
+                    <a class="library-action library-action-view" href="/materials/grade4/2025-1/ReadPass_EIKEN_Grade4_2025-1_Student_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="4級 2025年度 第1回 共通版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade4/2025-1/ReadPass_EIKEN_Grade4_2025-1_Student_Workbook.pdf" download="ReadPass_EIKEN_Grade4_2025-1_Student_Workbook.pdf" aria-label="4級 2025年度 第1回 共通版のPDFをダウンロード">ダウンロード</a>
                   </div>
-                  <h4>標準版</h4>
-                  <p>自分で本文を探して書いたあと、確認訳と照合する版です。</p>
-                </div>
-                <div class="document-actions" aria-label="3級 2025年度 第1回 標準版の操作">
-                  <a class="document-button document-view" href="/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Student_Standard_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第1回 標準版のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Student_Standard_Workbook.pdf" download="ReadPass_EIKEN_Grade3_2025-1_Student_Standard_Workbook.pdf" aria-label="3級 2025年度 第1回 標準版のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-              <article class="document-row document-row-guide">
-                <div class="document-icon" aria-hidden="true">T</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">講師用</p>
-                    <span>9ページ</span>
+                </article>
+                <article class="library-document library-document-guide">
+                  <span class="library-document-icon" aria-hidden="true">教</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>講師用</span>
+                      <span>8ページ</span>
+                    </div>
+                    <h4>指導教案</h4>
+                    <p>全35問の正答・完成英文・不正解語の意味・根拠英文・2つの訳・低学年への声かけをまとめた教案です。</p>
                   </div>
-                  <h4>指導教案</h4>
-                  <p>解答・記入例と指導上の確認点をまとめた講師用資料です。</p>
-                </div>
-                <div class="document-actions" aria-label="3級 2025年度 第1回 指導教案の操作">
-                  <a class="document-button document-view" href="/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="3級 2025年度 第1回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_Grade3_2025-1_Instructor_Teaching_Guide.pdf" aria-label="3級 2025年度 第1回 指導教案のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-            </div>
-          </article>
-          <article class="session-card" id="grade4-2025-1" data-catalog-card data-grade="grade4" data-year="2025">
-            <header class="session-card-head">
-              <div>
-                <p class="session-grade">4級</p>
-                <h3>2025年度 第1回</h3>
+                  <div class="library-document-actions" aria-label="4級 2025年度 第1回 指導教案の操作">
+                    <a class="library-action library-action-view" href="/materials/grade4/2025-1/ReadPass_EIKEN_Grade4_2025-1_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="4級 2025年度 第1回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade4/2025-1/ReadPass_EIKEN_Grade4_2025-1_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_Grade4_2025-1_Instructor_Teaching_Guide.pdf" aria-label="4級 2025年度 第1回 指導教案のPDFをダウンロード">ダウンロード</a>
+                  </div>
+                </article>
               </div>
-              <div class="session-status"><span>公開中</span><small>生徒用1版＋指導教案</small></div>
-            </header>
-            <div class="document-list">
-              <article class="document-row">
-                <div class="document-icon" aria-hidden="true">W</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">生徒配付用</p>
-                    <span>24ページ</span>
+            </details>
+            <details class="session-row" id="grade5-2025-1" data-catalog-card data-grade="grade5" data-year="2025" data-search="5級 2025年度 第1回 共通版 生徒配付用 指導教案 講師用">
+              <summary>
+                <span class="session-primary"><span class="grade-pill">5級</span><strong>2025年度 第1回</strong></span>
+                <span class="session-contents">生徒用＋指導教案</span>
+                <span class="session-pdf-count">PDF 2点</span>
+                <span class="session-chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="library-document-list">
+                <article class="library-document">
+                  <span class="library-document-icon" aria-hidden="true">生</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>生徒配付用</span>
+                      <span>13ページ</span>
+                    </div>
+                    <h4>共通版</h4>
+                    <p>小学校高学年から取り組めるよう、見る場所・書く内容・回数を1動作ずつ示した筆写中心のワークです。</p>
                   </div>
-                  <h4>共通版</h4>
-                  <p>小学校高学年から取り組めるよう、見る場所・書く内容・回数を1動作ずつ示した筆写中心のワークです。</p>
-                </div>
-                <div class="document-actions" aria-label="4級 2025年度 第1回 共通版の操作">
-                  <a class="document-button document-view" href="/materials/grade4/2025-1/ReadPass_EIKEN_Grade4_2025-1_Student_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="4級 2025年度 第1回 共通版のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade4/2025-1/ReadPass_EIKEN_Grade4_2025-1_Student_Workbook.pdf" download="ReadPass_EIKEN_Grade4_2025-1_Student_Workbook.pdf" aria-label="4級 2025年度 第1回 共通版のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-              <article class="document-row document-row-guide">
-                <div class="document-icon" aria-hidden="true">T</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">講師用</p>
-                    <span>8ページ</span>
+                  <div class="library-document-actions" aria-label="5級 2025年度 第1回 共通版の操作">
+                    <a class="library-action library-action-view" href="/materials/grade5/2025-1/ReadPass_EIKEN_Grade5_2025-1_Student_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="5級 2025年度 第1回 共通版のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade5/2025-1/ReadPass_EIKEN_Grade5_2025-1_Student_Workbook.pdf" download="ReadPass_EIKEN_Grade5_2025-1_Student_Workbook.pdf" aria-label="5級 2025年度 第1回 共通版のPDFをダウンロード">ダウンロード</a>
                   </div>
-                  <h4>指導教案</h4>
-                  <p>全35問の正答・完成英文・不正解語の意味・根拠英文・2つの訳・低学年への声かけをまとめた教案です。</p>
-                </div>
-                <div class="document-actions" aria-label="4級 2025年度 第1回 指導教案の操作">
-                  <a class="document-button document-view" href="/materials/grade4/2025-1/ReadPass_EIKEN_Grade4_2025-1_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="4級 2025年度 第1回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade4/2025-1/ReadPass_EIKEN_Grade4_2025-1_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_Grade4_2025-1_Instructor_Teaching_Guide.pdf" aria-label="4級 2025年度 第1回 指導教案のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-            </div>
-          </article>
-          <article class="session-card" id="grade5-2025-1" data-catalog-card data-grade="grade5" data-year="2025">
-            <header class="session-card-head">
-              <div>
-                <p class="session-grade">5級</p>
-                <h3>2025年度 第1回</h3>
+                </article>
+                <article class="library-document library-document-guide">
+                  <span class="library-document-icon" aria-hidden="true">教</span>
+                  <div class="library-document-copy">
+                    <div class="library-document-meta">
+                      <span>講師用</span>
+                      <span>5ページ</span>
+                    </div>
+                    <h4>指導教案</h4>
+                    <p>全25問の正答・完成英文・不正解語の意味・会話の練習文・語順・低学年への声かけをまとめた教案です。</p>
+                  </div>
+                  <div class="library-document-actions" aria-label="5級 2025年度 第1回 指導教案の操作">
+                    <a class="library-action library-action-view" href="/materials/grade5/2025-1/ReadPass_EIKEN_Grade5_2025-1_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="5級 2025年度 第1回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
+                    <a class="library-action library-action-download" href="/materials/grade5/2025-1/ReadPass_EIKEN_Grade5_2025-1_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_Grade5_2025-1_Instructor_Teaching_Guide.pdf" aria-label="5級 2025年度 第1回 指導教案のPDFをダウンロード">ダウンロード</a>
+                  </div>
+                </article>
               </div>
-              <div class="session-status"><span>公開中</span><small>生徒用1版＋指導教案</small></div>
-            </header>
-            <div class="document-list">
-              <article class="document-row">
-                <div class="document-icon" aria-hidden="true">W</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">生徒配付用</p>
-                    <span>13ページ</span>
-                  </div>
-                  <h4>共通版</h4>
-                  <p>小学校高学年から取り組めるよう、見る場所・書く内容・回数を1動作ずつ示した筆写中心のワークです。</p>
-                </div>
-                <div class="document-actions" aria-label="5級 2025年度 第1回 共通版の操作">
-                  <a class="document-button document-view" href="/materials/grade5/2025-1/ReadPass_EIKEN_Grade5_2025-1_Student_Workbook.pdf" target="_blank" rel="noopener noreferrer" aria-label="5級 2025年度 第1回 共通版のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade5/2025-1/ReadPass_EIKEN_Grade5_2025-1_Student_Workbook.pdf" download="ReadPass_EIKEN_Grade5_2025-1_Student_Workbook.pdf" aria-label="5級 2025年度 第1回 共通版のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-              <article class="document-row document-row-guide">
-                <div class="document-icon" aria-hidden="true">T</div>
-                <div class="document-copy">
-                  <div class="document-title-line">
-                    <p class="document-audience">講師用</p>
-                    <span>5ページ</span>
-                  </div>
-                  <h4>指導教案</h4>
-                  <p>全25問の正答・完成英文・不正解語の意味・会話の練習文・語順・低学年への声かけをまとめた教案です。</p>
-                </div>
-                <div class="document-actions" aria-label="5級 2025年度 第1回 指導教案の操作">
-                  <a class="document-button document-view" href="/materials/grade5/2025-1/ReadPass_EIKEN_Grade5_2025-1_Instructor_Teaching_Guide.pdf" target="_blank" rel="noopener noreferrer" aria-label="5級 2025年度 第1回 指導教案のPDFを新しいタブで閲覧">PDFを閲覧</a>
-                  <a class="document-button document-download" href="/materials/grade5/2025-1/ReadPass_EIKEN_Grade5_2025-1_Instructor_Teaching_Guide.pdf" download="ReadPass_EIKEN_Grade5_2025-1_Instructor_Teaching_Guide.pdf" aria-label="5級 2025年度 第1回 指導教案のPDFをダウンロード">ダウンロード</a>
-                </div>
-              </article>
-            </div>
-          </article>
+            </details>
           </div>
           <p class="catalog-empty" data-catalog-empty hidden>該当する教材はまだ登録されていません。</p>
           <!-- MATERIAL_CATALOG_END -->
@@ -751,11 +729,13 @@
       </section>
 
       <section id="philosophy" class="section philosophy">
-        <div class="container narrow">
-          <div class="section-number reveal"><span>01</span><small>PHILOSOPHY</small></div>
-          <div class="philosophy-grid">
-            <h2 class="section-title reveal">アプリの速さと、<br />紙の手応えを<br />ひとつの流れに。</h2>
-            <div class="section-body reveal">
+        <div class="container">
+          <div class="story-heading reveal">
+            <div>
+              <p class="eyebrow">WHY PENPASS</p>
+              <h2 class="section-title">アプリの速さと、<br />紙の手応えを<br />ひとつの流れに。</h2>
+            </div>
+            <div class="section-body">
               <p>
                 アプリは、答えや解説をすぐに確かめられる便利な学習手段です。一方で、画面を見て
                 「分かった」と感じても、数日後に同じ英文を自分で書けるとは限りません。
@@ -767,15 +747,25 @@
               <blockquote>「わかる」で止めず、書ける・探せる・読めるところまで。</blockquote>
             </div>
           </div>
+          <figure class="story-photo reveal">
+            <img src="/assets/images/penpass-teacher-prep.webp" alt="生徒用ワークと指導教案を準備する講師の手元" width="1280" height="853" loading="lazy" />
+            <figcaption><span>LESSON PREPARATION</span><strong>生徒用と講師用を、同じ授業の流れで。</strong></figcaption>
+          </figure>
         </div>
       </section>
 
       <section class="section flow-section" aria-labelledby="flow-title">
         <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">ONE LEARNING LOOP</p>
-            <h2 id="flow-title">毎回の動きを、4つに固定</h2>
-            <p>先生の長い説明を聞かなくても、紙面の番号を上から追えば始められる設計です。</p>
+          <div class="flow-layout">
+            <figure class="flow-photo reveal">
+              <img src="/assets/images/penpass-writing-detail.webp" alt="鉛筆で英文を書き写す手元" width="1100" height="825" loading="lazy" />
+              <figcaption>書く場所と回数を、1動作ずつ示します。</figcaption>
+            </figure>
+            <div class="section-heading reveal">
+              <p class="eyebrow">ONE LEARNING LOOP</p>
+              <h2 id="flow-title">毎回の動きを、<br />4つに固定</h2>
+              <p>先生の長い説明を聞かなくても、紙面の番号を上から追えば始められる設計です。</p>
+            </div>
           </div>
           <ol class="learning-flow">
             <li class="reveal"><span>01</span><strong>解く</strong><p>ReadPassで同じ問題を開き、まず自分の答えを残します。</p></li>

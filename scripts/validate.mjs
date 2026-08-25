@@ -7,6 +7,9 @@ const requiredFiles = [
   "data/materials.json",
   "scripts/render-catalog.mjs",
   "assets/favicon.svg",
+  "assets/images/penpass-hero-learning.webp",
+  "assets/images/penpass-teacher-prep.webp",
+  "assets/images/penpass-writing-detail.webp",
   "vercel.json",
   "robots.txt",
 ];
