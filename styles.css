@@ -571,6 +571,179 @@ button {
   letter-spacing: 0.12em;
 }
 
+.materials-section {
+  background: var(--paper);
+}
+
+.materials-heading {
+  margin-bottom: 48px;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: end;
+  gap: 72px;
+}
+
+.materials-heading h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(38px, 4.2vw, 56px);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.035em;
+}
+
+.materials-heading > p {
+  margin: 0 0 5px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 2;
+}
+
+.material-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.material-card {
+  min-width: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  border: 1px solid var(--green-900);
+  background: var(--cream);
+}
+
+.material-card-guide {
+  background: var(--blue-100);
+}
+
+.material-card-head {
+  min-height: 66px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--green-900);
+}
+
+.material-card-head p {
+  margin: 0;
+  color: var(--green-600);
+  font-family: Georgia, serif;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+}
+
+.material-number {
+  color: var(--green-900);
+  font-family: Georgia, serif;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.material-card-body {
+  padding: 34px 34px 30px;
+}
+
+.material-label {
+  margin: 0 0 8px;
+  color: var(--green-600);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.material-card h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.material-card-body > p:not(.material-label) {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.material-meta {
+  margin: 30px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.material-meta div {
+  min-height: 44px;
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 68px 1fr;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+}
+
+.material-meta dt {
+  color: var(--green-600);
+  font-weight: 700;
+}
+
+.material-meta dd {
+  margin: 0;
+}
+
+.material-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--green-900);
+}
+
+.material-actions .button {
+  min-width: 0;
+  min-height: 62px;
+  padding-inline: 14px;
+  font-size: 13px;
+}
+
+.material-actions .button + .button {
+  border-left: 1px solid var(--green-900);
+}
+
+.material-view {
+  background: var(--green-900);
+  color: white;
+}
+
+.material-view:hover,
+.material-view:focus-visible {
+  background: var(--green-800);
+}
+
+.material-download {
+  background: var(--yellow);
+  color: var(--green-950);
+}
+
+.material-download:hover,
+.material-download:focus-visible {
+  background: var(--yellow-bright);
+}
+
+.internal-note {
+  margin: 22px 0 0;
+  padding: 16px 18px;
+  border-left: 3px solid var(--yellow);
+  background: rgba(233, 203, 88, 0.13);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.internal-note strong {
+  margin-right: 8px;
+  color: var(--green-900);
+}
+
 .section {
   padding-block: 118px;
 }
@@ -1170,9 +1343,14 @@ button {
   }
 
   .philosophy-grid,
+  .materials-heading,
   .roadmap-grid {
     grid-template-columns: 1fr;
     gap: 48px;
+  }
+
+  .material-grid {
+    grid-template-columns: 1fr;
   }
 
   .learning-flow {
@@ -1346,6 +1524,7 @@ button {
 
   .section-title,
   .section-heading h2,
+  .materials-heading h2,
   .sample-intro h2,
   .roadmap-copy h2,
   .trial-inner h2 {
@@ -1354,6 +1533,28 @@ button {
 
   .philosophy {
     background: var(--cream);
+  }
+
+  .materials-heading {
+    margin-bottom: 34px;
+    gap: 20px;
+  }
+
+  .material-card-body {
+    padding: 28px 22px 24px;
+  }
+
+  .material-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .material-actions .button + .button {
+    border-top: 1px solid var(--green-900);
+    border-left: 0;
+  }
+
+  .internal-note {
+    padding: 14px;
   }
 
   .philosophy-grid {
