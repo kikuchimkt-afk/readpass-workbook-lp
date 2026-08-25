@@ -251,6 +251,43 @@
           ]
         }
       ]
+    },
+    {
+      "slug": "grade4",
+      "label": "4級",
+      "fileCode": "Grade4",
+      "order": 40,
+      "sessions": [
+        {
+          "key": "2025-1",
+          "year": 2025,
+          "session": 1,
+          "label": "2025年度 第1回",
+          "updatedAt": "2026-08-25",
+          "documents": [
+            {
+              "type": "workbook",
+              "profile": "common",
+              "audience": "生徒配付用",
+              "label": "共通版",
+              "description": "小学校高学年から取り組めるよう、見る場所・書く内容・回数を1動作ずつ示した筆写中心のワークです。",
+              "pages": 24,
+              "path": "/materials/grade4/2025-1/ReadPass_EIKEN_Grade4_2025-1_Student_Workbook.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade4_2025-1_Student_Workbook.pdf"
+            },
+            {
+              "type": "teaching-guide",
+              "profile": "teacher",
+              "audience": "講師用",
+              "label": "指導教案",
+              "description": "全35問の正答・完成英文・不正解語の意味・根拠英文・2つの訳・低学年への声かけをまとめた教案です。",
+              "pages": 8,
+              "path": "/materials/grade4/2025-1/ReadPass_EIKEN_Grade4_2025-1_Instructor_Teaching_Guide.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade4_2025-1_Instructor_Teaching_Guide.pdf"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

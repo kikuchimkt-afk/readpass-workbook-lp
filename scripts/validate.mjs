@@ -180,6 +180,8 @@ const requiredLegacySources = [
   "/materials/grade3/2025-3/workbook-support.pdf",
   "/materials/grade3/2025-3/workbook-standard.pdf",
   "/materials/grade3/2025-3/teaching-guide.pdf",
+  "/materials/grade4/2025-1/workbook.pdf",
+  "/materials/grade4/2025-1/teaching-guide.pdf",
 ];
 unique(redirects.map((redirect) => redirect.source), "redirect source");
 for (const source of requiredLegacySources) {
