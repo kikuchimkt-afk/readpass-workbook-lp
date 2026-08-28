@@ -20,7 +20,7 @@
               "profile": "support",
               "audience": "生徒配付用",
               "label": "サポート版",
-              "description": "小学校高学年〜中2でも迷わないよう、1動作ずつの指示・意味の区切り・『だれ／何が・どうする』・2つの訳を示す版です。",
+              "description": "小学校高学年〜中2でも迷わないよう、1動作ずつの指示・意味の区切り・『だれ／何が・どうする』・2つの訳を示し、大問1では正解を含む4つの選択肢を問題と同じ順で確認できる版です。",
               "pages": 20,
               "path": "/materials/grade-pre2plus/2025-3/ReadPass_EIKEN_GradePre2Plus_2025-3_Student_Support_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-3_Student_Support_Workbook.pdf"
@@ -30,7 +30,7 @@
               "profile": "standard",
               "audience": "生徒配付用",
               "label": "標準版",
-              "description": "自分で根拠英文と2つの訳を書いたあと、同じページの確認例と照合して赤で直す版です。",
+              "description": "自分で根拠英文と2つの訳を書いたあと、同じページの確認例と照合して赤で直し、大問1では正解を含む4つの選択肢を問題と同じ順で確認する版です。",
               "pages": 20,
               "path": "/materials/grade-pre2plus/2025-3/ReadPass_EIKEN_GradePre2Plus_2025-3_Student_Standard_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-3_Student_Standard_Workbook.pdf"
@@ -40,7 +40,7 @@
               "profile": "teacher",
               "audience": "講師用",
               "label": "指導教案",
-              "description": "全31問の正答・不正解語義・根拠英文・2つの訳・止まりやすい点・最初の声かけをまとめた共通教案です。",
+              "description": "全31問の正答・大問1の4つの選択肢の意味（問題順）・根拠英文・2つの訳・止まりやすい点・最初の声かけをまとめた共通教案です。",
               "pages": 11,
               "path": "/materials/grade-pre2plus/2025-3/ReadPass_EIKEN_GradePre2Plus_2025-3_Instructor_Teaching_Guide.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-3_Instructor_Teaching_Guide.pdf"
@@ -59,7 +59,7 @@
               "profile": "support",
               "audience": "生徒配付用",
               "label": "サポート版",
-              "description": "小学校高学年〜中2でも迷わないよう、1動作ずつの指示・意味の区切り・『だれ／何が・どうする』・2つの訳を示す版です。",
+              "description": "小学校高学年〜中2でも迷わないよう、1動作ずつの指示・意味の区切り・『だれ／何が・どうする』・2つの訳を示し、大問1では正解を含む4つの選択肢を問題と同じ順で確認できる版です。",
               "pages": 20,
               "path": "/materials/grade-pre2plus/2025-2/ReadPass_EIKEN_GradePre2Plus_2025-2_Student_Support_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-2_Student_Support_Workbook.pdf"
@@ -69,7 +69,7 @@
               "profile": "standard",
               "audience": "生徒配付用",
               "label": "標準版",
-              "description": "自分で根拠英文と2つの訳を書いたあと、同じページの確認例と照合して赤で直す版です。",
+              "description": "自分で根拠英文と2つの訳を書いたあと、同じページの確認例と照合して赤で直し、大問1では正解を含む4つの選択肢を問題と同じ順で確認する版です。",
               "pages": 20,
               "path": "/materials/grade-pre2plus/2025-2/ReadPass_EIKEN_GradePre2Plus_2025-2_Student_Standard_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-2_Student_Standard_Workbook.pdf"
@@ -79,7 +79,7 @@
               "profile": "teacher",
               "audience": "講師用",
               "label": "指導教案",
-              "description": "全31問の正答・不正解語義・根拠英文・2つの訳・止まりやすい点・最初の声かけをまとめた共通教案です。",
+              "description": "全31問の正答・大問1の4つの選択肢の意味（問題順）・根拠英文・2つの訳・止まりやすい点・最初の声かけをまとめた共通教案です。",
               "pages": 11,
               "path": "/materials/grade-pre2plus/2025-2/ReadPass_EIKEN_GradePre2Plus_2025-2_Instructor_Teaching_Guide.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-2_Instructor_Teaching_Guide.pdf"
@@ -98,7 +98,7 @@
               "profile": "support",
               "audience": "生徒配付用",
               "label": "サポート版",
-              "description": "小学校高学年〜中2でも迷わないよう、1動作ずつの指示・意味の区切り・『だれ／何が・どうする』・2つの訳を示す版です。",
+              "description": "小学校高学年〜中2でも迷わないよう、1動作ずつの指示・意味の区切り・『だれ／何が・どうする』・2つの訳を示し、大問1では正解を含む4つの選択肢を問題と同じ順で確認できる版です。",
               "pages": 20,
               "path": "/materials/grade-pre2plus/2025-1/ReadPass_EIKEN_GradePre2Plus_2025-1_Student_Support_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-1_Student_Support_Workbook.pdf"
@@ -108,7 +108,7 @@
               "profile": "standard",
               "audience": "生徒配付用",
               "label": "標準版",
-              "description": "自分で根拠英文と2つの訳を書いたあと、同じページの確認例と照合して赤で直す版です。",
+              "description": "自分で根拠英文と2つの訳を書いたあと、同じページの確認例と照合して赤で直し、大問1では正解を含む4つの選択肢を問題と同じ順で確認する版です。",
               "pages": 20,
               "path": "/materials/grade-pre2plus/2025-1/ReadPass_EIKEN_GradePre2Plus_2025-1_Student_Standard_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-1_Student_Standard_Workbook.pdf"
@@ -118,7 +118,7 @@
               "profile": "teacher",
               "audience": "講師用",
               "label": "指導教案",
-              "description": "全31問の正答・不正解語義・根拠英文・2つの訳・止まりやすい点・最初の声かけをまとめた共通教案です。",
+              "description": "全31問の正答・大問1の4つの選択肢の意味（問題順）・根拠英文・2つの訳・止まりやすい点・最初の声かけをまとめた共通教案です。",
               "pages": 11,
               "path": "/materials/grade-pre2plus/2025-1/ReadPass_EIKEN_GradePre2Plus_2025-1_Instructor_Teaching_Guide.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-1_Instructor_Teaching_Guide.pdf"
