@@ -18,6 +18,7 @@ const allSessions = grades
   .sort((a, b) => b.year - a.year || b.session - a.session || a.grade.order - b.grade.order);
 const years = [...new Set(allSessions.map((session) => session.year))].sort((a, b) => b - a);
 const documentTotal = allSessions.reduce((count, session) => count + session.documents.length, 0);
+const readPassBaseUrl = "https://read-pass-pro.vercel.app/index.html";
 
 const yearOptions = years.map((year) => `<option value="${year}">${year}年度</option>`).join("");
 
@@ -46,6 +47,8 @@ const renderSession = (session) => {
   const { grade } = session;
   const workbookCount = session.documents.filter((document) => document.type === "workbook").length;
   const available = workbookCount === 1 ? "生徒用＋指導教案" : `生徒用${workbookCount}版＋指導教案`;
+  const readPassUrl = `${readPassBaseUrl}?grade=${encodeURIComponent(grade.slug)}&exam=${encodeURIComponent(session.key)}&nav=1`;
+  const readPassAriaLabel = `ReadPassで${grade.label} ${session.label}を新しいタブで開く`;
   const searchText = [
     grade.label,
     session.label,
@@ -54,7 +57,13 @@ const renderSession = (session) => {
   return `
             <details class="session-row" id="${escapeHtml(grade.slug)}-${escapeHtml(session.key)}" data-catalog-card data-grade="${escapeHtml(grade.slug)}" data-year="${session.year}" data-search="${escapeHtml(searchText)}">
               <summary>
-                <span class="session-primary"><span class="grade-pill">${escapeHtml(grade.label)}</span><strong>${escapeHtml(session.label)}</strong></span>
+                <span class="session-primary">
+                  <span class="grade-pill">${escapeHtml(grade.label)}</span>
+                  <span class="session-title-group">
+                    <strong>${escapeHtml(session.label)}</strong>
+                    <a class="session-readpass-link" href="${escapeHtml(readPassUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(readPassAriaLabel)}">ReadPassで開く <span aria-hidden="true">↗</span></a>
+                  </span>
+                </span>
                 <span class="session-contents">${escapeHtml(available)}</span>
                 <span class="session-pdf-count">PDF ${session.documents.length}点</span>
                 <span class="session-chevron" aria-hidden="true"></span>

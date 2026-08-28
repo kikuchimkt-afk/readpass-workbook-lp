@@ -38,6 +38,7 @@ const sessionIds = [];
 const paths = [];
 const downloadNames = [];
 let documentCount = 0;
+const readPassBaseUrl = "https://read-pass-pro.vercel.app/index.html";
 
 for (const grade of data.grades) {
   if (!grade.slug || !grade.label || !grade.fileCode || !Array.isArray(grade.sessions) || !grade.sessions.length) {
@@ -51,6 +52,10 @@ for (const grade of data.grades) {
     }
     if (!Array.isArray(session.documents) || !session.documents.length) {
       throw new Error(`Session has no documents: ${sessionId}`);
+    }
+    const readPassUrl = `${readPassBaseUrl}?grade=${encodeURIComponent(grade.slug)}&amp;exam=${encodeURIComponent(session.key)}&amp;nav=1`;
+    if (html.split(`href="${readPassUrl}"`).length - 1 !== 1) {
+      throw new Error(`Session must have one direct ReadPass link: ${sessionId}`);
     }
     const workbooks = session.documents.filter((document) => document.type === "workbook");
     const guides = session.documents.filter((document) => document.type === "teaching-guide");
@@ -162,6 +167,9 @@ if (!css.includes("prefers-reduced-motion")) throw new Error("Reduced-motion sup
 if (!js.includes("sampleContent") || !js.includes("updateCatalog")) {
   throw new Error("Required page interactions are missing");
 }
+if (!js.includes("session-readpass-link")) {
+  throw new Error("ReadPass session-link interaction is missing");
+}
 if (!robots.includes("Disallow: /")) throw new Error("robots.txt must discourage indexing");
 
 const vercel = JSON.parse(readFileSync("vercel.json", "utf8"));
@@ -220,6 +228,11 @@ for (const match of html.matchAll(/href="([^"]+)"/g)) {
 const downloadCount = (html.match(/\sdownload="[^"]+\.pdf"/g) || []).length;
 if (downloadCount !== documentCount) {
   throw new Error(`Expected ${documentCount} named PDF downloads, found ${downloadCount}`);
+}
+
+const readPassLinkCount = (html.match(/class="session-readpass-link"/g) || []).length;
+if (readPassLinkCount !== sessionIds.length) {
+  throw new Error(`Expected ${sessionIds.length} ReadPass links, found ${readPassLinkCount}`);
 }
 
 console.log(

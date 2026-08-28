@@ -35,6 +35,11 @@ const resultCount = document.querySelector("[data-result-count]");
 const catalogEmpty = document.querySelector("[data-catalog-empty]");
 let activeGrade = "all";
 
+document.querySelectorAll(".session-readpass-link").forEach((link) => {
+  link.addEventListener("click", (event) => event.stopPropagation());
+  link.addEventListener("keydown", (event) => event.stopPropagation());
+});
+
 const availableGrades = new Set(gradeFilters.map((button) => button.dataset.gradeFilter));
 const optionExists = (select, value) =>
   [...(select?.options ?? [])].some((option) => option.value === value);
