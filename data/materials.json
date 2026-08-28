@@ -1,7 +1,54 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-25",
+  "updatedAt": "2026-08-28",
   "grades": [
+    {
+      "slug": "grade-pre2plus",
+      "label": "準2級プラス",
+      "fileCode": "GradePre2Plus",
+      "order": 10,
+      "sessions": [
+        {
+          "key": "2025-1",
+          "year": 2025,
+          "session": 1,
+          "label": "2025年度 第1回",
+          "updatedAt": "2026-08-28",
+          "documents": [
+            {
+              "type": "workbook",
+              "profile": "support",
+              "audience": "生徒配付用",
+              "label": "サポート版",
+              "description": "小学校高学年〜中2でも迷わないよう、1動作ずつの指示・意味の区切り・『だれ／何が・どうする』・2つの訳を示す版です。",
+              "pages": 20,
+              "path": "/materials/grade-pre2plus/2025-1/ReadPass_EIKEN_GradePre2Plus_2025-1_Student_Support_Workbook.pdf",
+              "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-1_Student_Support_Workbook.pdf"
+            },
+            {
+              "type": "workbook",
+              "profile": "standard",
+              "audience": "生徒配付用",
+              "label": "標準版",
+              "description": "自分で根拠英文と2つの訳を書いたあと、同じページの確認例と照合して赤で直す版です。",
+              "pages": 20,
+              "path": "/materials/grade-pre2plus/2025-1/ReadPass_EIKEN_GradePre2Plus_2025-1_Student_Standard_Workbook.pdf",
+              "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-1_Student_Standard_Workbook.pdf"
+            },
+            {
+              "type": "teaching-guide",
+              "profile": "teacher",
+              "audience": "講師用",
+              "label": "指導教案",
+              "description": "全31問の正答・不正解語義・根拠英文・2つの訳・止まりやすい点・最初の声かけをまとめた共通教案です。",
+              "pages": 11,
+              "path": "/materials/grade-pre2plus/2025-1/ReadPass_EIKEN_GradePre2Plus_2025-1_Instructor_Teaching_Guide.pdf",
+              "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-1_Instructor_Teaching_Guide.pdf"
+            }
+          ]
+        }
+      ]
+    },
     {
       "slug": "grade-pre2",
       "label": "準2級",
