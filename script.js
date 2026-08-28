@@ -135,8 +135,8 @@ const sampleContent = {
     kind: "短文・語彙",
     action: "正しい英文を見ながら1回写す",
     model: "Aya was glad because she found her lost notebook.",
-    extraTitle: "不正解3語の意味を書く",
-    extra: "empty＝＿＿　careful＝＿＿　famous＝＿＿",
+    extraTitle: "4つの選択肢の意味を書く（問題順）",
+    extra: "1.empty＝＿＿　2.glad＝＿＿　3.careful＝＿＿　4.famous＝＿＿",
     done: "4　英文を指で追って、声に出して1回読む",
   },
   dialogue: {
