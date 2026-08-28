@@ -138,14 +138,14 @@
           "year": 2025,
           "session": 3,
           "label": "2025年度 第3回",
-          "updatedAt": "2026-08-25",
+          "updatedAt": "2026-08-28",
           "documents": [
             {
               "type": "workbook",
               "profile": "support",
               "audience": "生徒配付用",
               "label": "サポート版",
-              "description": "完成見本・意味の区切り・主語／動詞の手掛かりを先に示す版です。",
+              "description": "完成見本・意味の区切り・主語／動詞の手掛かりを先に示し、大問1では正解を含む4つの選択肢を問題と同じ順で確認できる版です。",
               "pages": 15,
               "path": "/materials/grade-pre2/2025-3/ReadPass_EIKEN_GradePre2_2025-3_Student_Support_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2_2025-3_Student_Support_Workbook.pdf"
@@ -155,7 +155,7 @@
               "profile": "standard",
               "audience": "生徒配付用",
               "label": "標準版",
-              "description": "自分で根拠を探して書いたあと、正しい英文と2つの訳で照合する版です。",
+              "description": "自分で根拠を探して書いたあと、正しい英文と2つの訳で照合し、大問1では正解を含む4つの選択肢を問題と同じ順で確認する版です。",
               "pages": 15,
               "path": "/materials/grade-pre2/2025-3/ReadPass_EIKEN_GradePre2_2025-3_Student_Standard_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2_2025-3_Student_Standard_Workbook.pdf"
@@ -165,7 +165,7 @@
               "profile": "teacher",
               "audience": "講師用",
               "label": "指導教案",
-              "description": "全29問の解答・完成英文・根拠英文・2つの訳・指導上の確認点をまとめた共通教案です。",
+              "description": "全29問の解答・完成英文・大問1の4つの選択肢の意味（問題順）・根拠英文・2つの訳・指導上の確認点をまとめた共通教案です。",
               "pages": 8,
               "path": "/materials/grade-pre2/2025-3/ReadPass_EIKEN_GradePre2_2025-3_Instructor_Teaching_Guide.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2_2025-3_Instructor_Teaching_Guide.pdf"
@@ -177,14 +177,14 @@
           "year": 2025,
           "session": 2,
           "label": "2025年度 第2回",
-          "updatedAt": "2026-08-25",
+          "updatedAt": "2026-08-28",
           "documents": [
             {
               "type": "workbook",
               "profile": "support",
               "audience": "生徒配付用",
               "label": "サポート版",
-              "description": "完成見本・意味の区切り・主語／動詞の手掛かりを先に示す版です。",
+              "description": "完成見本・意味の区切り・主語／動詞の手掛かりを先に示し、大問1では正解を含む4つの選択肢を問題と同じ順で確認できる版です。",
               "pages": 15,
               "path": "/materials/grade-pre2/2025-2/ReadPass_EIKEN_GradePre2_2025-2_Student_Support_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2_2025-2_Student_Support_Workbook.pdf"
@@ -194,7 +194,7 @@
               "profile": "standard",
               "audience": "生徒配付用",
               "label": "標準版",
-              "description": "自分で根拠を探して書いたあと、正しい英文と2つの訳で照合する版です。",
+              "description": "自分で根拠を探して書いたあと、正しい英文と2つの訳で照合し、大問1では正解を含む4つの選択肢を問題と同じ順で確認する版です。",
               "pages": 15,
               "path": "/materials/grade-pre2/2025-2/ReadPass_EIKEN_GradePre2_2025-2_Student_Standard_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2_2025-2_Student_Standard_Workbook.pdf"
@@ -204,7 +204,7 @@
               "profile": "teacher",
               "audience": "講師用",
               "label": "指導教案",
-              "description": "全29問の解答・完成英文・根拠英文・2つの訳・指導上の確認点をまとめた共通教案です。",
+              "description": "全29問の解答・完成英文・大問1の4つの選択肢の意味（問題順）・根拠英文・2つの訳・指導上の確認点をまとめた共通教案です。",
               "pages": 8,
               "path": "/materials/grade-pre2/2025-2/ReadPass_EIKEN_GradePre2_2025-2_Instructor_Teaching_Guide.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2_2025-2_Instructor_Teaching_Guide.pdf"
@@ -216,14 +216,14 @@
           "year": 2025,
           "session": 1,
           "label": "2025年度 第1回",
-          "updatedAt": "2026-08-25",
+          "updatedAt": "2026-08-28",
           "documents": [
             {
               "type": "workbook",
               "profile": "support",
               "audience": "生徒配付用",
               "label": "サポート版",
-              "description": "完成見本・意味の区切り・主語／動詞の手掛かりを先に示す版です。",
+              "description": "完成見本・意味の区切り・主語／動詞の手掛かりを先に示し、大問1では正解を含む4つの選択肢を問題と同じ順で確認できる版です。",
               "pages": 15,
               "path": "/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Student_Support_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2_2025-1_Student_Support_Workbook.pdf"
@@ -233,7 +233,7 @@
               "profile": "standard",
               "audience": "生徒配付用",
               "label": "標準版",
-              "description": "自分で根拠を探して書いたあと、正しい英文と2つの訳で照合する版です。",
+              "description": "自分で根拠を探して書いたあと、正しい英文と2つの訳で照合し、大問1では正解を含む4つの選択肢を問題と同じ順で確認する版です。",
               "pages": 15,
               "path": "/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Student_Standard_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2_2025-1_Student_Standard_Workbook.pdf"
@@ -243,7 +243,7 @@
               "profile": "teacher",
               "audience": "講師用",
               "label": "指導教案",
-              "description": "全29問の解答・完成英文・根拠英文・2つの訳・指導上の確認点をまとめた共通教案です。",
+              "description": "全29問の解答・完成英文・大問1の4つの選択肢の意味（問題順）・根拠英文・2つの訳・指導上の確認点をまとめた共通教案です。",
               "pages": 8,
               "path": "/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Instructor_Teaching_Guide.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2_2025-1_Instructor_Teaching_Guide.pdf"
