@@ -263,14 +263,14 @@
           "year": 2025,
           "session": 3,
           "label": "2025年度 第3回",
-          "updatedAt": "2026-08-25",
+          "updatedAt": "2026-08-28",
           "documents": [
             {
               "type": "workbook",
               "profile": "support",
               "audience": "生徒配付用",
               "label": "サポート版",
-              "description": "見本・書き出し・確認訳を先に示し、迷わず筆写を始められる版です。",
+              "description": "見本・書き出し・確認訳を先に示し、大問1では正解を含む4つの選択肢を問題と同じ順で確認できる、迷わず筆写を始められる版です。",
               "pages": 15,
               "path": "/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Student_Support_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_Grade3_2025-3_Student_Support_Workbook.pdf"
@@ -280,7 +280,7 @@
               "profile": "standard",
               "audience": "生徒配付用",
               "label": "標準版",
-              "description": "自分で本文を探して書いたあと、確認訳と照合する版です。",
+              "description": "自分で本文を探して書いたあと、確認訳と照合し、大問1では正解を含む4つの選択肢を問題と同じ順で確認する版です。",
               "pages": 15,
               "path": "/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Student_Standard_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_Grade3_2025-3_Student_Standard_Workbook.pdf"
@@ -290,7 +290,7 @@
               "profile": "teacher",
               "audience": "講師用",
               "label": "指導教案",
-              "description": "解答・記入例・根拠英文・指導上の確認点をまとめた共通教案です。",
+              "description": "解答・記入例・大問1の4つの選択肢の意味（問題順）・根拠英文・指導上の確認点をまとめた共通教案です。",
               "pages": 9,
               "path": "/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Instructor_Teaching_Guide.pdf",
               "downloadName": "ReadPass_EIKEN_Grade3_2025-3_Instructor_Teaching_Guide.pdf"
@@ -302,14 +302,14 @@
           "year": 2025,
           "session": 2,
           "label": "2025年度 第2回",
-          "updatedAt": "2026-08-25",
+          "updatedAt": "2026-08-28",
           "documents": [
             {
               "type": "workbook",
               "profile": "support",
               "audience": "生徒配付用",
               "label": "サポート版",
-              "description": "見本・書き出し・確認訳を先に示し、迷わず筆写を始められる版です。",
+              "description": "見本・書き出し・確認訳を先に示し、大問1では正解を含む4つの選択肢を問題と同じ順で確認できる、迷わず筆写を始められる版です。",
               "pages": 16,
               "path": "/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Student_Support_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_Grade3_2025-2_Student_Support_Workbook.pdf"
@@ -319,7 +319,7 @@
               "profile": "standard",
               "audience": "生徒配付用",
               "label": "標準版",
-              "description": "自分で本文を探して書いたあと、確認訳と照合する版です。",
+              "description": "自分で本文を探して書いたあと、確認訳と照合し、大問1では正解を含む4つの選択肢を問題と同じ順で確認する版です。",
               "pages": 16,
               "path": "/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Student_Standard_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_Grade3_2025-2_Student_Standard_Workbook.pdf"
@@ -329,7 +329,7 @@
               "profile": "teacher",
               "audience": "講師用",
               "label": "指導教案",
-              "description": "解答・記入例・根拠英文・指導上の確認点をまとめた共通教案です。",
+              "description": "解答・記入例・大問1の4つの選択肢の意味（問題順）・根拠英文・指導上の確認点をまとめた共通教案です。",
               "pages": 9,
               "path": "/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Instructor_Teaching_Guide.pdf",
               "downloadName": "ReadPass_EIKEN_Grade3_2025-2_Instructor_Teaching_Guide.pdf"
@@ -341,14 +341,14 @@
           "year": 2025,
           "session": 1,
           "label": "2025年度 第1回",
-          "updatedAt": "2026-08-25",
+          "updatedAt": "2026-08-28",
           "documents": [
             {
               "type": "workbook",
               "profile": "support",
               "audience": "生徒配付用",
               "label": "サポート版",
-              "description": "見本と具体的な手順を示し、迷わず筆写を始められる生徒用ワークです。",
+              "description": "見本・書き出し・確認訳を先に示し、大問1では正解を含む4つの選択肢を問題と同じ順で確認できる、迷わず筆写を始められる版です。",
               "pages": 15,
               "path": "/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Student_Support_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_Grade3_2025-1_Student_Support_Workbook.pdf"
@@ -358,7 +358,7 @@
               "profile": "standard",
               "audience": "生徒配付用",
               "label": "標準版",
-              "description": "自分で本文を探して書いたあと、確認訳と照合する版です。",
+              "description": "自分で本文を探して書いたあと、確認訳と照合し、大問1では正解を含む4つの選択肢を問題と同じ順で確認する版です。",
               "pages": 15,
               "path": "/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Student_Standard_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_Grade3_2025-1_Student_Standard_Workbook.pdf"
@@ -368,7 +368,7 @@
               "profile": "teacher",
               "audience": "講師用",
               "label": "指導教案",
-              "description": "解答・記入例と指導上の確認点をまとめた講師用資料です。",
+              "description": "解答・記入例・大問1の4つの選択肢の意味（問題順）・根拠英文・指導上の確認点をまとめた共通教案です。",
               "pages": 9,
               "path": "/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Instructor_Teaching_Guide.pdf",
               "downloadName": "ReadPass_EIKEN_Grade3_2025-1_Instructor_Teaching_Guide.pdf"
