@@ -10,6 +10,7 @@ const requiredFiles = [
   "assets/images/penpass-hero-learning.webp",
   "assets/images/penpass-teacher-prep.webp",
   "assets/images/penpass-writing-detail.webp",
+  "materials/flyers/PenPass_ReadPass_Linked_Student_Introduction_Flyer_A4_Portrait.pdf",
   "vercel.json",
   "robots.txt",
 ];
@@ -21,6 +22,8 @@ const css = readFileSync("styles.css", "utf8");
 const js = readFileSync("script.js", "utf8");
 const robots = readFileSync("robots.txt", "utf8");
 const data = JSON.parse(readFileSync("data/materials.json", "utf8"));
+const flyerPath = "/materials/flyers/PenPass_ReadPass_Linked_Student_Introduction_Flyer_A4_Portrait.pdf";
+const flyerDownloadName = "PenPass_ReadPass_Linked_Student_Introduction_Flyer_A4_Portrait.pdf";
 
 if (data.schemaVersion !== 1 || !Array.isArray(data.grades) || !data.grades.length) {
   throw new Error("data/materials.json has an unsupported or empty schema");
@@ -225,9 +228,24 @@ for (const match of html.matchAll(/href="([^"]+)"/g)) {
   }
 }
 
-const downloadCount = (html.match(/\sdownload="[^"]+\.pdf"/g) || []).length;
-if (downloadCount !== documentCount) {
-  throw new Error(`Expected ${documentCount} named PDF downloads, found ${downloadCount}`);
+const catalogDownloadCount = (html.match(/class="library-action library-action-download"[^>]+\sdownload="[^"]+\.pdf"/g) || []).length;
+if (catalogDownloadCount !== documentCount) {
+  throw new Error(`Expected ${documentCount} named material PDF downloads, found ${catalogDownloadCount}`);
+}
+
+if (html.split(`href="${flyerPath}"`).length - 1 !== 1) {
+  throw new Error("The student introduction flyer must have one download link");
+}
+if (html.split(`download="${flyerDownloadName}"`).length - 1 !== 1) {
+  throw new Error("The student introduction flyer must have a descriptive download name");
+}
+const flyerBuffer = readFileSync(flyerPath.slice(1));
+if (flyerBuffer.subarray(0, 5).toString("ascii") !== "%PDF-") {
+  throw new Error("Invalid student introduction flyer PDF signature");
+}
+const flyerPages = (flyerBuffer.toString("latin1").match(/\/Type\s*\/Page\b/g) || []).length;
+if (flyerPages !== 1) {
+  throw new Error(`Student introduction flyer must be one page, found ${flyerPages}`);
 }
 
 const readPassLinkCount = (html.match(/class="session-readpass-link"/g) || []).length;
