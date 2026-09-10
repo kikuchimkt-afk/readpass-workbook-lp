@@ -46,6 +46,7 @@
           <a href="#profiles">版の選び方</a>
           <a href="#philosophy">作成理念</a>
           <a href="#sample">紙面見本</a>
+          <a href="#changelog">更新履歴</a>
         </nav>
         <a class="header-cta" href="#materials">教材を選ぶ</a>
       </div>
@@ -58,7 +59,7 @@
             <p class="hero-badge">ECCベストワン北島中央校｜社内教材ポータル</p>
             <h1 class="hero-wordmark" lang="en">PenPass</h1>
             <p class="hero-product-subtitle">ReadPass連動 かきこみワーク</p>
-            <p class="hero-concept">アプリで解く。紙に書く。授業で確かめる。</p>
+            <p class="hero-concept">紙で解く。アプリで確かめる。紙に書いて残す。</p>
             <p class="hero-lead">
               ReadPassで得た「わかった」を、筆写・意味確認・和訳・音読へつなぐ授業用ワークです。
               生徒用ワークブックと講師用の指導教案を、級・年度・回からすぐに選べます。
@@ -1330,7 +1331,7 @@
             </div>
           </div>
           <ol class="learning-flow">
-            <li class="reveal"><span>01</span><strong>解く</strong><p>ReadPassで同じ問題を開き、まず自分の答えを残します。</p></li>
+            <li class="reveal"><span>01</span><strong>答え合わせ</strong><p>過去問プリントで解いたあと、ReadPassで正解と解説を確認します。</p></li>
             <li class="reveal"><span>02</span><strong>写す</strong><p>正解を確認して、指定された英文だけを1回写します。</p></li>
             <li class="reveal"><span>03</span><strong>確かめる</strong><p>選択肢の意味、または直訳風と自然な訳を書きます。</p></li>
             <li class="reveal"><span>04</span><strong>読む</strong><p>英文を指で追い、声に出して2回読みます。</p></li>
@@ -1391,7 +1392,7 @@
 
           <div id="sample-panel" class="sample-paper reveal" role="tabpanel" tabindex="0" aria-live="polite">
             <div class="sample-paper-head"><span data-sample-number>Q 01</span><span data-sample-kind>短文・語彙</span></div>
-            <div class="sample-task"><b>1</b><div><strong>ReadPassで解く → 答え合わせ</strong><p>最初：＿＿　正解（赤）：＿＿</p></div></div>
+            <div class="sample-task"><b>1</b><div><strong>答え合わせ：ReadPassで解説を読む</strong><p>自分の答え：＿＿　正解：＿＿　→　○ ・ △ ・ ×</p></div></div>
             <div class="sample-task"><b>2</b><div><strong data-sample-action>正しい英文を見ながら1回写す</strong><p class="sample-model" data-sample-model>Aya was glad because she found her lost notebook.</p><div class="sample-lines"><i></i><i></i><i></i></div></div></div>
             <div class="sample-task"><b>3</b><div><strong data-sample-extra-title>4つの選択肢の意味を書く（問題順）</strong><p data-sample-extra>1.empty＝＿＿　2.glad＝＿＿　3.careful＝＿＿　4.famous＝＿＿</p><div class="sample-lines small"><i></i><i></i></div></div></div>
             <div class="sample-done"><span>4　英文を指で追って、声に出して2回読む</span><strong>□ できた</strong></div>
@@ -1399,12 +1400,114 @@
         </div>
       </section>
 
+      <section id="changelog" class="section changelog-section">
+        <div class="container">
+          <div class="changelog-heading reveal">
+            <p class="eyebrow">CHANGELOG</p>
+            <h2 class="section-title">更新履歴</h2>
+            <p class="changelog-intro">
+              教材と本ページの変更を、新しい順に記録しています。作成に使ったモデルと推論レベルも併記します。
+            </p>
+          </div>
+          <!-- CHANGELOG_START -->
+          <ol class="changelog-list">
+            <li class="changelog-entry">
+              <div class="changelog-head">
+                <time class="changelog-date" datetime="2026-09-10">2026年9月10日</time>
+                <span class="changelog-tags">
+                  <span class="changelog-tag changelog-tag-model">Claude Opus 5</span>
+                  <span class="changelog-tag changelog-tag-reasoning">推論 高</span>
+                </span>
+              </div>
+              <h3>更新履歴セクションを追加し、LP本文を新しい流れへ更新</h3>
+                <p class="changelog-scope">対象：LP（index.html・styles.css・data/changelog.json）</p>
+              <ul class="changelog-changes">
+                <li>「更新履歴」セクションを新設し、data/changelog.json から新しい順に自動生成する仕組みを追加（モデル名・推論レベル・変更内容を併記）</li>
+                <li>npm run catalog / check に更新履歴の生成と検証を追加し、日付形式・新しい順・HTMLへの反映を自動チェック</li>
+                <li>全級が紙で解く流れに移行したのに合わせ、LP本文の「01 解く：ReadPassで同じ問題を開き」を「01 答え合わせ」に修正</li>
+                <li>紙面見本の手順1と授業の流れの説明文を、過去問プリント→ReadPass→PenPassの順に書き換え</li>
+              </ul>
+            </li>
+            <li class="changelog-entry">
+              <div class="changelog-head">
+                <time class="changelog-date" datetime="2026-09-10">2026年9月10日</time>
+                <span class="changelog-tags">
+                  <span class="changelog-tag changelog-tag-model">Claude Sonnet 5</span>
+                  <span class="changelog-tag changelog-tag-reasoning">推論 中</span>
+                </span>
+              </div>
+              <h3>4級・5級を新しい授業の流れへ展開</h3>
+                <p class="changelog-scope">対象：4級・5級（各2025年度 第1〜3回）</p>
+              <ul class="changelog-changes">
+                <li>生徒用共通版の1ページ目に「きょうの進め方」を新設し、過去問プリント→ReadPassで答え合わせ→PenPassの順と、終了ライン・提出日欄を明記</li>
+                <li>各問の先頭を「答え合わせ：ReadPassで解説を読む」に統一（5級はひらがな中心の平易な表記）</li>
+                <li>指導教案の1ページ目に60分／80分のタイムテーブル、生徒にそのまま読み上げる指示、巡回で見る場所を追加</li>
+                <li>低学年向けの共通版1冊構成のため、○△×による絞り込みは行わず、大問1から全問を書く方式を維持</li>
+              </ul>
+            </li>
+            <li class="changelog-entry">
+              <div class="changelog-head">
+                <time class="changelog-date" datetime="2026-09-10">2026年9月10日</time>
+                <span class="changelog-tags">
+                  <span class="changelog-tag changelog-tag-model">Claude Sonnet 5</span>
+                  <span class="changelog-tag changelog-tag-reasoning">推論 中</span>
+                </span>
+              </div>
+              <h3>準2級プラス・準2級へ展開／全16回に過去問プリントを追加</h3>
+                <p class="changelog-scope">対象：準2級プラス（2025年度 第1〜3回・2026年度 第1回）、準2級（2025年度 第1〜3回）、教材一覧の全16回</p>
+              <ul class="changelog-changes">
+                <li>準2級・準2級プラスが共有する生成スクリプトへ、きょうの進め方ページと答え合わせ＋○△×の記入欄を横展開</li>
+                <li>指導教案の1ページ目を60分／80分のタイムテーブルと読み上げ指示に差し替え</li>
+                <li>教材一覧の各回に、STEP1で使う「過去問プリント」を生徒用ワークブックより前に追加</li>
+                <li>過去問プリントは最終ページに正解一覧（解説なし）を含むため「正解のみ・解説なし」と明記し、巡回ポイントに先読み防止を追加</li>
+              </ul>
+            </li>
+            <li class="changelog-entry">
+              <div class="changelog-head">
+                <time class="changelog-date" datetime="2026-09-10">2026年9月10日</time>
+                <span class="changelog-tags">
+                  <span class="changelog-tag changelog-tag-model">Claude Opus 5</span>
+                  <span class="changelog-tag changelog-tag-reasoning">推論 高</span>
+                </span>
+              </div>
+              <h3>3級 標準版を「自分で探す」設計へ</h3>
+                <p class="changelog-scope">対象：3級（2025年度 第1〜3回）標準版・指導教案</p>
+              <ul class="changelog-changes">
+                <li>大問3の手順を、ページ下部の英文を写す形から、本文中の根拠文を自分で探して下を見ずに写す形へ変更</li>
+                <li>ページ下部の帯の役割を「写す見本」から「書き終えてからの答え合わせ」へ変更</li>
+                <li>サポート版と標準版の違いを大問1〜3すべてで明確化し、指導教案の版の使い分け表を5項目へ拡充</li>
+                <li>巡回ポイントに「標準版が根拠文を探せずに止まっていないか」を追加</li>
+              </ul>
+            </li>
+            <li class="changelog-entry">
+              <div class="changelog-head">
+                <time class="changelog-date" datetime="2026-09-10">2026年9月10日</time>
+                <span class="changelog-tags">
+                  <span class="changelog-tag changelog-tag-model">Claude Opus 5</span>
+                  <span class="changelog-tag changelog-tag-reasoning">推論 高</span>
+                </span>
+              </div>
+              <h3>3級を「紙で解く→ReadPassで答え合わせ→PenPass」の流れに再設計</h3>
+                <p class="changelog-scope">対象：3級（2025年度 第1〜3回）サポート版・標準版・指導教案</p>
+              <ul class="changelog-changes">
+                <li>1ページ目に「きょうの進め方」を新設し、3ステップの順序・△と×の記入欄・終了ライン・提出日欄をまとめて掲載</li>
+                <li>全30問の手順①を「ReadPassで解く」から「答え合わせ：ReadPassで解説を読む」に変更し、○△×の自己判定欄を追加</li>
+                <li>大問3の確認用の訳を記入欄の直下からページ下部へ移動し、書く前に答えが目に入らないよう変更</li>
+                <li>大問2で写す手がかり文を優先順位ルールで選び直し、「Yes.」「Hi, Martin.」のような断片を排除</li>
+                <li>指導教案の1ページ目を、60分／80分のタイムテーブルと読み上げ指示・巡回ポイントに差し替え</li>
+              </ul>
+            </li>
+          </ol>
+          <!-- CHANGELOG_END -->
+        </div>
+      </section>
+
       <section id="trial" class="trial-section">
         <div class="trial-inner container reveal">
           <p class="eyebrow">LESSON FLOW</p>
-          <h2>ReadPassで解いてから、<br />ワークブックへ。</h2>
+          <h2>紙で解いてから、<br />ワークブックへ。</h2>
           <p>
-            授業では、先にReadPassで問題を解き、答えと解説を確認します。その後、生徒用ワークブックで筆写・意味確認・和訳・音読へ進みます。
+            授業では、まず過去問プリントを紙で解きます。次にReadPassで答え合わせと解説を確認し、そのあと生徒用ワークブックで筆写・意味確認・和訳・音読へ進みます。
           </p>
           <a class="button button-yellow" href="#materials">教材ライブラリへ戻る <span aria-hidden="true">↑</span></a>
           <small>※本ページと掲載教材は社内利用専用です。</small>

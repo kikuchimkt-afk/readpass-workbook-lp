@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node scripts/serve.mjs",
-    "catalog": "node scripts/render-catalog.mjs",
-    "check": "node scripts/render-catalog.mjs --check && node scripts/validate.mjs"
+    "catalog": "node scripts/render-catalog.mjs && node scripts/render-changelog.mjs",
+    "check": "node scripts/render-catalog.mjs --check && node scripts/render-changelog.mjs --check && node scripts/validate.mjs"
   }
 }

@@ -6,6 +6,8 @@ const requiredFiles = [
   "script.js",
   "data/materials.json",
   "scripts/render-catalog.mjs",
+  "scripts/render-changelog.mjs",
+  "data/changelog.json",
   "assets/favicon.svg",
   "assets/images/penpass-hero-learning.webp",
   "assets/images/penpass-teacher-prep.webp",
@@ -132,7 +134,7 @@ unique(sessionIds, "session ID");
 unique(paths, "material path");
 unique(downloadNames, "download name");
 
-const requiredIds = ["top", "main", "materials", "profiles", "philosophy", "design", "sample", "trial"];
+const requiredIds = ["top", "main", "materials", "profiles", "philosophy", "design", "sample", "changelog", "trial"];
 const missingIds = requiredIds.filter((id) => !html.includes(`id="${id}"`));
 if (missingIds.length) throw new Error(`Missing section IDs: ${missingIds.join(", ")}`);
 
@@ -253,6 +255,39 @@ if (readPassLinkCount !== sessionIds.length) {
   throw new Error(`Expected ${sessionIds.length} ReadPass links, found ${readPassLinkCount}`);
 }
 
+const changelog = JSON.parse(readFileSync("data/changelog.json", "utf8"));
+if (changelog.schemaVersion !== 1 || !Array.isArray(changelog.entries) || !changelog.entries.length) {
+  throw new Error("data/changelog.json has an unsupported or empty schema");
+}
+let previousDate = null;
+for (const entry of changelog.entries) {
+  for (const key of ["date", "title", "model", "reasoning"]) {
+    if (typeof entry[key] !== "string" || !entry[key].trim()) {
+      throw new Error(`Changelog entry is missing ${key}: ${entry.title || entry.date}`);
+    }
+  }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(entry.date)) {
+    throw new Error(`Changelog date must be YYYY-MM-DD: ${entry.date}`);
+  }
+  if (previousDate && entry.date > previousDate) {
+    throw new Error(`Changelog entries must be newest first: ${entry.date} follows ${previousDate}`);
+  }
+  previousDate = entry.date;
+  if (!Array.isArray(entry.changes) || !entry.changes.length) {
+    throw new Error(`Changelog entry has no changes: ${entry.title}`);
+  }
+  if (!html.includes(`>${entry.title}</h3>`)) {
+    throw new Error(`Changelog entry is not rendered into index.html: ${entry.title}`);
+  }
+}
+const renderedEntryCount = (html.match(/class="changelog-entry"/g) || []).length;
+if (renderedEntryCount !== changelog.entries.length) {
+  throw new Error(
+    `Expected ${changelog.entries.length} changelog entries, found ${renderedEntryCount}`,
+  );
+}
+if (!css.includes(".changelog-entry")) throw new Error("Changelog styles are missing");
+
 console.log(
-  `LP validation passed: ${data.grades.length} grade(s), ${sessionIds.length} session(s), ${documentCount} PDF document(s)`,
+  `LP validation passed: ${data.grades.length} grade(s), ${sessionIds.length} session(s), ${documentCount} PDF document(s), ${changelog.entries.length} changelog entry(ies)`,
 );
