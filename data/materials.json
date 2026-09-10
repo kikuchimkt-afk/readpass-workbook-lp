@@ -13,15 +13,25 @@
           "year": 2026,
           "session": 1,
           "label": "2026年度 第1回",
-          "updatedAt": "2026-09-02",
+          "updatedAt": "2026-09-10",
           "documents": [
+            {
+              "type": "practice-exam",
+              "profile": "practice",
+              "audience": "生徒配付用（正解のみ・解説なし）",
+              "label": "過去問プリント",
+              "description": "ReadPassの過去問と同じ回の印刷用プリントです。最終ページに正解一覧（解説なし）を収録しています。STEP1ではこれを解き、最終ページは見ずに、STEP2でReadPassの答え合わせ・解説へ進みます。",
+              "pages": 11,
+              "path": "/materials/grade-pre2plus/2026-1/ReadPass_EIKEN_GradePre2Plus_2026-1_Student_Practice_Exam.pdf",
+              "downloadName": "ReadPass_EIKEN_GradePre2Plus_2026-1_Student_Practice_Exam.pdf"
+            },
             {
               "type": "workbook",
               "profile": "support",
               "audience": "生徒配付用",
               "label": "サポート版",
-              "description": "小学校高学年〜中2でも迷わないよう、1動作ずつの指示・意味の区切り・『だれ／何が・どうする』・2つの訳を示し、大問1では正解を含む4つの選択肢を問題と同じ順で確認できる版です。",
-              "pages": 20,
+              "description": "1ページ目の「きょうの進め方」で、過去問プリント→ReadPassで答え合わせ→PenPassの順と、△と×だけを書く範囲を示します。完成見本・/区切り・S/Vの手がかりを先に見せる版です。",
+              "pages": 21,
               "path": "/materials/grade-pre2plus/2026-1/ReadPass_EIKEN_GradePre2Plus_2026-1_Student_Support_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2026-1_Student_Support_Workbook.pdf"
             },
@@ -30,8 +40,8 @@
               "profile": "standard",
               "audience": "生徒配付用",
               "label": "標準版",
-              "description": "自分で根拠英文と2つの訳を書いたあと、同じページの確認例と照合して赤で直し、大問1では正解を含む4つの選択肢を問題と同じ順で確認する版です。",
-              "pages": 20,
+              "description": "1ページ目の「きょうの進め方」で、過去問プリント→ReadPassで答え合わせ→PenPassの順と、△と×だけを書く範囲を示します。先に自力で書き、確認見本と比べて赤で直す版です。",
+              "pages": 21,
               "path": "/materials/grade-pre2plus/2026-1/ReadPass_EIKEN_GradePre2Plus_2026-1_Student_Standard_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2026-1_Student_Standard_Workbook.pdf"
             },
@@ -40,8 +50,8 @@
               "profile": "teacher",
               "audience": "講師用",
               "label": "指導教案",
-              "description": "全31問の正答・大問1の4つの選択肢の意味（問題順）・根拠英文・2つの訳・止まりやすい点・最初の声かけをまとめた共通教案です。",
-              "pages": 11,
+              "description": "60分／80分のタイムテーブル、生徒にそのまま読み上げる指示、巡回で見る場所に加え、解答・完成英文・4つの選択肢の意味（問題順）・根拠英文をまとめた共通教案です。",
+              "pages": 12,
               "path": "/materials/grade-pre2plus/2026-1/ReadPass_EIKEN_GradePre2Plus_2026-1_Instructor_Teaching_Guide.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2026-1_Instructor_Teaching_Guide.pdf"
             }
@@ -52,15 +62,25 @@
           "year": 2025,
           "session": 3,
           "label": "2025年度 第3回",
-          "updatedAt": "2026-08-28",
+          "updatedAt": "2026-09-10",
           "documents": [
+            {
+              "type": "practice-exam",
+              "profile": "practice",
+              "audience": "生徒配付用（正解のみ・解説なし）",
+              "label": "過去問プリント",
+              "description": "ReadPassの過去問と同じ回の印刷用プリントです。最終ページに正解一覧（解説なし）を収録しています。STEP1ではこれを解き、最終ページは見ずに、STEP2でReadPassの答え合わせ・解説へ進みます。",
+              "pages": 11,
+              "path": "/materials/grade-pre2plus/2025-3/ReadPass_EIKEN_GradePre2Plus_2025-3_Student_Practice_Exam.pdf",
+              "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-3_Student_Practice_Exam.pdf"
+            },
             {
               "type": "workbook",
               "profile": "support",
               "audience": "生徒配付用",
               "label": "サポート版",
-              "description": "小学校高学年〜中2でも迷わないよう、1動作ずつの指示・意味の区切り・『だれ／何が・どうする』・2つの訳を示し、大問1では正解を含む4つの選択肢を問題と同じ順で確認できる版です。",
-              "pages": 20,
+              "description": "1ページ目の「きょうの進め方」で、過去問プリント→ReadPassで答え合わせ→PenPassの順と、△と×だけを書く範囲を示します。完成見本・/区切り・S/Vの手がかりを先に見せる版です。",
+              "pages": 21,
               "path": "/materials/grade-pre2plus/2025-3/ReadPass_EIKEN_GradePre2Plus_2025-3_Student_Support_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-3_Student_Support_Workbook.pdf"
             },
@@ -69,8 +89,8 @@
               "profile": "standard",
               "audience": "生徒配付用",
               "label": "標準版",
-              "description": "自分で根拠英文と2つの訳を書いたあと、同じページの確認例と照合して赤で直し、大問1では正解を含む4つの選択肢を問題と同じ順で確認する版です。",
-              "pages": 20,
+              "description": "1ページ目の「きょうの進め方」で、過去問プリント→ReadPassで答え合わせ→PenPassの順と、△と×だけを書く範囲を示します。先に自力で書き、確認見本と比べて赤で直す版です。",
+              "pages": 21,
               "path": "/materials/grade-pre2plus/2025-3/ReadPass_EIKEN_GradePre2Plus_2025-3_Student_Standard_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-3_Student_Standard_Workbook.pdf"
             },
@@ -79,8 +99,8 @@
               "profile": "teacher",
               "audience": "講師用",
               "label": "指導教案",
-              "description": "全31問の正答・大問1の4つの選択肢の意味（問題順）・根拠英文・2つの訳・止まりやすい点・最初の声かけをまとめた共通教案です。",
-              "pages": 11,
+              "description": "60分／80分のタイムテーブル、生徒にそのまま読み上げる指示、巡回で見る場所に加え、解答・完成英文・4つの選択肢の意味（問題順）・根拠英文をまとめた共通教案です。",
+              "pages": 12,
               "path": "/materials/grade-pre2plus/2025-3/ReadPass_EIKEN_GradePre2Plus_2025-3_Instructor_Teaching_Guide.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-3_Instructor_Teaching_Guide.pdf"
             }
@@ -91,15 +111,25 @@
           "year": 2025,
           "session": 2,
           "label": "2025年度 第2回",
-          "updatedAt": "2026-08-28",
+          "updatedAt": "2026-09-10",
           "documents": [
+            {
+              "type": "practice-exam",
+              "profile": "practice",
+              "audience": "生徒配付用（正解のみ・解説なし）",
+              "label": "過去問プリント",
+              "description": "ReadPassの過去問と同じ回の印刷用プリントです。最終ページに正解一覧（解説なし）を収録しています。STEP1ではこれを解き、最終ページは見ずに、STEP2でReadPassの答え合わせ・解説へ進みます。",
+              "pages": 11,
+              "path": "/materials/grade-pre2plus/2025-2/ReadPass_EIKEN_GradePre2Plus_2025-2_Student_Practice_Exam.pdf",
+              "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-2_Student_Practice_Exam.pdf"
+            },
             {
               "type": "workbook",
               "profile": "support",
               "audience": "生徒配付用",
               "label": "サポート版",
-              "description": "小学校高学年〜中2でも迷わないよう、1動作ずつの指示・意味の区切り・『だれ／何が・どうする』・2つの訳を示し、大問1では正解を含む4つの選択肢を問題と同じ順で確認できる版です。",
-              "pages": 20,
+              "description": "1ページ目の「きょうの進め方」で、過去問プリント→ReadPassで答え合わせ→PenPassの順と、△と×だけを書く範囲を示します。完成見本・/区切り・S/Vの手がかりを先に見せる版です。",
+              "pages": 21,
               "path": "/materials/grade-pre2plus/2025-2/ReadPass_EIKEN_GradePre2Plus_2025-2_Student_Support_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-2_Student_Support_Workbook.pdf"
             },
@@ -108,8 +138,8 @@
               "profile": "standard",
               "audience": "生徒配付用",
               "label": "標準版",
-              "description": "自分で根拠英文と2つの訳を書いたあと、同じページの確認例と照合して赤で直し、大問1では正解を含む4つの選択肢を問題と同じ順で確認する版です。",
-              "pages": 20,
+              "description": "1ページ目の「きょうの進め方」で、過去問プリント→ReadPassで答え合わせ→PenPassの順と、△と×だけを書く範囲を示します。先に自力で書き、確認見本と比べて赤で直す版です。",
+              "pages": 21,
               "path": "/materials/grade-pre2plus/2025-2/ReadPass_EIKEN_GradePre2Plus_2025-2_Student_Standard_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-2_Student_Standard_Workbook.pdf"
             },
@@ -118,8 +148,8 @@
               "profile": "teacher",
               "audience": "講師用",
               "label": "指導教案",
-              "description": "全31問の正答・大問1の4つの選択肢の意味（問題順）・根拠英文・2つの訳・止まりやすい点・最初の声かけをまとめた共通教案です。",
-              "pages": 11,
+              "description": "60分／80分のタイムテーブル、生徒にそのまま読み上げる指示、巡回で見る場所に加え、解答・完成英文・4つの選択肢の意味（問題順）・根拠英文をまとめた共通教案です。",
+              "pages": 12,
               "path": "/materials/grade-pre2plus/2025-2/ReadPass_EIKEN_GradePre2Plus_2025-2_Instructor_Teaching_Guide.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-2_Instructor_Teaching_Guide.pdf"
             }
@@ -130,15 +160,25 @@
           "year": 2025,
           "session": 1,
           "label": "2025年度 第1回",
-          "updatedAt": "2026-08-28",
+          "updatedAt": "2026-09-10",
           "documents": [
+            {
+              "type": "practice-exam",
+              "profile": "practice",
+              "audience": "生徒配付用（正解のみ・解説なし）",
+              "label": "過去問プリント",
+              "description": "ReadPassの過去問と同じ回の印刷用プリントです。最終ページに正解一覧（解説なし）を収録しています。STEP1ではこれを解き、最終ページは見ずに、STEP2でReadPassの答え合わせ・解説へ進みます。",
+              "pages": 11,
+              "path": "/materials/grade-pre2plus/2025-1/ReadPass_EIKEN_GradePre2Plus_2025-1_Student_Practice_Exam.pdf",
+              "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-1_Student_Practice_Exam.pdf"
+            },
             {
               "type": "workbook",
               "profile": "support",
               "audience": "生徒配付用",
               "label": "サポート版",
-              "description": "小学校高学年〜中2でも迷わないよう、1動作ずつの指示・意味の区切り・『だれ／何が・どうする』・2つの訳を示し、大問1では正解を含む4つの選択肢を問題と同じ順で確認できる版です。",
-              "pages": 20,
+              "description": "1ページ目の「きょうの進め方」で、過去問プリント→ReadPassで答え合わせ→PenPassの順と、△と×だけを書く範囲を示します。完成見本・/区切り・S/Vの手がかりを先に見せる版です。",
+              "pages": 21,
               "path": "/materials/grade-pre2plus/2025-1/ReadPass_EIKEN_GradePre2Plus_2025-1_Student_Support_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-1_Student_Support_Workbook.pdf"
             },
@@ -147,8 +187,8 @@
               "profile": "standard",
               "audience": "生徒配付用",
               "label": "標準版",
-              "description": "自分で根拠英文と2つの訳を書いたあと、同じページの確認例と照合して赤で直し、大問1では正解を含む4つの選択肢を問題と同じ順で確認する版です。",
-              "pages": 20,
+              "description": "1ページ目の「きょうの進め方」で、過去問プリント→ReadPassで答え合わせ→PenPassの順と、△と×だけを書く範囲を示します。先に自力で書き、確認見本と比べて赤で直す版です。",
+              "pages": 21,
               "path": "/materials/grade-pre2plus/2025-1/ReadPass_EIKEN_GradePre2Plus_2025-1_Student_Standard_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-1_Student_Standard_Workbook.pdf"
             },
@@ -157,8 +197,8 @@
               "profile": "teacher",
               "audience": "講師用",
               "label": "指導教案",
-              "description": "全31問の正答・大問1の4つの選択肢の意味（問題順）・根拠英文・2つの訳・止まりやすい点・最初の声かけをまとめた共通教案です。",
-              "pages": 11,
+              "description": "60分／80分のタイムテーブル、生徒にそのまま読み上げる指示、巡回で見る場所に加え、解答・完成英文・4つの選択肢の意味（問題順）・根拠英文をまとめた共通教案です。",
+              "pages": 12,
               "path": "/materials/grade-pre2plus/2025-1/ReadPass_EIKEN_GradePre2Plus_2025-1_Instructor_Teaching_Guide.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2Plus_2025-1_Instructor_Teaching_Guide.pdf"
             }
@@ -177,15 +217,25 @@
           "year": 2025,
           "session": 3,
           "label": "2025年度 第3回",
-          "updatedAt": "2026-08-28",
+          "updatedAt": "2026-09-10",
           "documents": [
+            {
+              "type": "practice-exam",
+              "profile": "practice",
+              "audience": "生徒配付用（正解のみ・解説なし）",
+              "label": "過去問プリント",
+              "description": "ReadPassの過去問と同じ回の印刷用プリントです。最終ページに正解一覧（解説なし）を収録しています。STEP1ではこれを解き、最終ページは見ずに、STEP2でReadPassの答え合わせ・解説へ進みます。",
+              "pages": 10,
+              "path": "/materials/grade-pre2/2025-3/ReadPass_EIKEN_GradePre2_2025-3_Student_Practice_Exam.pdf",
+              "downloadName": "ReadPass_EIKEN_GradePre2_2025-3_Student_Practice_Exam.pdf"
+            },
             {
               "type": "workbook",
               "profile": "support",
               "audience": "生徒配付用",
               "label": "サポート版",
-              "description": "完成見本・意味の区切り・主語／動詞の手掛かりを先に示し、大問1では正解を含む4つの選択肢を問題と同じ順で確認できる版です。",
-              "pages": 15,
+              "description": "1ページ目の「きょうの進め方」で、過去問プリント→ReadPassで答え合わせ→PenPassの順と、△と×だけを書く範囲を示します。完成見本・/区切り・S/Vの手がかりを先に見せる版です。",
+              "pages": 16,
               "path": "/materials/grade-pre2/2025-3/ReadPass_EIKEN_GradePre2_2025-3_Student_Support_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2_2025-3_Student_Support_Workbook.pdf"
             },
@@ -194,8 +244,8 @@
               "profile": "standard",
               "audience": "生徒配付用",
               "label": "標準版",
-              "description": "自分で根拠を探して書いたあと、正しい英文と2つの訳で照合し、大問1では正解を含む4つの選択肢を問題と同じ順で確認する版です。",
-              "pages": 15,
+              "description": "1ページ目の「きょうの進め方」で、過去問プリント→ReadPassで答え合わせ→PenPassの順と、△と×だけを書く範囲を示します。先に自力で書き、確認見本と比べて赤で直す版です。",
+              "pages": 16,
               "path": "/materials/grade-pre2/2025-3/ReadPass_EIKEN_GradePre2_2025-3_Student_Standard_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2_2025-3_Student_Standard_Workbook.pdf"
             },
@@ -204,8 +254,8 @@
               "profile": "teacher",
               "audience": "講師用",
               "label": "指導教案",
-              "description": "全29問の解答・完成英文・大問1の4つの選択肢の意味（問題順）・根拠英文・2つの訳・指導上の確認点をまとめた共通教案です。",
-              "pages": 8,
+              "description": "60分／80分のタイムテーブル、生徒にそのまま読み上げる指示、巡回で見る場所に加え、解答・完成英文・4つの選択肢の意味（問題順）・根拠英文をまとめた共通教案です。",
+              "pages": 9,
               "path": "/materials/grade-pre2/2025-3/ReadPass_EIKEN_GradePre2_2025-3_Instructor_Teaching_Guide.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2_2025-3_Instructor_Teaching_Guide.pdf"
             }
@@ -216,15 +266,25 @@
           "year": 2025,
           "session": 2,
           "label": "2025年度 第2回",
-          "updatedAt": "2026-08-28",
+          "updatedAt": "2026-09-10",
           "documents": [
+            {
+              "type": "practice-exam",
+              "profile": "practice",
+              "audience": "生徒配付用（正解のみ・解説なし）",
+              "label": "過去問プリント",
+              "description": "ReadPassの過去問と同じ回の印刷用プリントです。最終ページに正解一覧（解説なし）を収録しています。STEP1ではこれを解き、最終ページは見ずに、STEP2でReadPassの答え合わせ・解説へ進みます。",
+              "pages": 10,
+              "path": "/materials/grade-pre2/2025-2/ReadPass_EIKEN_GradePre2_2025-2_Student_Practice_Exam.pdf",
+              "downloadName": "ReadPass_EIKEN_GradePre2_2025-2_Student_Practice_Exam.pdf"
+            },
             {
               "type": "workbook",
               "profile": "support",
               "audience": "生徒配付用",
               "label": "サポート版",
-              "description": "完成見本・意味の区切り・主語／動詞の手掛かりを先に示し、大問1では正解を含む4つの選択肢を問題と同じ順で確認できる版です。",
-              "pages": 15,
+              "description": "1ページ目の「きょうの進め方」で、過去問プリント→ReadPassで答え合わせ→PenPassの順と、△と×だけを書く範囲を示します。完成見本・/区切り・S/Vの手がかりを先に見せる版です。",
+              "pages": 16,
               "path": "/materials/grade-pre2/2025-2/ReadPass_EIKEN_GradePre2_2025-2_Student_Support_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2_2025-2_Student_Support_Workbook.pdf"
             },
@@ -233,8 +293,8 @@
               "profile": "standard",
               "audience": "生徒配付用",
               "label": "標準版",
-              "description": "自分で根拠を探して書いたあと、正しい英文と2つの訳で照合し、大問1では正解を含む4つの選択肢を問題と同じ順で確認する版です。",
-              "pages": 15,
+              "description": "1ページ目の「きょうの進め方」で、過去問プリント→ReadPassで答え合わせ→PenPassの順と、△と×だけを書く範囲を示します。先に自力で書き、確認見本と比べて赤で直す版です。",
+              "pages": 16,
               "path": "/materials/grade-pre2/2025-2/ReadPass_EIKEN_GradePre2_2025-2_Student_Standard_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2_2025-2_Student_Standard_Workbook.pdf"
             },
@@ -243,8 +303,8 @@
               "profile": "teacher",
               "audience": "講師用",
               "label": "指導教案",
-              "description": "全29問の解答・完成英文・大問1の4つの選択肢の意味（問題順）・根拠英文・2つの訳・指導上の確認点をまとめた共通教案です。",
-              "pages": 8,
+              "description": "60分／80分のタイムテーブル、生徒にそのまま読み上げる指示、巡回で見る場所に加え、解答・完成英文・4つの選択肢の意味（問題順）・根拠英文をまとめた共通教案です。",
+              "pages": 9,
               "path": "/materials/grade-pre2/2025-2/ReadPass_EIKEN_GradePre2_2025-2_Instructor_Teaching_Guide.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2_2025-2_Instructor_Teaching_Guide.pdf"
             }
@@ -255,15 +315,25 @@
           "year": 2025,
           "session": 1,
           "label": "2025年度 第1回",
-          "updatedAt": "2026-08-28",
+          "updatedAt": "2026-09-10",
           "documents": [
+            {
+              "type": "practice-exam",
+              "profile": "practice",
+              "audience": "生徒配付用（正解のみ・解説なし）",
+              "label": "過去問プリント",
+              "description": "ReadPassの過去問と同じ回の印刷用プリントです。最終ページに正解一覧（解説なし）を収録しています。STEP1ではこれを解き、最終ページは見ずに、STEP2でReadPassの答え合わせ・解説へ進みます。",
+              "pages": 10,
+              "path": "/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Student_Practice_Exam.pdf",
+              "downloadName": "ReadPass_EIKEN_GradePre2_2025-1_Student_Practice_Exam.pdf"
+            },
             {
               "type": "workbook",
               "profile": "support",
               "audience": "生徒配付用",
               "label": "サポート版",
-              "description": "完成見本・意味の区切り・主語／動詞の手掛かりを先に示し、大問1では正解を含む4つの選択肢を問題と同じ順で確認できる版です。",
-              "pages": 15,
+              "description": "1ページ目の「きょうの進め方」で、過去問プリント→ReadPassで答え合わせ→PenPassの順と、△と×だけを書く範囲を示します。完成見本・/区切り・S/Vの手がかりを先に見せる版です。",
+              "pages": 16,
               "path": "/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Student_Support_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2_2025-1_Student_Support_Workbook.pdf"
             },
@@ -272,8 +342,8 @@
               "profile": "standard",
               "audience": "生徒配付用",
               "label": "標準版",
-              "description": "自分で根拠を探して書いたあと、正しい英文と2つの訳で照合し、大問1では正解を含む4つの選択肢を問題と同じ順で確認する版です。",
-              "pages": 15,
+              "description": "1ページ目の「きょうの進め方」で、過去問プリント→ReadPassで答え合わせ→PenPassの順と、△と×だけを書く範囲を示します。先に自力で書き、確認見本と比べて赤で直す版です。",
+              "pages": 16,
               "path": "/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Student_Standard_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2_2025-1_Student_Standard_Workbook.pdf"
             },
@@ -282,8 +352,8 @@
               "profile": "teacher",
               "audience": "講師用",
               "label": "指導教案",
-              "description": "全29問の解答・完成英文・大問1の4つの選択肢の意味（問題順）・根拠英文・2つの訳・指導上の確認点をまとめた共通教案です。",
-              "pages": 8,
+              "description": "60分／80分のタイムテーブル、生徒にそのまま読み上げる指示、巡回で見る場所に加え、解答・完成英文・4つの選択肢の意味（問題順）・根拠英文をまとめた共通教案です。",
+              "pages": 9,
               "path": "/materials/grade-pre2/2025-1/ReadPass_EIKEN_GradePre2_2025-1_Instructor_Teaching_Guide.pdf",
               "downloadName": "ReadPass_EIKEN_GradePre2_2025-1_Instructor_Teaching_Guide.pdf"
             }
@@ -304,6 +374,16 @@
           "label": "2025年度 第3回",
           "updatedAt": "2026-09-10",
           "documents": [
+            {
+              "type": "practice-exam",
+              "profile": "practice",
+              "audience": "生徒配付用（正解のみ・解説なし）",
+              "label": "過去問プリント",
+              "description": "ReadPassの過去問と同じ回の印刷用プリントです。最終ページに正解一覧（解説なし）を収録しています。STEP1ではこれを解き、最終ページは見ずに、STEP2でReadPassの答え合わせ・解説へ進みます。",
+              "pages": 10,
+              "path": "/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Student_Practice_Exam.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade3_2025-3_Student_Practice_Exam.pdf"
+            },
             {
               "type": "workbook",
               "profile": "support",
@@ -344,6 +424,16 @@
           "updatedAt": "2026-09-10",
           "documents": [
             {
+              "type": "practice-exam",
+              "profile": "practice",
+              "audience": "生徒配付用（正解のみ・解説なし）",
+              "label": "過去問プリント",
+              "description": "ReadPassの過去問と同じ回の印刷用プリントです。最終ページに正解一覧（解説なし）を収録しています。STEP1ではこれを解き、最終ページは見ずに、STEP2でReadPassの答え合わせ・解説へ進みます。",
+              "pages": 10,
+              "path": "/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Student_Practice_Exam.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade3_2025-2_Student_Practice_Exam.pdf"
+            },
+            {
               "type": "workbook",
               "profile": "support",
               "audience": "生徒配付用",
@@ -382,6 +472,16 @@
           "label": "2025年度 第1回",
           "updatedAt": "2026-09-10",
           "documents": [
+            {
+              "type": "practice-exam",
+              "profile": "practice",
+              "audience": "生徒配付用（正解のみ・解説なし）",
+              "label": "過去問プリント",
+              "description": "ReadPassの過去問と同じ回の印刷用プリントです。最終ページに正解一覧（解説なし）を収録しています。STEP1ではこれを解き、最終ページは見ずに、STEP2でReadPassの答え合わせ・解説へ進みます。",
+              "pages": 10,
+              "path": "/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Student_Practice_Exam.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade3_2025-1_Student_Practice_Exam.pdf"
+            },
             {
               "type": "workbook",
               "profile": "support",
@@ -430,6 +530,16 @@
           "updatedAt": "2026-08-28",
           "documents": [
             {
+              "type": "practice-exam",
+              "profile": "practice",
+              "audience": "生徒配付用（正解のみ・解説なし）",
+              "label": "過去問プリント",
+              "description": "ReadPassの過去問と同じ回の印刷用プリントです。最終ページに正解一覧（解説なし）を収録しています。STEP1ではこれを解き、最終ページは見ずに、STEP2でReadPassの答え合わせ・解説へ進みます。",
+              "pages": 11,
+              "path": "/materials/grade4/2025-3/ReadPass_EIKEN_Grade4_2025-3_Student_Practice_Exam.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade4_2025-3_Student_Practice_Exam.pdf"
+            },
+            {
               "type": "workbook",
               "profile": "common",
               "audience": "生徒配付用",
@@ -459,6 +569,16 @@
           "updatedAt": "2026-08-28",
           "documents": [
             {
+              "type": "practice-exam",
+              "profile": "practice",
+              "audience": "生徒配付用（正解のみ・解説なし）",
+              "label": "過去問プリント",
+              "description": "ReadPassの過去問と同じ回の印刷用プリントです。最終ページに正解一覧（解説なし）を収録しています。STEP1ではこれを解き、最終ページは見ずに、STEP2でReadPassの答え合わせ・解説へ進みます。",
+              "pages": 11,
+              "path": "/materials/grade4/2025-2/ReadPass_EIKEN_Grade4_2025-2_Student_Practice_Exam.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade4_2025-2_Student_Practice_Exam.pdf"
+            },
+            {
               "type": "workbook",
               "profile": "common",
               "audience": "生徒配付用",
@@ -487,6 +607,16 @@
           "label": "2025年度 第1回",
           "updatedAt": "2026-08-28",
           "documents": [
+            {
+              "type": "practice-exam",
+              "profile": "practice",
+              "audience": "生徒配付用（正解のみ・解説なし）",
+              "label": "過去問プリント",
+              "description": "ReadPassの過去問と同じ回の印刷用プリントです。最終ページに正解一覧（解説なし）を収録しています。STEP1ではこれを解き、最終ページは見ずに、STEP2でReadPassの答え合わせ・解説へ進みます。",
+              "pages": 11,
+              "path": "/materials/grade4/2025-1/ReadPass_EIKEN_Grade4_2025-1_Student_Practice_Exam.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade4_2025-1_Student_Practice_Exam.pdf"
+            },
             {
               "type": "workbook",
               "profile": "common",
@@ -525,6 +655,16 @@
           "updatedAt": "2026-08-28",
           "documents": [
             {
+              "type": "practice-exam",
+              "profile": "practice",
+              "audience": "生徒配付用（正解のみ・解説なし）",
+              "label": "過去問プリント",
+              "description": "ReadPassの過去問と同じ回の印刷用プリントです。最終ページに正解一覧（解説なし）を収録しています。STEP1ではこれを解き、最終ページは見ずに、STEP2でReadPassの答え合わせ・解説へ進みます。",
+              "pages": 6,
+              "path": "/materials/grade5/2025-3/ReadPass_EIKEN_Grade5_2025-3_Student_Practice_Exam.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade5_2025-3_Student_Practice_Exam.pdf"
+            },
+            {
               "type": "workbook",
               "profile": "common",
               "audience": "生徒配付用",
@@ -554,6 +694,16 @@
           "updatedAt": "2026-08-28",
           "documents": [
             {
+              "type": "practice-exam",
+              "profile": "practice",
+              "audience": "生徒配付用（正解のみ・解説なし）",
+              "label": "過去問プリント",
+              "description": "ReadPassの過去問と同じ回の印刷用プリントです。最終ページに正解一覧（解説なし）を収録しています。STEP1ではこれを解き、最終ページは見ずに、STEP2でReadPassの答え合わせ・解説へ進みます。",
+              "pages": 6,
+              "path": "/materials/grade5/2025-2/ReadPass_EIKEN_Grade5_2025-2_Student_Practice_Exam.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade5_2025-2_Student_Practice_Exam.pdf"
+            },
+            {
               "type": "workbook",
               "profile": "common",
               "audience": "生徒配付用",
@@ -582,6 +732,16 @@
           "label": "2025年度 第1回",
           "updatedAt": "2026-08-28",
           "documents": [
+            {
+              "type": "practice-exam",
+              "profile": "practice",
+              "audience": "生徒配付用（正解のみ・解説なし）",
+              "label": "過去問プリント",
+              "description": "ReadPassの過去問と同じ回の印刷用プリントです。最終ページに正解一覧（解説なし）を収録しています。STEP1ではこれを解き、最終ページは見ずに、STEP2でReadPassの答え合わせ・解説へ進みます。",
+              "pages": 6,
+              "path": "/materials/grade5/2025-1/ReadPass_EIKEN_Grade5_2025-1_Student_Practice_Exam.pdf",
+              "downloadName": "ReadPass_EIKEN_Grade5_2025-1_Student_Practice_Exam.pdf"
+            },
             {
               "type": "workbook",
               "profile": "common",
