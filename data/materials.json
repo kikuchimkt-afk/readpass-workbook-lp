@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-02",
+  "updatedAt": "2026-09-10",
   "grades": [
     {
       "slug": "grade-pre2plus",
@@ -302,15 +302,15 @@
           "year": 2025,
           "session": 3,
           "label": "2025年度 第3回",
-          "updatedAt": "2026-08-28",
+          "updatedAt": "2026-09-10",
           "documents": [
             {
               "type": "workbook",
               "profile": "support",
               "audience": "生徒配付用",
               "label": "サポート版",
-              "description": "見本・書き出し・確認訳を先に示し、大問1では正解を含む4つの選択肢を問題と同じ順で確認できる、迷わず筆写を始められる版です。",
-              "pages": 15,
+              "description": "1ページ目の「きょうの進め方」で、過去問プリント→ReadPassで答え合わせ→PenPassの順と、△と×だけを書く範囲を示します。写す英文の書き出し・終わりの語と訳の見本を示し、迷わず手を動かせる版です。",
+              "pages": 16,
               "path": "/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Student_Support_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_Grade3_2025-3_Student_Support_Workbook.pdf"
             },
@@ -319,8 +319,8 @@
               "profile": "standard",
               "audience": "生徒配付用",
               "label": "標準版",
-              "description": "自分で本文を探して書いたあと、確認訳と照合し、大問1では正解を含む4つの選択肢を問題と同じ順で確認する版です。",
-              "pages": 15,
+              "description": "1ページ目の「きょうの進め方」で、過去問プリント→ReadPassで答え合わせ→PenPassの順と、△と×だけを書く範囲を示します。大問3は根拠文を本文から自分で探し、訳も見ないで書いてから、ページ下部で照合する版です。",
+              "pages": 16,
               "path": "/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Student_Standard_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_Grade3_2025-3_Student_Standard_Workbook.pdf"
             },
@@ -329,8 +329,8 @@
               "profile": "teacher",
               "audience": "講師用",
               "label": "指導教案",
-              "description": "解答・記入例・大問1の4つの選択肢の意味（問題順）・根拠英文・指導上の確認点をまとめた共通教案です。",
-              "pages": 9,
+              "description": "60分／80分のタイムテーブル、生徒にそのまま読み上げる指示、巡回で見る場所に加え、解答・記入例・大問1の4つの選択肢の意味（問題順）・根拠英文をまとめた共通教案です。",
+              "pages": 10,
               "path": "/materials/grade3/2025-3/ReadPass_EIKEN_Grade3_2025-3_Instructor_Teaching_Guide.pdf",
               "downloadName": "ReadPass_EIKEN_Grade3_2025-3_Instructor_Teaching_Guide.pdf"
             }
@@ -341,15 +341,15 @@
           "year": 2025,
           "session": 2,
           "label": "2025年度 第2回",
-          "updatedAt": "2026-08-28",
+          "updatedAt": "2026-09-10",
           "documents": [
             {
               "type": "workbook",
               "profile": "support",
               "audience": "生徒配付用",
               "label": "サポート版",
-              "description": "見本・書き出し・確認訳を先に示し、大問1では正解を含む4つの選択肢を問題と同じ順で確認できる、迷わず筆写を始められる版です。",
-              "pages": 16,
+              "description": "1ページ目の「きょうの進め方」で、過去問プリント→ReadPassで答え合わせ→PenPassの順と、△と×だけを書く範囲を示します。写す英文の書き出し・終わりの語と訳の見本を示し、迷わず手を動かせる版です。",
+              "pages": 17,
               "path": "/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Student_Support_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_Grade3_2025-2_Student_Support_Workbook.pdf"
             },
@@ -358,8 +358,8 @@
               "profile": "standard",
               "audience": "生徒配付用",
               "label": "標準版",
-              "description": "自分で本文を探して書いたあと、確認訳と照合し、大問1では正解を含む4つの選択肢を問題と同じ順で確認する版です。",
-              "pages": 16,
+              "description": "1ページ目の「きょうの進め方」で、過去問プリント→ReadPassで答え合わせ→PenPassの順と、△と×だけを書く範囲を示します。大問3は根拠文を本文から自分で探し、訳も見ないで書いてから、ページ下部で照合する版です。",
+              "pages": 17,
               "path": "/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Student_Standard_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_Grade3_2025-2_Student_Standard_Workbook.pdf"
             },
@@ -368,8 +368,8 @@
               "profile": "teacher",
               "audience": "講師用",
               "label": "指導教案",
-              "description": "解答・記入例・大問1の4つの選択肢の意味（問題順）・根拠英文・指導上の確認点をまとめた共通教案です。",
-              "pages": 9,
+              "description": "60分／80分のタイムテーブル、生徒にそのまま読み上げる指示、巡回で見る場所に加え、解答・記入例・大問1の4つの選択肢の意味（問題順）・根拠英文をまとめた共通教案です。",
+              "pages": 10,
               "path": "/materials/grade3/2025-2/ReadPass_EIKEN_Grade3_2025-2_Instructor_Teaching_Guide.pdf",
               "downloadName": "ReadPass_EIKEN_Grade3_2025-2_Instructor_Teaching_Guide.pdf"
             }
@@ -380,15 +380,15 @@
           "year": 2025,
           "session": 1,
           "label": "2025年度 第1回",
-          "updatedAt": "2026-08-28",
+          "updatedAt": "2026-09-10",
           "documents": [
             {
               "type": "workbook",
               "profile": "support",
               "audience": "生徒配付用",
               "label": "サポート版",
-              "description": "見本・書き出し・確認訳を先に示し、大問1では正解を含む4つの選択肢を問題と同じ順で確認できる、迷わず筆写を始められる版です。",
-              "pages": 15,
+              "description": "1ページ目の「きょうの進め方」で、過去問プリント→ReadPassで答え合わせ→PenPassの順と、△と×だけを書く範囲を示します。写す英文の書き出し・終わりの語と訳の見本を示し、迷わず手を動かせる版です。",
+              "pages": 16,
               "path": "/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Student_Support_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_Grade3_2025-1_Student_Support_Workbook.pdf"
             },
@@ -397,8 +397,8 @@
               "profile": "standard",
               "audience": "生徒配付用",
               "label": "標準版",
-              "description": "自分で本文を探して書いたあと、確認訳と照合し、大問1では正解を含む4つの選択肢を問題と同じ順で確認する版です。",
-              "pages": 15,
+              "description": "1ページ目の「きょうの進め方」で、過去問プリント→ReadPassで答え合わせ→PenPassの順と、△と×だけを書く範囲を示します。大問3は根拠文を本文から自分で探し、訳も見ないで書いてから、ページ下部で照合する版です。",
+              "pages": 16,
               "path": "/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Student_Standard_Workbook.pdf",
               "downloadName": "ReadPass_EIKEN_Grade3_2025-1_Student_Standard_Workbook.pdf"
             },
@@ -407,8 +407,8 @@
               "profile": "teacher",
               "audience": "講師用",
               "label": "指導教案",
-              "description": "解答・記入例・大問1の4つの選択肢の意味（問題順）・根拠英文・指導上の確認点をまとめた共通教案です。",
-              "pages": 9,
+              "description": "60分／80分のタイムテーブル、生徒にそのまま読み上げる指示、巡回で見る場所に加え、解答・記入例・大問1の4つの選択肢の意味（問題順）・根拠英文をまとめた共通教案です。",
+              "pages": 10,
               "path": "/materials/grade3/2025-1/ReadPass_EIKEN_Grade3_2025-1_Instructor_Teaching_Guide.pdf",
               "downloadName": "ReadPass_EIKEN_Grade3_2025-1_Instructor_Teaching_Guide.pdf"
             }
